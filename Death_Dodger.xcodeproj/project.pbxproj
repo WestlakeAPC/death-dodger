@@ -1,0 +1,443 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		730E96591CF2707C002C8D13 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 730E96581CF2707C002C8D13 /* main.m */; };
+		730E965C1CF2707C002C8D13 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 730E965B1CF2707C002C8D13 /* AppDelegate.m */; };
+		730E965F1CF2707C002C8D13 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 730E965E1CF2707C002C8D13 /* ViewController.m */; };
+		730E96621CF2707C002C8D13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 730E96601CF2707C002C8D13 /* Main.storyboard */; };
+		730E96641CF2707C002C8D13 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 730E96631CF2707C002C8D13 /* Images.xcassets */; };
+		730E96671CF2707C002C8D13 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 730E96651CF2707C002C8D13 /* LaunchScreen.xib */; };
+		730E96731CF2707D002C8D13 /* Death_DodgerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 730E96721CF2707D002C8D13 /* Death_DodgerTests.m */; };
+		730E96B31CF28672002C8D13 /* Finn.png in Resources */ = {isa = PBXBuildFile; fileRef = 730E96B21CF28672002C8D13 /* Finn.png */; };
+		7313C6AC1D0DE985004E3242 /* InitialView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7313C6AB1D0DE985004E3242 /* InitialView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		730E966D1CF2707D002C8D13 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 730E964B1CF2707C002C8D13 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 730E96521CF2707C002C8D13;
+			remoteInfo = Death_Dodger;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		730E96531CF2707C002C8D13 /* Death_Dodger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Death_Dodger.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		730E96571CF2707C002C8D13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		730E96581CF2707C002C8D13 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		730E965A1CF2707C002C8D13 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		730E965B1CF2707C002C8D13 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		730E965D1CF2707C002C8D13 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		730E965E1CF2707C002C8D13 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		730E96611CF2707C002C8D13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		730E96631CF2707C002C8D13 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		730E96661CF2707C002C8D13 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		730E966C1CF2707D002C8D13 /* Death_DodgerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Death_DodgerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		730E96711CF2707D002C8D13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		730E96721CF2707D002C8D13 /* Death_DodgerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Death_DodgerTests.m; sourceTree = "<group>"; };
+		730E96B21CF28672002C8D13 /* Finn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Finn.png; path = ../../../../../../Photos/Finn.png; sourceTree = "<group>"; };
+		7313C6AA1D0DE985004E3242 /* InitialView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InitialView.h; path = ../InitialView.h; sourceTree = "<group>"; };
+		7313C6AB1D0DE985004E3242 /* InitialView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InitialView.m; path = ../InitialView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		730E96501CF2707C002C8D13 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		730E96691CF2707D002C8D13 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		730E964A1CF2707C002C8D13 = {
+			isa = PBXGroup;
+			children = (
+				730E96551CF2707C002C8D13 /* Death_Dodger */,
+				730E966F1CF2707D002C8D13 /* Death_DodgerTests */,
+				730E96541CF2707C002C8D13 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		730E96541CF2707C002C8D13 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				730E96531CF2707C002C8D13 /* Death_Dodger.app */,
+				730E966C1CF2707D002C8D13 /* Death_DodgerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		730E96551CF2707C002C8D13 /* Death_Dodger */ = {
+			isa = PBXGroup;
+			children = (
+				730E965A1CF2707C002C8D13 /* AppDelegate.h */,
+				730E965B1CF2707C002C8D13 /* AppDelegate.m */,
+				7313C6AA1D0DE985004E3242 /* InitialView.h */,
+				7313C6AB1D0DE985004E3242 /* InitialView.m */,
+				730E965D1CF2707C002C8D13 /* ViewController.h */,
+				730E965E1CF2707C002C8D13 /* ViewController.m */,
+				730E96601CF2707C002C8D13 /* Main.storyboard */,
+				730E96B21CF28672002C8D13 /* Finn.png */,
+				730E96631CF2707C002C8D13 /* Images.xcassets */,
+				730E96651CF2707C002C8D13 /* LaunchScreen.xib */,
+				730E96561CF2707C002C8D13 /* Supporting Files */,
+			);
+			path = Death_Dodger;
+			sourceTree = "<group>";
+		};
+		730E96561CF2707C002C8D13 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				730E96571CF2707C002C8D13 /* Info.plist */,
+				730E96581CF2707C002C8D13 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		730E966F1CF2707D002C8D13 /* Death_DodgerTests */ = {
+			isa = PBXGroup;
+			children = (
+				730E96721CF2707D002C8D13 /* Death_DodgerTests.m */,
+				730E96701CF2707D002C8D13 /* Supporting Files */,
+			);
+			path = Death_DodgerTests;
+			sourceTree = "<group>";
+		};
+		730E96701CF2707D002C8D13 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				730E96711CF2707D002C8D13 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		730E96521CF2707C002C8D13 /* Death_Dodger */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 730E96761CF2707D002C8D13 /* Build configuration list for PBXNativeTarget "Death_Dodger" */;
+			buildPhases = (
+				730E964F1CF2707C002C8D13 /* Sources */,
+				730E96501CF2707C002C8D13 /* Frameworks */,
+				730E96511CF2707C002C8D13 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Death_Dodger;
+			productName = Death_Dodger;
+			productReference = 730E96531CF2707C002C8D13 /* Death_Dodger.app */;
+			productType = "com.apple.product-type.application";
+		};
+		730E966B1CF2707D002C8D13 /* Death_DodgerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 730E96791CF2707D002C8D13 /* Build configuration list for PBXNativeTarget "Death_DodgerTests" */;
+			buildPhases = (
+				730E96681CF2707D002C8D13 /* Sources */,
+				730E96691CF2707D002C8D13 /* Frameworks */,
+				730E966A1CF2707D002C8D13 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				730E966E1CF2707D002C8D13 /* PBXTargetDependency */,
+			);
+			name = Death_DodgerTests;
+			productName = Death_DodgerTests;
+			productReference = 730E966C1CF2707D002C8D13 /* Death_DodgerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		730E964B1CF2707C002C8D13 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = "Animator Joe";
+				TargetAttributes = {
+					730E96521CF2707C002C8D13 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					730E966B1CF2707D002C8D13 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 730E96521CF2707C002C8D13;
+					};
+				};
+			};
+			buildConfigurationList = 730E964E1CF2707C002C8D13 /* Build configuration list for PBXProject "Death_Dodger" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 730E964A1CF2707C002C8D13;
+			productRefGroup = 730E96541CF2707C002C8D13 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				730E96521CF2707C002C8D13 /* Death_Dodger */,
+				730E966B1CF2707D002C8D13 /* Death_DodgerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		730E96511CF2707C002C8D13 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				730E96621CF2707C002C8D13 /* Main.storyboard in Resources */,
+				730E96671CF2707C002C8D13 /* LaunchScreen.xib in Resources */,
+				730E96B31CF28672002C8D13 /* Finn.png in Resources */,
+				730E96641CF2707C002C8D13 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		730E966A1CF2707D002C8D13 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		730E964F1CF2707C002C8D13 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				730E965F1CF2707C002C8D13 /* ViewController.m in Sources */,
+				7313C6AC1D0DE985004E3242 /* InitialView.m in Sources */,
+				730E965C1CF2707C002C8D13 /* AppDelegate.m in Sources */,
+				730E96591CF2707C002C8D13 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		730E96681CF2707D002C8D13 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				730E96731CF2707D002C8D13 /* Death_DodgerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		730E966E1CF2707D002C8D13 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 730E96521CF2707C002C8D13 /* Death_Dodger */;
+			targetProxy = 730E966D1CF2707D002C8D13 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		730E96601CF2707C002C8D13 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				730E96611CF2707C002C8D13 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		730E96651CF2707C002C8D13 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				730E96661CF2707C002C8D13 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		730E96741CF2707D002C8D13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		730E96751CF2707D002C8D13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		730E96771CF2707D002C8D13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Death_Dodger/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		730E96781CF2707D002C8D13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Death_Dodger/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		730E967A1CF2707D002C8D13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Death_DodgerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Death_Dodger.app/Death_Dodger";
+			};
+			name = Debug;
+		};
+		730E967B1CF2707D002C8D13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Death_DodgerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Death_Dodger.app/Death_Dodger";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		730E964E1CF2707C002C8D13 /* Build configuration list for PBXProject "Death_Dodger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				730E96741CF2707D002C8D13 /* Debug */,
+				730E96751CF2707D002C8D13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		730E96761CF2707D002C8D13 /* Build configuration list for PBXNativeTarget "Death_Dodger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				730E96771CF2707D002C8D13 /* Debug */,
+				730E96781CF2707D002C8D13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		730E96791CF2707D002C8D13 /* Build configuration list for PBXNativeTarget "Death_DodgerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				730E967A1CF2707D002C8D13 /* Debug */,
+				730E967B1CF2707D002C8D13 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 730E964B1CF2707C002C8D13 /* Project object */;
+}
