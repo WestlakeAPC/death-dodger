@@ -22,6 +22,7 @@
     /*
     spriteFinn.
      */
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,12 +33,14 @@
 - (IBAction)rightButton {
     
     directionStatus.text = @"right";
+    finnCharc.center = CGPointMake(finnCharc.center.x + 4, finnCharc.center.y);
     
 }
 
 - (IBAction)leftButton {
     
     directionStatus.text = @"left";
+    finnCharc.center = CGPointMake(finnCharc.center.x - 4, finnCharc.center.y);
     
 }
 @end

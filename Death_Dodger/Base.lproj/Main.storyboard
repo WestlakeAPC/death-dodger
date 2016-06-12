@@ -22,7 +22,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="leftButton" destination="vXZ-lx-hvc" eventType="touchUpInside" id="uph-i5-qdy"/>
+                                    <action selector="leftButton" destination="vXZ-lx-hvc" eventType="touchUpInside" id="axP-5G-RyN"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HLe-wH-SVA">
@@ -31,7 +31,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="rightButton" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Y0P-Yc-Pv2"/>
+                                    <action selector="rightButton" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Qvc-Qo-SQc"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Direction" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qL8-mG-ca3">
@@ -50,6 +50,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="directionStatus" destination="qL8-mG-ca3" id="N21-9N-1Xe"/>
+                        <outlet property="finnCharc" destination="TgQ-Lg-kJ1" id="QXz-Vg-KKf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -91,7 +92,7 @@
                                         </state>
                                         <connections>
                                             <action selector="startButton:" destination="2EY-dj-TaU" eventType="touchUpInside" id="7Go-jg-kh0"/>
-                                            <segue destination="vXZ-lx-hvc" kind="show" id="jlO-W1-geO"/>
+                                            <segue destination="vXZ-lx-hvc" kind="presentation" modalTransitionStyle="crossDissolve" id="jlO-W1-geO"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -104,7 +105,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eBP-vZ-fqf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-805.5" y="430.5"/>
+            <point key="canvasLocation" x="-801.5" y="430.5"/>
         </scene>
     </scenes>
     <resources>
