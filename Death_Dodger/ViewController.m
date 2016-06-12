@@ -36,17 +36,17 @@
     
     directionStatus.text = @"right";
     finnCoordX+=6;
-    [this reDraw];
+    [self reDraw];
 }
 
 - (IBAction)leftButton {
     
     directionStatus.text = @"left";
     finnCoordX-=6;
-    [this reDraw];
+    [self reDraw];
 }
 
-- (void):reDraw {
+- (void)reDraw {
     finnCharc.center=CGPointMake(finnCoordX,finnCoordY);
 }
 
