@@ -84,14 +84,14 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3LW-O9-9Tb">
-                                        <rect key="frame" x="-99" y="430" width="359" height="73"/>
+                                        <rect key="frame" x="-103" y="440" width="359" height="73"/>
                                         <fontDescription key="fontDescription" name="IowanOldStyle-Roman" family="Iowan Old Style" pointSize="27"/>
                                         <state key="normal" title="Start!">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="startButton:" destination="2EY-dj-TaU" eventType="touchUpInside" id="gHA-Wg-ehY"/>
-                                            <segue destination="vXZ-lx-hvc" kind="show" id="vqP-P8-mNf"/>
+                                            <action selector="startButton:" destination="2EY-dj-TaU" eventType="touchUpInside" id="7Go-jg-kh0"/>
+                                            <segue destination="vXZ-lx-hvc" kind="show" id="jlO-W1-geO"/>
                                         </connections>
                                     </button>
                                 </subviews>
