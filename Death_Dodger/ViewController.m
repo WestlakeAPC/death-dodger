@@ -22,6 +22,8 @@
     /*
     spriteFinn.
      */
+    finnCoordX = finnCharc.center.x;
+    finnCoordY = finnCharc.center.y;
     
 }
 
@@ -33,14 +35,19 @@
 - (IBAction)rightButton {
     
     directionStatus.text = @"right";
-    finnCharc.center = CGPointMake(finnCharc.center.x + 4, finnCharc.center.y);
-    
+    finnCoordX+=6;
+    [this reDraw];
 }
 
 - (IBAction)leftButton {
     
     directionStatus.text = @"left";
-    finnCharc.center = CGPointMake(finnCharc.center.x - 4, finnCharc.center.y);
-    
+    finnCoordX-=6;
+    [this reDraw];
 }
+
+- (void):reDraw {
+    finnCharc.center=CGPointMake(finnCoordX,finnCoordY);
+}
+
 @end

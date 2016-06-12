@@ -4,9 +4,6 @@
 //
 //  Created by Joseph Jin on 5/22/16.
 //  Copyright (c) 2016 Animator Joe. All rights reserved.
-////IHateEliBecauseHeSucks
-
-
 
 #import <UIKit/UIKit.h>
 
@@ -14,13 +11,13 @@
 
     IBOutlet UILabel *directionStatus;
     IBOutlet UIImageView *finnCharc;
+    CGFloat finnCoordX;
+    CGFloat finnCoordY;
 }
 
 - (IBAction)rightButton;
 - (IBAction)leftButton;
-
-//@property (strong, nonatomic) IBOutlet UIImageView *spriteFinn;
-//@property (strong, nonatomic) IBOutletCollection(UIImageView) NSArray *Finn;
+- (void)reDraw;
 
 @end
 
