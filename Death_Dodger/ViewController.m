@@ -5,6 +5,12 @@
 //  Created by Joseph Jin on 5/22/16.
 //  Copyright (c) 2016 Animator Joe. All rights reserved.
 //
+//
+// ================================================================================
+//
+// Update Notice: Enabling the directionStatus text may cause glitches in the game.
+//
+// ================================================================================
 
 #import "ViewController.h"
 
@@ -18,12 +24,17 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     //This part is what happens to Finn as soon as the app is loaded.
-
-    /*
-    spriteFinn.
-     */
+    //spriteFinn.
+    
+    // Set to True to Debug
+    //        |
+    //       \|/
+    debug = false;
+    
+    directionStatus.hidden = true;
     finnCoordX = finnCharc.center.x;
     finnCoordY = finnCharc.center.y;
+    
     
 }
 
@@ -32,22 +43,38 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)rightButton {
+- (IBAction)leftButton:(id)sender {
     
-    directionStatus.text = @"right";
-    finnCoordX+=6;
-    [self reDraw];
-}
-
-- (IBAction)leftButton {
-    
+    if (debug){
+        
     directionStatus.text = @"left";
-    finnCoordX-=6;
+        
+    }
+    
+    finnCharc.center = CGPointMake(finnCoordX, finnCoordY);
+    finnCoordX -= 10;
     [self reDraw];
+    
 }
 
-- (void)reDraw {
-    finnCharc.center=CGPointMake(finnCoordX,finnCoordY);
+- (IBAction)rightButton:(id)sender {
+    
+    if (debug){
+        
+    directionStatus.text = @"right";
+        
+    }
+    
+    finnCharc.center = CGPointMake(finnCoordX, finnCoordY);
+    finnCoordX += 10;
+    [self reDraw];
+        
+}
+
+- (void)reDraw{
+    
+    finnCharc.center = CGPointMake(finnCoordX, finnCoordY);
+    
 }
 
 @end

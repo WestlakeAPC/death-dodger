@@ -10,17 +10,17 @@
 @interface ViewController : UIViewController {
 
     IBOutlet UILabel *directionStatus;
+    IBOutlet UILabel *xCoordStatus;
     IBOutlet UIImageView *finnCharc;
     CGFloat finnCoordX;
     CGFloat finnCoordY;
+    char Direct;
+    bool debug;
+    
 }
 
-- (IBAction)rightButton;
-- (IBAction)leftButton;
-- (void)reDraw;
+
+- (IBAction)leftButton:(id)sender;
+- (IBAction)rightButton:(id)sender;
 
 @end
-
-
-
-
