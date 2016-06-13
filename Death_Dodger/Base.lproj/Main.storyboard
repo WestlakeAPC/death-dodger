@@ -5,58 +5,56 @@
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="ufC-wZ-h7g">
+        <scene sceneID="4IC-26-v4M">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="ixM-e9-F32" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                        <viewControllerLayoutGuide type="top" id="pCZ-tN-b2L"/>
+                        <viewControllerLayoutGuide type="bottom" id="3bE-Bh-vFG"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                    <view key="view" contentMode="scaleToFill" id="GMK-sj-U8H">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l2h-Li-irQ">
-                                <rect key="frame" x="0.0" y="0.0" width="187" height="667"/>
-                                <state key="normal" title="Left">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="leftButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="FIX-bg-sRu"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HLe-wH-SVA">
-                                <rect key="frame" x="187" y="0.0" width="188" height="667"/>
-                                <state key="normal" title="Right">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="rightButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ozB-Yl-4ME"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Direction" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qL8-mG-ca3">
-                                <rect key="frame" x="153" y="163" width="69" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Direction" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sSb-6D-E7J">
+                                <rect key="frame" x="153" y="150" width="69" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Finn.png" translatesAutoresizingMaskIntoConstraints="NO" id="TgQ-Lg-kJ1">
-                                <rect key="frame" x="152" y="519" width="70" height="121"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8G2-n0-Lbt">
+                                <rect key="frame" x="187" y="0.0" width="188" height="667"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="rightButton:" destination="ixM-e9-F32" eventType="touchUpInside" id="Z71-t1-a5j"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Finn.png" translatesAutoresizingMaskIntoConstraints="NO" id="5rv-Ub-fpm">
+                                <rect key="frame" x="152" y="526" width="70" height="121"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VIu-rK-mIB">
+                                <rect key="frame" x="0.0" y="0.0" width="187" height="667"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="leftButton:" destination="ixM-e9-F32" eventType="touchUpInside" id="Hgh-Mz-BNv"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <nil key="simulatedStatusBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
-                        <outlet property="directionStatus" destination="qL8-mG-ca3" id="N21-9N-1Xe"/>
-                        <outlet property="finnCharc" destination="TgQ-Lg-kJ1" id="QXz-Vg-KKf"/>
-                        <outletCollection property="DirectionY" destination="qL8-mG-ca3" id="z26-oY-gjp"/>
+                        <outlet property="directionStatus" destination="sSb-6D-E7J" id="dqk-lr-P7P"/>
+                        <outlet property="finnCharc" destination="5rv-Ub-fpm" id="tBh-0h-Fdo"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6jR-UZ-d53" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-336.5" y="430.5"/>
+            <point key="canvasLocation" x="-265.5" y="430.5"/>
         </scene>
         <!--Initial View-->
         <scene sceneID="klG-7V-yM6">
@@ -93,7 +91,7 @@
                                         </state>
                                         <connections>
                                             <action selector="startButton:" destination="2EY-dj-TaU" eventType="touchUpInside" id="7Go-jg-kh0"/>
-                                            <segue destination="vXZ-lx-hvc" kind="presentation" modalTransitionStyle="crossDissolve" id="jlO-W1-geO"/>
+                                            <segue destination="ixM-e9-F32" kind="presentation" modalTransitionStyle="crossDissolve" id="tMc-Ap-X4g"/>
                                         </connections>
                                     </button>
                                 </subviews>
