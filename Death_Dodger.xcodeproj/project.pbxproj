@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		228049301D10647800BAE333 /* Finn.png in Resources */ = {isa = PBXBuildFile; fileRef = 2280492F1D10647800BAE333 /* Finn.png */; };
 		730E96591CF2707C002C8D13 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 730E96581CF2707C002C8D13 /* main.m */; };
 		730E965C1CF2707C002C8D13 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 730E965B1CF2707C002C8D13 /* AppDelegate.m */; };
 		730E96621CF2707C002C8D13 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 730E96601CF2707C002C8D13 /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2280492F1D10647800BAE333 /* Finn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Finn.png; path = images/Finn.png; sourceTree = "<group>"; };
 		730E96531CF2707C002C8D13 /* Death_Dodger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Death_Dodger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		730E96571CF2707C002C8D13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		730E96581CF2707C002C8D13 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,7 +42,7 @@
 		730E966C1CF2707D002C8D13 /* Death_DodgerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Death_DodgerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		730E96711CF2707D002C8D13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		730E96721CF2707D002C8D13 /* Death_DodgerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Death_DodgerTests.m; sourceTree = "<group>"; };
-		730E96B21CF28672002C8D13 /* Finn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Finn.png; path = ../../../../../../Photos/Finn.png; sourceTree = "<group>"; };
+		730E96B21CF28672002C8D13 /* Finn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Finn.png; path = images/Finn.png; sourceTree = "<group>"; };
 		7313C6AA1D0DE985004E3242 /* InitialView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InitialView.h; path = ../InitialView.h; sourceTree = "<group>"; };
 		7313C6AB1D0DE985004E3242 /* InitialView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InitialView.m; path = ../InitialView.m; sourceTree = "<group>"; };
 		7313C6B01D0E54FC004E3242 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = ../ViewController.h; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				7313C6B01D0E54FC004E3242 /* ViewController.h */,
 				7313C6B11D0E54FC004E3242 /* ViewController.m */,
 				730E96601CF2707C002C8D13 /* Main.storyboard */,
+				2280492F1D10647800BAE333 /* Finn.png */,
 				730E96B21CF28672002C8D13 /* Finn.png */,
 				730E96631CF2707C002C8D13 /* Images.xcassets */,
 				730E96651CF2707C002C8D13 /* LaunchScreen.xib */,
@@ -209,6 +212,7 @@
 			files = (
 				730E96621CF2707C002C8D13 /* Main.storyboard in Resources */,
 				730E96671CF2707C002C8D13 /* LaunchScreen.xib in Resources */,
+				228049301D10647800BAE333 /* Finn.png in Resources */,
 				730E96B31CF28672002C8D13 /* Finn.png in Resources */,
 				730E96641CF2707C002C8D13 /* Images.xcassets in Resources */,
 			);
