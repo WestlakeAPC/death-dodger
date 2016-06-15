@@ -14,6 +14,9 @@
 		737C90691D106A9100D0D181 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 737C90681D106A9100D0D181 /* Images.xcassets */; };
 		737C906C1D106A9100D0D181 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 737C906A1D106A9100D0D181 /* LaunchScreen.xib */; };
 		737C90781D106A9100D0D181 /* DeathDodgerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 737C90771D106A9100D0D181 /* DeathDodgerTests.m */; };
+		737C90821D106AF600D0D181 /* Finn.png in Resources */ = {isa = PBXBuildFile; fileRef = 737C90811D106AF600D0D181 /* Finn.png */; };
+		737C90841D106B0400D0D181 /* theSword.png in Resources */ = {isa = PBXBuildFile; fileRef = 737C90831D106B0400D0D181 /* theSword.png */; };
+		737C90871D106B1F00D0D181 /* InitialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 737C90861D106B1F00D0D181 /* InitialViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,10 @@
 		737C90711D106A9100D0D181 /* DeathDodgerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeathDodgerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		737C90761D106A9100D0D181 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		737C90771D106A9100D0D181 /* DeathDodgerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeathDodgerTests.m; sourceTree = "<group>"; };
+		737C90811D106AF600D0D181 /* Finn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Finn.png; sourceTree = "<group>"; };
+		737C90831D106B0400D0D181 /* theSword.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = theSword.png; sourceTree = "<group>"; };
+		737C90851D106B1F00D0D181 /* InitialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InitialViewController.h; path = ../InitialViewController.h; sourceTree = "<group>"; };
+		737C90861D106B1F00D0D181 /* InitialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InitialViewController.m; path = ../InitialViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +90,8 @@
 			children = (
 				737C905F1D106A9100D0D181 /* AppDelegate.h */,
 				737C90601D106A9100D0D181 /* AppDelegate.m */,
+				737C90851D106B1F00D0D181 /* InitialViewController.h */,
+				737C90861D106B1F00D0D181 /* InitialViewController.m */,
 				737C90621D106A9100D0D181 /* ViewController.h */,
 				737C90631D106A9100D0D181 /* ViewController.m */,
 				737C90651D106A9100D0D181 /* Main.storyboard */,
@@ -96,6 +105,8 @@
 		737C905B1D106A9100D0D181 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				737C90811D106AF600D0D181 /* Finn.png */,
+				737C90831D106B0400D0D181 /* theSword.png */,
 				737C905C1D106A9100D0D181 /* Info.plist */,
 				737C905D1D106A9100D0D181 /* main.m */,
 			);
@@ -199,8 +210,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				737C90841D106B0400D0D181 /* theSword.png in Resources */,
 				737C90671D106A9100D0D181 /* Main.storyboard in Resources */,
 				737C906C1D106A9100D0D181 /* LaunchScreen.xib in Resources */,
+				737C90821D106AF600D0D181 /* Finn.png in Resources */,
 				737C90691D106A9100D0D181 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -222,6 +235,7 @@
 				737C90641D106A9100D0D181 /* ViewController.m in Sources */,
 				737C90611D106A9100D0D181 /* AppDelegate.m in Sources */,
 				737C905E1D106A9100D0D181 /* main.m in Sources */,
+				737C90871D106B1F00D0D181 /* InitialViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
