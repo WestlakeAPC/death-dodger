@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>8CB2FDE0-D5A9-418C-AB86-703C45DFC95D</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Death_Dodger</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>C5C4E2D586C7919B6BC430E49DA14F91BBA5F106</key>
+		<string>https://github.com/EtherTyper/finn-knife-game.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Death_Dodger.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>C5C4E2D586C7919B6BC430E49DA14F91BBA5F106</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/EtherTyper/finn-knife-game.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>C5C4E2D586C7919B6BC430E49DA14F91BBA5F106</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C5C4E2D586C7919B6BC430E49DA14F91BBA5F106</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Death_Dodger</string>
+		</dict>
+	</array>
+</dict>
+</plist>
