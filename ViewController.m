@@ -12,7 +12,7 @@
 //
 // ================================================================================
 
-#import "GameViewController.h"
+#import "ViewController.h"
 
 @interface ViewController ()
 
