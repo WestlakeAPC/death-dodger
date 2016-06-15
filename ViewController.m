@@ -32,7 +32,9 @@
     debug = false;
     
     finnCoordX = finnCharc.center.x;
-    finnCoordY = finnCharc.center.y;
+    finnCoordY = [[UIScreen mainScreen] bounds].size.height * 3/4;
+    
+    [self reDraw];
     
     if (!debug) {
         directionStatus.hidden = true;
@@ -46,41 +48,25 @@
 }
 
 - (void)reDraw{
-    
-    if(!(finnCoordX <= 20)){
-        
-      if (!(finnCoordX >= 350)){
-          
     finnCharc.center = CGPointMake(finnCoordX, finnCoordY);
-          
-          }
-        
-    }
-    
 }
 
 - (IBAction)leftButton:(id)sender {
     
-    if (debug){
-        
-        directionStatus.text = @"left";
-        
-    }
+    if (debug) directionStatus.text = @"left";
     
-    finnCoordX -= 10;
+    if(!(finnCoordX <= [finnCharc frame].size.width/2)) finnCoordX -= 10;
+    
     [self reDraw];
     
 }
 
 - (IBAction)rightButton:(id)sender {
     
-    if (debug){
-        
-        directionStatus.text = @"right";
-        
-    }
+    if (debug) directionStatus.text = @"right";
     
-    finnCoordX += 10;
+    if (!(finnCoordX >=  [[UIScreen mainScreen] bounds].size.width-[finnCharc frame].size.width/2)) finnCoordX += 10;
+    
     [self reDraw];
         
 }
