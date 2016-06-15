@@ -34,13 +34,30 @@
     finnCoordX = finnCharc.center.x;
     finnCoordY = [[UIScreen mainScreen] bounds].size.height * 3/4;
     
-    [self reDraw];
+    
+    //Sword size      52px X 112px
+    
+    sword1yCoords = -[aSword1 frame].size.height/2;
+    sword2yCoords = -[aSword1 frame].size.height/2;
+    
+    sword1xCoords = [aSword1 frame].size.width/2 + rand() % (int)([[UIScreen mainScreen] bounds].size.width-[aSword1 frame].size.width/2);
+    sword2xCoords = [aSword2 frame].size.width/2 + rand() % (int)([[UIScreen mainScreen] bounds].size.width-[aSword2 frame].size.width/2);
+    
+    [self drawLoop];
     
     if (!debug) {
         directionStatus.hidden = true;
     }
     
 }
+
+- (void)drawLoop {
+    
+    moveSwordsDown = [NSTimer scheduledTimerWithTimeInterval:0.05 target:self selector:@selector(reDraw) userInfo:nil repeats:true];
+    if (debug) directionStatus.text = @"Yep, this isn't a infinite loop.";
+    
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -49,6 +66,11 @@
 
 - (void)reDraw{
     finnCharc.center = CGPointMake(finnCoordX, finnCoordY);
+    
+    sword1yCoords = sword1yCoords + 20;
+    sword2yCoords = sword2yCoords + 20;
+    aSword1.center = CGPointMake(sword1xCoords, sword1yCoords);
+    aSword2.center = CGPointMake(sword2xCoords, sword2yCoords);
 }
 
 - (IBAction)leftButton:(id)sender {

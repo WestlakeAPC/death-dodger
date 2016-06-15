@@ -17,6 +17,15 @@
     char Direct;
     bool debug;
     
+    IBOutlet UIImageView *aSword1;
+    IBOutlet UIImageView *aSword2;
+    CGFloat sword1xCoords;
+    CGFloat sword2xCoords;
+    CGFloat sword1yCoords;
+    CGFloat sword2yCoords;
+    
+    NSTimer *moveSwordsDown;
+
 }
 
 
