@@ -67,8 +67,14 @@
 - (void)reDraw{
     finnCharc.center = CGPointMake(finnCoordX, finnCoordY);
     
-    sword1yCoords = sword1yCoords + 20;
-    sword2yCoords = sword2yCoords + 20;
+    if (aSword1.center.y<=[[UIScreen mainScreen] bounds].size.height+[aSword1 frame].size.height/2)
+        sword1yCoords = sword1yCoords + 20;
+    else
+        sword1yCoords = -[aSword1 frame].size.height/2 - 200;
+    if (aSword2.center.y<=[[UIScreen mainScreen] bounds].size.height+[aSword2 frame].size.height/2)
+        sword2yCoords = sword2yCoords + 20;
+    else
+        sword2yCoords = -[aSword2 frame].size.height/2 - 200;
     aSword1.center = CGPointMake(sword1xCoords, sword1yCoords);
     aSword2.center = CGPointMake(sword2xCoords, sword2yCoords);
 }
