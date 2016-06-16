@@ -72,6 +72,7 @@
     } else {
         sword1yCoords = -[aSword1 frame].size.height/2 - 200;
         sword1xCoords = [aSword1 frame].size.width/2 + rand() % (int)([[UIScreen mainScreen] bounds].size.width-[aSword1 frame].size.width/2);
+        aSword1.hidden = false;
     }
     
     if (aSword2.center.y<=[[UIScreen mainScreen] bounds].size.height+[aSword2 frame].size.height/2) {
@@ -79,7 +80,11 @@
     } else {
         sword2yCoords = -[aSword2 frame].size.height/2 - 200;
         sword2xCoords = [aSword2 frame].size.width/2 + rand() % (int)([[UIScreen mainScreen] bounds].size.width-[aSword2 frame].size.width/2);
+        aSword2.hidden = false;
     }
+    
+    if ([self checkCollision:aSword1]) { aSword1.hidden=true; }
+    if ([self checkCollision:aSword2]) { aSword2.hidden=true; }
     
     aSword1.center = CGPointMake(sword1xCoords, sword1yCoords);
     aSword2.center = CGPointMake(sword2xCoords, sword2yCoords);
@@ -103,6 +108,13 @@
     
     [self reDraw];
         
+}
+
+- (GLboolean)checkCollision:(UIImageView*)aSword{
+    return (aSword.center.x-[aSword frame].size.width/2 < finnCharc.center.x+[finnCharc frame].size.width/2 && // X Overlap
+        finnCharc.center.x-[finnCharc frame].size.width/2 < aSword.center.x+[aSword frame].size.width/2 &&
+        aSword.center.y-[aSword frame].size.height/2 < finnCharc.center.y+[finnCharc frame].size.height/2 && // Y Overlap
+        finnCharc.center.y-[finnCharc frame].size.height/2 < aSword.center.y+[aSword frame].size.height/2);
 }
 
 @end
