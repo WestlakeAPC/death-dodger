@@ -67,14 +67,20 @@
 - (void)reDraw{
     finnCharc.center = CGPointMake(finnCoordX, finnCoordY);
     
-    if (aSword1.center.y<=[[UIScreen mainScreen] bounds].size.height+[aSword1 frame].size.height/2)
+    if (aSword1.center.y<=[[UIScreen mainScreen] bounds].size.height+[aSword1 frame].size.height/2) {
         sword1yCoords = sword1yCoords + 20;
-    else
+    } else {
         sword1yCoords = -[aSword1 frame].size.height/2 - 200;
-    if (aSword2.center.y<=[[UIScreen mainScreen] bounds].size.height+[aSword2 frame].size.height/2)
+        sword1xCoords = [aSword1 frame].size.width/2 + rand() % (int)([[UIScreen mainScreen] bounds].size.width-[aSword1 frame].size.width/2);
+    }
+    
+    if (aSword2.center.y<=[[UIScreen mainScreen] bounds].size.height+[aSword2 frame].size.height/2) {
         sword2yCoords = sword2yCoords + 20;
-    else
+    } else {
         sword2yCoords = -[aSword2 frame].size.height/2 - 200;
+        sword2xCoords = [aSword2 frame].size.width/2 + rand() % (int)([[UIScreen mainScreen] bounds].size.width-[aSword2 frame].size.width/2);
+    }
+    
     aSword1.center = CGPointMake(sword1xCoords, sword1yCoords);
     aSword2.center = CGPointMake(sword2xCoords, sword2yCoords);
 }
