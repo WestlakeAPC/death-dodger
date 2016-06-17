@@ -1,9 +1,10 @@
 //
 //  ViewController.m
-//  DeathDodger
+//  Death_Dodger
 //
-//  Created by Joseph Jin on 6/14/16.
+//  Created by Joseph Jin on 5/22/16.
 //  Copyright (c) 2016 Animator Joe. All rights reserved.
+//
 //
 // ================================================================================
 //
@@ -29,14 +30,37 @@
     //        |
     //       \|/
     debug = false;
+    //Initial Values and Setup
+    playerScore = 0;
+    deathScreen.hidden = true;
+    deathStatus =false;
+    playerScoreInGame.text = [[NSString alloc] initWithFormat:@"Your Score: %d",playerScore];
+    if (!debug) {directionStatus.hidden = true;}
     
-    directionStatus.hidden = false;
+    //Initial Character Placemet
     finnCoordX = finnCharc.center.x;
-    finnCoordY = finnCharc.center.y;
+    finnCoordY = [[UIScreen mainScreen] bounds].size.height * 3/4;
     
-    //This is like a main loop or function.
-    [self drawSwords];
-        
+    //Initial Sword Placement
+    //Sword size      52px X 112px
+    sword1yCoords = -[aSword1 frame].size.height/2;
+    sword2yCoords = -[aSword1 frame].size.height/2;
+    
+    sword1xCoords = [aSword1 frame].size.width/2 + rand() % (int)([[UIScreen mainScreen] bounds].size.width-[aSword1 frame].size.width/2);
+    
+    sword2xCoords = [aSword2 frame].size.width/2 + rand() % (int)([[UIScreen mainScreen] bounds].size.width-[aSword2 frame].size.width/2);
+    
+    [self drawLoop];
+    
+}
+
+//Calling reDraw
+- (void)drawLoop {
+    
+    moveSwordsDown = [NSTimer scheduledTimerWithTimeInterval:0.05 target:self selector:@selector(reDraw) userInfo:nil repeats:true];
+    
+    if (debug) directionStatus.text = @"Yep, this isn't a infinite loop.";
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -44,70 +68,103 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)reDraw {
-    //Charac Movement
-    if(!(finnCoordX <= 20)){
+//Movement of Sword
+- (void)reDraw{
+    
+    if (!deathStatus) {
+        finnCharc.center = CGPointMake(finnCoordX, finnCoordY);
+    
+        if (aSword1.center.y<=[[UIScreen mainScreen] bounds].size.height+[aSword1 frame].size.height/2) {
+        sword1yCoords = sword1yCoords + 20;
+    } else {
+        sword1yCoords = -[aSword1 frame].size.height/2;
+        sword1xCoords = [aSword1 frame].size.width/2 + rand() % (int)([[UIScreen mainScreen] bounds].size.width-[aSword1 frame].size.width);
+        aSword1.hidden = false;
+        playerScore = playerScore + 1;
+        //playerScoreInGame.text = [[NSString alloc] initWithFormat:@"Your Score: %d",playerScore];
+    }
+    
+        if (aSword2.center.y<=[[UIScreen mainScreen] bounds].size.height+[aSword2 frame].size.height/2) {
+        sword2yCoords = sword2yCoords + 20;
+    } else {
+        sword2yCoords = -[aSword2 frame].size.height/2 - 200;
+        sword2xCoords = [aSword2 frame].size.width/2 + rand() % (int)([[UIScreen mainScreen] bounds].size.width-[aSword2 frame].size.width);
+        aSword2.hidden = false;
+        playerScore = playerScore + 1;
+        //playerScoreInGame.text = [[NSString alloc] initWithFormat:@"Your Score: %d",playerScore];
+    }
+    
+        if ([self checkCollision:aSword1]) {[self playerDidDie]; deathStatus = true;}
+        if ([self checkCollision:aSword2]) {[self playerDidDie]; deathStatus = true;}
+    
+        aSword1.center = CGPointMake(sword1xCoords, sword1yCoords);
+        aSword2.center = CGPointMake(sword2xCoords, sword2yCoords);
         
-        if (!(finnCoordX >= 350)){
-            
-            finnCharc.center = CGPointMake(finnCoordX, finnCoordY);
-            
-        }
     }
 }
 
-- (void)drawSwords {
-    //Sword size      52px X 112px
-    sword1yCoords = -56;
-    sword2yCoords = -56;
+- (void)playerDidDie{
     
-    sword1xCoords = 26 + rand() % 323;
-    sword2xCoords = 26 + rand() % 323;
-    
-    moveSwordsDown = [NSTimer scheduledTimerWithTimeInterval:0.05 target:self selector:@selector(dropSwords) userInfo:nil repeats:true];
-    directionStatus.text = @"Yep, this isn't a infinite loop.";
-        
-}
-
-- (void)dropSwords {
-    
-    sword1yCoords = sword1yCoords + 20;
-    sword2yCoords = sword2yCoords + 20;
+    //Score
     aSword1.center = CGPointMake(sword1xCoords, sword1yCoords);
     aSword2.center = CGPointMake(sword2xCoords, sword2yCoords);
+    deathScreen.hidden = false;
+    playerScoreOnScreen.text = [[NSString alloc] initWithFormat:@"%d",playerScore];
     
 }
 
 - (IBAction)leftButton:(id)sender {
     
-    //Left Button
-    if (debug){
-        
-        directionStatus.text = @"left";
-        
-    }
+    if (debug) directionStatus.text = @"left";
     
-    if(!(finnCoordX <= 20)){
-        finnCoordX -= 10;
-        [self reDraw];
-    }
+    if(!(finnCoordX <= [finnCharc frame].size.width/2)) finnCoordX -= 10;
+    
+    [self reDraw];
     
 }
 
 - (IBAction)rightButton:(id)sender {
     
-    //Right Button
-    if (debug){
-        
-        directionStatus.text = @"right";
-        
-    }
+    if (debug) directionStatus.text = @"right";
     
-    if(!(finnCoordX >= 350)){
-        finnCoordX += 10;
-        [self reDraw];
-    }
+    if (!(finnCoordX >=  [[UIScreen mainScreen] bounds].size.width-[finnCharc frame].size.width/2)) finnCoordX += 10;
     
+    [self reDraw];
+    
+}
+
+- (IBAction)restartButton:(id)sender {
+    
+    //Restating Initial Character Placemet
+    finnCoordX = finnCharc.center.x;
+    finnCoordY = [[UIScreen mainScreen] bounds].size.height * 3/4;
+    
+    //Restating Initial Sword Placement
+    sword1yCoords = -[aSword1 frame].size.height/2;
+    sword2yCoords = -[aSword1 frame].size.height/2;
+    
+    sword1xCoords = [aSword1 frame].size.width/2 + rand() % (int)([[UIScreen mainScreen] bounds].size.width-[aSword1 frame].size.width/2);
+    
+    sword2xCoords = [aSword2 frame].size.width/2 + rand() % (int)([[UIScreen mainScreen] bounds].size.width-[aSword2 frame].size.width/2);
+    
+    //Run Game
+    deathStatus = false;
+    deathScreen.hidden = true;
+    playerScore = 0;
+    playerScoreInGame.text = [[NSString alloc] initWithFormat:@"Your Score: %d",playerScore];
+    
+}
+
+//Returns Death Value (Boolean)
+- (GLboolean)checkCollision:(UIImageView*)aSword{
+    
+    return (aSword.center.x-[aSword frame].size.width/2 < finnCharc.center.x+[finnCharc frame].size.width/2 && // X Overlap
+            
+            finnCharc.center.x-[finnCharc frame].size.width/2 < aSword.center.x+[aSword frame].size.width/2 &&
+            
+            aSword.center.y-[aSword frame].size.height/2 < finnCharc.center.y+[finnCharc frame].size.height/2 && // Y Overlap
+            
+            finnCharc.center.y-[finnCharc frame].size.height/2 < aSword.center.y+[aSword frame].size.height/2);
 }
 
 @end

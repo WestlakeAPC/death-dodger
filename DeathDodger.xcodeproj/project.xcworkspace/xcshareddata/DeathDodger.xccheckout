@@ -5,19 +5,19 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>8CB2FDE0-D5A9-418C-AB86-703C45DFC95D</string>
+	<string>4FCE0508-6D66-4D6F-BAAF-72401A6892D0</string>
 	<key>IDESourceControlProjectName</key>
-	<string>Death_Dodger</string>
+	<string>DeathDodger</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>C5C4E2D586C7919B6BC430E49DA14F91BBA5F106</key>
+		<key>679DA1E688732550E4A1829C8793BD1745455A39</key>
 		<string>https://github.com/EtherTyper/finn-knife-game.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Death_Dodger.xcodeproj</string>
+	<string>DeathDodger.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>C5C4E2D586C7919B6BC430E49DA14F91BBA5F106</key>
+		<key>679DA1E688732550E4A1829C8793BD1745455A39</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -25,16 +25,16 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>C5C4E2D586C7919B6BC430E49DA14F91BBA5F106</string>
+	<string>679DA1E688732550E4A1829C8793BD1745455A39</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>C5C4E2D586C7919B6BC430E49DA14F91BBA5F106</string>
+			<string>679DA1E688732550E4A1829C8793BD1745455A39</string>
 			<key>IDESourceControlWCCName</key>
-			<string>Death_Dodger</string>
+			<string>DeathDodger</string>
 		</dict>
 	</array>
 </dict>

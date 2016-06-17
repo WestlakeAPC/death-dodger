@@ -16,6 +16,15 @@
     IBOutlet UIImageView *aSword1;
     IBOutlet UIImageView *aSword2;
     
+    IBOutlet UIView *deathScreen;
+    IBOutlet UILabel *playerScoreOnScreen;
+    IBOutlet UILabel *playerScoreInGame;
+    
+    bool debug;
+    bool deathStatus;
+    
+    int playerScore;
+    
     CGFloat finnCoordX;
     CGFloat finnCoordY;
     
@@ -26,12 +35,11 @@
     
     NSTimer *moveSwordsDown;
     
-    bool debug;
-    
 }
 
 - (IBAction)leftButton:(id)sender;
 - (IBAction)rightButton:(id)sender;
+- (IBAction)restartButton:(id)sender;
 
 @end
 

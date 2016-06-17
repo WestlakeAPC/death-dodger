@@ -74,19 +74,17 @@
                                     <action selector="leftButton:" destination="kCI-4y-Odp" eventType="touchUpInside" id="FKU-WT-vT5"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wbl-hP-VVD">
-                                <rect key="frame" x="188" y="0.0" width="187" height="667"/>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="rightButton:" destination="kCI-4y-Odp" eventType="touchUpInside" id="LOB-Xp-Eyb"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Direction" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="22o-t5-ZXh">
                                 <rect key="frame" x="16" y="97" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Score:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pnT-h9-747">
+                                <rect key="frame" x="16" y="20" width="219" height="29"/>
+                                <color key="backgroundColor" red="0.76824674520000003" green="0.96951893680000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="theSword.png" translatesAutoresizingMaskIntoConstraints="NO" id="fqQ-XH-fFM">
@@ -98,6 +96,43 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Finn.png" translatesAutoresizingMaskIntoConstraints="NO" id="6WR-LR-5kS">
                                 <rect key="frame" x="165" y="526" width="70" height="121"/>
                             </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="naU-4k-p0V">
+                                <rect key="frame" x="14" y="248" width="347" height="171"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Score:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WTe-Y5-4qY">
+                                        <rect key="frame" x="107" y="18" width="132" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="21" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mr1-mR-kyk">
+                                        <rect key="frame" x="137" y="68" width="73" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pQd-0Q-rLQ">
+                                        <rect key="frame" x="57" y="112" width="233" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <state key="normal" title="Restart">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="restartButton:" destination="kCI-4y-Odp" eventType="touchUpInside" id="0jX-VX-3Oq"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.52302140720000001" green="1" blue="0.48953829370000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wbl-hP-VVD">
+                                <rect key="frame" x="188" y="0.0" width="187" height="667"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="rightButton:" destination="kCI-4y-Odp" eventType="touchUpInside" id="LOB-Xp-Eyb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -105,8 +140,11 @@
                     <connections>
                         <outlet property="aSword1" destination="fqQ-XH-fFM" id="hPH-7f-GzQ"/>
                         <outlet property="aSword2" destination="nSD-AB-XTp" id="I8B-bq-lS3"/>
+                        <outlet property="deathScreen" destination="naU-4k-p0V" id="AJF-tT-fls"/>
                         <outlet property="directionStatus" destination="22o-t5-ZXh" id="uKe-sZ-DDc"/>
                         <outlet property="finnCharc" destination="6WR-LR-5kS" id="D4K-8d-2FJ"/>
+                        <outlet property="playerScoreInGame" destination="pnT-h9-747" id="TjI-eh-oGT"/>
+                        <outlet property="playerScoreOnScreen" destination="Mr1-mR-kyk" id="y9m-cJ-btY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JG7-0h-5FE" userLabel="First Responder" sceneMemberID="firstResponder"/>
