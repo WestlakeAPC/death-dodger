@@ -13,6 +13,7 @@ class GameScene: SKScene {
     
     private var label : SKLabelNode?
     private var rocket : SKSpriteNode?
+    private var over : SKShapeNode?
     private var spinnyNode : SKShapeNode?
     private var swords = [SKSpriteNode?](repeating: nil, count: 4);
     
@@ -21,12 +22,17 @@ class GameScene: SKScene {
     let down = SKAction.moveBy(x: 0, y: -20, duration: 0.03)
     
     var initialized : Bool = false;
+    var continued : Bool = false;
+    var score : CGFloat = 0.0;
     
     override func didMove(to view: SKView) {
         
         // Get label node from scene and store it for use later
         self.label = self.childNode(withName: "//helloLabel") as? SKLabelNode
+        self.label?.isHidden = true;
+        
         self.rocket = self.childNode(withName: "//finnCharc") as? SKSpriteNode
+        self.over = self.childNode(withName: "overScreen") as? SKShapeNode
         
         if !initialized {
             for i in 1 ... swords.endIndex-1 {
@@ -39,29 +45,66 @@ class GameScene: SKScene {
             
             rocket?.position = CGPoint(x: self.frame.origin.x + self.frame.width/2,
                                        y: self.frame.origin.y + self.frame.height/4)
+            
+            over?.position = CGPoint(x: self.frame.origin.x + self.frame.width/2,
+                                     y: self.frame.origin.y + self.frame.height/2)
+            over?.isHidden = true
+            over?.name = "Over-screen"
+            over?.isUserInteractionEnabled = false
+            
+            continued = true;
             initialized = true;
         }
         
-        if let label = self.label {
-            label.alpha = 0.0
-            label.run(SKAction.fadeIn(withDuration: 2.0))
-            label.text = String("Spaceship");
-        }
+        if continued {
+            if let label = self.label {
+                label.alpha = 0.0
+                label.run(SKAction.fadeIn(withDuration: 2.0))
+                label.text = String("Spaceship");
+            }
         
-        // Create shape node to use during mouse interaction
-        let w = (self.size.width + self.size.height) * 0.05
-        self.spinnyNode = SKShapeNode.init(rectOf: CGSize.init(width: w, height: w), cornerRadius: w * 0.3)
+            // Create shape node to use during mouse interaction
+            let w = (self.size.width + self.size.height) * 0.05
+            self.spinnyNode = SKShapeNode.init(rectOf: CGSize.init(width: w, height: w), cornerRadius: w * 0.3)
         
-        if let spinnyNode = self.spinnyNode {
-            spinnyNode.lineWidth = 2.5
+            if let spinnyNode = self.spinnyNode {
+                spinnyNode.lineWidth = 2.5
             
-            spinnyNode.run(SKAction.repeatForever(SKAction.rotate(byAngle: CGFloat(M_PI), duration: 1)))
-            spinnyNode.run(SKAction.sequence([SKAction.wait(forDuration: 0.5),
-                                              SKAction.fadeOut(withDuration: 0.5),
-                                              SKAction.removeFromParent()]))
+                spinnyNode.run(SKAction.repeatForever(SKAction.rotate(byAngle: CGFloat(M_PI), duration: 1)))
+                spinnyNode.run(SKAction.sequence([SKAction.wait(forDuration: 0.5),
+                                                  SKAction.fadeOut(withDuration: 0.5),
+                                                  SKAction.removeFromParent()]))
+            }
         }
     }
     
+    func playerDidDie(){
+        continued = false;
+        
+        self.over?.setScale(0.0)
+        self.over?.isHidden = false
+        self.rocket?.isHidden = true
+        
+        let deathLabel = SKLabelNode.init(text: "You died! Restart?")
+        deathLabel.fontSize = 36;
+        deathLabel.setScale(0.33);
+        deathLabel.fontColor = #colorLiteral(red: 0.6823074818, green: 0.08504396677, blue: 0.06545677781, alpha: 1);
+        self.over?.addChild(deathLabel)
+        deathLabel.position = CGPoint(x: (self.over?.frame.origin.x)! + (self.over?.frame.width)!/2,
+                                      y: (self.over?.frame.origin.y)! + (self.over?.frame.height)!/2)
+        
+        let pLabel = SKLabelNode.init(text: String(score)+" points!")
+        pLabel.fontSize = 45;
+        pLabel.fontName = "San-Francisco-Bold";
+        pLabel.setScale(0.33);
+        pLabel.fontColor = #colorLiteral(red: 0.6823074818, green: 0.08504396677, blue: 0.06545677781, alpha: 1);
+        self.over?.addChild(pLabel)
+        pLabel.position = CGPoint(x: (self.over?.frame.origin.x)! + (self.over?.frame.width)!/2,
+                                      y: (self.over?.frame.origin.y)! + (self.over?.frame.height)!/2 + 25)
+
+        
+        self.over?.run(SKAction.scale(to: 4.0, duration: 1.0))
+    }
     
     func touchDown(atPoint pos : CGPoint) {
         if let n = self.spinnyNode?.copy() as! SKShapeNode? {
@@ -79,13 +122,15 @@ class GameScene: SKScene {
         }
         
         if let rocket = self.rocket {
-            if pos.x < self.frame.origin.x + self.frame.width/2{
-                if (self.rocket?.position.x)! - (self.rocket?.frame.width)!/2 > self.frame.origin.x {
-                    rocket.run(self.left);
-                }
-            } else if pos.x >= self.frame.origin.x + self.frame.width/2 {
-                if (self.rocket?.position.x)! + (self.rocket?.frame.width)!/2 <= self.frame.origin.x + self.frame.width {
-                    rocket.run(self.right);
+            if continued {
+                if pos.x < self.frame.origin.x + self.frame.width/2{
+                    if (self.rocket?.position.x)! - (self.rocket?.frame.width)!/2 > self.frame.origin.x {
+                        rocket.run(self.left);
+                    }
+                } else if pos.x >= self.frame.origin.x + self.frame.width/2 {
+                    if (self.rocket?.position.x)! + (self.rocket?.frame.width)!/2 <= self.frame.origin.x + self.frame.width {
+                        rocket.run(self.right);
+                    }
                 }
             }
         }
@@ -106,6 +151,12 @@ class GameScene: SKScene {
         
         for t in touches {
             self.touchDown(atPoint: t.location(in: self))
+            
+            for i in self.nodes(at: t.location(in: self)) {
+                if !continued && i.name == "Over-screen" {
+                    self.initialized = false;
+                }
+            }
         }
     }
     
@@ -127,10 +178,14 @@ class GameScene: SKScene {
             swords[i]?.run(self.down);
             if ((self.rocket?.intersects(swords[i]!)) == true) {
                 swords[i]?.isHidden = true;
+                self.playerDidDie();
             } else if (swords[i]?.position.y <= self.frame.origin.y + (swords[i]?.frame.height)!/2) {
-                swords[i]?.position = CGPoint(x: self.frame.origin.x + CGFloat(arc4random_uniform(UInt32(self.frame.width))),
-                                              y: self.frame.origin.y + self.frame.width * 2)
-                swords[i]?.isHidden = false;
+                if continued {
+                    swords[i]?.position = CGPoint(x: self.frame.origin.x + CGFloat(arc4random_uniform(UInt32(self.frame.width))),
+                                                  y: self.frame.origin.y + self.frame.width * 2)
+                    swords[i]?.isHidden = false;
+                    score+=0.5;
+                }
             }
         }
     }
