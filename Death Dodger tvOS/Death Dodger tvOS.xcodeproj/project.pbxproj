@@ -18,6 +18,7 @@
 		171418CB1D161B930020FC02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171418C31D1619AA0020FC02 /* AppDelegate.swift */; };
 		171418CC1D161C8A0020FC02 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1714188E1D1616970020FC02 /* Main.storyboard */; };
 		171418CE1D1621350020FC02 /* Gomez10.png in Resources */ = {isa = PBXBuildFile; fileRef = 171418CD1D1621350020FC02 /* Gomez10.png */; };
+		17C892CC1D175560007D731D /* Confetti.sks in Resources */ = {isa = PBXBuildFile; fileRef = 17C892CB1D175560007D731D /* Confetti.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		171418C11D16198B0020FC02 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GameScene.swift; path = "../Death Dodger/GameScene.swift"; sourceTree = "<group>"; };
 		171418C31D1619AA0020FC02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = "../Death Dodger/AppDelegate.swift"; sourceTree = "<group>"; };
 		171418CD1D1621350020FC02 /* Gomez10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Gomez10.png; path = "../Death Dodger/Gomez10.png"; sourceTree = "<group>"; };
+		17C892CB1D175560007D731D /* Confetti.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; name = Confetti.sks; path = "../Death Dodger/Confetti.sks"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 		171418761D1616970020FC02 = {
 			isa = PBXGroup;
 			children = (
+				17C892CB1D175560007D731D /* Confetti.sks */,
 				171418CD1D1621350020FC02 /* Gomez10.png */,
 				171418C31D1619AA0020FC02 /* AppDelegate.swift */,
 				171418C11D16198B0020FC02 /* GameScene.swift */,
@@ -250,6 +253,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17C892CC1D175560007D731D /* Confetti.sks in Resources */,
 				171418CE1D1621350020FC02 /* Gomez10.png in Resources */,
 				171418851D1616970020FC02 /* GameScene.sks in Resources */,
 				171418871D1616970020FC02 /* Actions.sks in Resources */,
@@ -513,6 +517,7 @@
 				171418AE1D1616970020FC02 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		171418AF1D1616970020FC02 /* Build configuration list for PBXNativeTarget "Death Dodger tvOSTests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +526,7 @@
 				171418B11D1616970020FC02 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		171418B21D1616970020FC02 /* Build configuration list for PBXNativeTarget "Death Dodger tvOSUITests" */ = {
 			isa = XCConfigurationList;
@@ -529,6 +535,7 @@
 				171418B41D1616970020FC02 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

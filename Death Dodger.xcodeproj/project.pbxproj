@@ -18,6 +18,7 @@
 		17C408061D12DA500017B400 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17C408041D12DA500017B400 /* LaunchScreen.storyboard */; };
 		17C408111D12DA500017B400 /* Death_DodgerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C408101D12DA500017B400 /* Death_DodgerTests.swift */; };
 		17C4081C1D12DA500017B400 /* Death_DodgerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C4081B1D12DA500017B400 /* Death_DodgerUITests.swift */; };
+		17C892C61D174F77007D731D /* Confetti.sks in Resources */ = {isa = PBXBuildFile; fileRef = 17C892C51D174F77007D731D /* Confetti.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		17C408171D12DA500017B400 /* Death DodgerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Death DodgerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		17C4081B1D12DA500017B400 /* Death_DodgerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Death_DodgerUITests.swift; sourceTree = "<group>"; };
 		17C4081D1D12DA500017B400 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17C892C51D174F77007D731D /* Confetti.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Confetti.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 				17C407F51D12DA500017B400 /* AppDelegate.swift */,
 				17C407F71D12DA500017B400 /* GameScene.sks */,
 				17C407F91D12DA500017B400 /* Actions.sks */,
+				17C892C51D174F77007D731D /* Confetti.sks */,
 				17C407FB1D12DA500017B400 /* GameScene.swift */,
 				17C407FD1D12DA500017B400 /* GameViewController.swift */,
 				17AA00CA1D134661005E8EB7 /* Gomez10.png */,
@@ -317,6 +320,7 @@
 				17C407F81D12DA500017B400 /* GameScene.sks in Resources */,
 				17C408031D12DA500017B400 /* Assets.xcassets in Resources */,
 				17AA00CB1D134661005E8EB7 /* Gomez10.png in Resources */,
+				17C892C61D174F77007D731D /* Confetti.sks in Resources */,
 				17C408061D12DA500017B400 /* LaunchScreen.storyboard in Resources */,
 				17C407FA1D12DA500017B400 /* Actions.sks in Resources */,
 			);

@@ -16,6 +16,7 @@ class GameScene: SKScene {
     private var over : SKShapeNode?
     private var spinnyNode : SKShapeNode?
     private var swords = [SKSpriteNode?](repeating: nil, count: 4);
+    private var emitter = [SKEmitterNode?](repeating: nil, count: 4);
     
     let left = SKAction.moveBy(x: -60, y: 0, duration: 0.3)
     let right = SKAction.moveBy(x: 60, y: 0, duration: 0.3)
@@ -78,13 +79,14 @@ class GameScene: SKScene {
         
         let pLabel = SKLabelNode.init(text: String(score)+" points!")
         pLabel.fontSize = 45;
-        pLabel.fontName = "San-Francisco-Bold";
+//        pLabel.fontName = "San-Francisco-Bold";
         pLabel.setScale(0.33);
         pLabel.fontColor = #colorLiteral(red: 0.6823074818, green: 0.08504396677, blue: 0.06545677781, alpha: 1);
         self.over?.addChild(pLabel)
         pLabel.position = CGPoint(x: (self.over?.frame.origin.x)! + (self.over?.frame.width)!/2,
                                       y: (self.over?.frame.origin.y)! + (self.over?.frame.height)!/2 + 25)
 
+        for i in emitter { i?.particleBirthRate = 40 }
         
         self.over?.run(SKAction.scale(to: 4.0, duration: 1.0))
     }
@@ -186,6 +188,20 @@ class GameScene: SKScene {
                                       y: self.frame.origin.y + self.frame.width * 2)
             sword?.isHidden = false
         };
+        
+        for i in 0...emitter.endIndex-1 {
+            if (emitter[i] == nil) {
+                emitter[i] = SKEmitterNode(fileNamed: "Confetti")
+                let extraX = CGFloat(i%2) * self.frame.width/2
+                let extraY = CGFloat((i/2)%2) * self.frame.height/2
+                emitter[i]?.position = CGPoint(x: self.frame.origin.x + self.frame.width/4 + extraX,
+                                           y: self.frame.origin.y + self.frame.height/4 + extraY)
+                
+                self.addChild(emitter[i]!)
+            }
+            
+            emitter[i]?.particleBirthRate = 0
+        }
         
         rocket?.position = CGPoint(x: self.frame.origin.x + self.frame.width/2,
                                    y: self.frame.origin.y + self.frame.height/4)
