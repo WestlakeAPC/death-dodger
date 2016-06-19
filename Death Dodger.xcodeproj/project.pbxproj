@@ -21,6 +21,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		171418BB1D1616980020FC02 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 171418B51D1616970020FC02 /* Death Dodger tvOS.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1714187F1D1616970020FC02;
+			remoteInfo = "Death Dodger tvOS";
+		};
+		171418BD1D1616980020FC02 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 171418B51D1616970020FC02 /* Death Dodger tvOS.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 171418981D1616970020FC02;
+			remoteInfo = "Death Dodger tvOSTests";
+		};
+		171418BF1D1616980020FC02 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 171418B51D1616970020FC02 /* Death Dodger tvOS.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 171418A31D1616970020FC02;
+			remoteInfo = "Death Dodger tvOSUITests";
+		};
 		17C4080D1D12DA500017B400 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 17C407EA1D12DA500017B400 /* Project object */;
@@ -38,6 +59,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		171418B51D1616970020FC02 /* Death Dodger tvOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Death Dodger tvOS.xcodeproj"; path = "Death Dodger tvOS/Death Dodger tvOS.xcodeproj"; sourceTree = "<group>"; };
 		17AA00CA1D134661005E8EB7 /* Gomez10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Gomez10.png; sourceTree = "<group>"; };
 		17C407F21D12DA500017B400 /* Death Dodger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Death Dodger.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		17C407F51D12DA500017B400 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -82,9 +104,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		171418B61D1616970020FC02 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				171418BC1D1616980020FC02 /* Death Dodger tvOS.app */,
+				171418BE1D1616980020FC02 /* Death Dodger tvOSTests.xctest */,
+				171418C01D1616980020FC02 /* Death Dodger tvOSUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		17C407E91D12DA500017B400 = {
 			isa = PBXGroup;
 			children = (
+				171418B51D1616970020FC02 /* Death Dodger tvOS.xcodeproj */,
 				17C407F41D12DA500017B400 /* Death Dodger */,
 				17C4080F1D12DA500017B400 /* Death DodgerTests */,
 				17C4081A1D12DA500017B400 /* Death DodgerUITests */,
@@ -236,6 +269,12 @@
 			mainGroup = 17C407E91D12DA500017B400;
 			productRefGroup = 17C407F31D12DA500017B400 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 171418B61D1616970020FC02 /* Products */;
+					ProjectRef = 171418B51D1616970020FC02 /* Death Dodger tvOS.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				17C407F11D12DA500017B400 /* Death Dodger */,
@@ -244,6 +283,30 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		171418BC1D1616980020FC02 /* Death Dodger tvOS.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "Death Dodger tvOS.app";
+			remoteRef = 171418BB1D1616980020FC02 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		171418BE1D1616980020FC02 /* Death Dodger tvOSTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Death Dodger tvOSTests.xctest";
+			remoteRef = 171418BD1D1616980020FC02 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		171418C01D1616980020FC02 /* Death Dodger tvOSUITests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Death Dodger tvOSUITests.xctest";
+			remoteRef = 171418BF1D1616980020FC02 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		17C407F01D12DA500017B400 /* Resources */ = {
