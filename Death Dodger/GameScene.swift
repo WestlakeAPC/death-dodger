@@ -18,8 +18,8 @@ class GameScene: SKScene {
     private var swords = [SKSpriteNode?](repeating: nil, count: 4);
     private var emitter = [SKEmitterNode?](repeating: nil, count: 4);
     
-    let left = SKAction.moveBy(x: -60, y: 0, duration: 0.3)
-    let right = SKAction.moveBy(x: 60, y: 0, duration: 0.3)
+    let left = SKAction.moveBy(x: -100, y: 0, duration: 0.3)
+    let right = SKAction.moveBy(x: 100, y: 0, duration: 0.3)
     let down = SKAction.moveBy(x: 0, y: -20, duration: 0.03)
     
     var initialized : Bool = false;
@@ -67,6 +67,7 @@ class GameScene: SKScene {
         self.over?.setScale(0.0)
         self.over?.isHidden = false
         self.over?.alpha = 1.0
+        self.over?.removeAllChildren()
         self.rocket?.isHidden = true
         
         let deathLabel = SKLabelNode.init(text: "You died! Restart?")
@@ -215,6 +216,7 @@ class GameScene: SKScene {
         
         continued = true;
         initialized = true;
+        self.score = 0.0
     }
     /*
     func checkCollision (aSword: SKSpriteNode) -> Bool {
