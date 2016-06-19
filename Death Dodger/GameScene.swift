@@ -35,25 +35,7 @@ class GameScene: SKScene {
         self.over = self.childNode(withName: "overScreen") as? SKShapeNode
         
         if !initialized {
-            for i in 1 ... swords.endIndex-1 {
-                swords[i] = self.childNode(withName: "//enemy"+String(i)) as? SKSpriteNode
-                let sword = swords[i]
-                
-                sword?.position = CGPoint(x: self.frame.origin.x + CGFloat(arc4random_uniform(UInt32(self.frame.width))),
-                                          y: self.frame.origin.y + self.frame.width * 2)
-            };
-            
-            rocket?.position = CGPoint(x: self.frame.origin.x + self.frame.width/2,
-                                       y: self.frame.origin.y + self.frame.height/4)
-            
-            over?.position = CGPoint(x: self.frame.origin.x + self.frame.width/2,
-                                     y: self.frame.origin.y + self.frame.height/2)
-            over?.isHidden = true
-            over?.name = "Over-screen"
-            over?.isUserInteractionEnabled = false
-            
-            continued = true;
-            initialized = true;
+            initialize()
         }
         
         if continued {
@@ -83,6 +65,7 @@ class GameScene: SKScene {
         
         self.over?.setScale(0.0)
         self.over?.isHidden = false
+        self.over?.alpha = 1.0
         self.rocket?.isHidden = true
         
         let deathLabel = SKLabelNode.init(text: "You died! Restart?")
@@ -154,7 +137,11 @@ class GameScene: SKScene {
             
             for i in self.nodes(at: t.location(in: self)) {
                 if !continued && i.name == "Over-screen" {
-                    self.initialized = false;
+                    self.initialized = false
+                    
+                    self.over?.run(SKAction.fadeOut(withDuration: 1.0), completion: {
+                        self.initialize()
+                    })
                 }
             }
         }
@@ -188,6 +175,30 @@ class GameScene: SKScene {
                 }
             }
         }
+    }
+    
+    func initialize() {
+        for i in 1 ... swords.endIndex-1 {
+            swords[i] = self.childNode(withName: "//enemy"+String(i)) as? SKSpriteNode
+            let sword = swords[i]
+            
+            sword?.position = CGPoint(x: self.frame.origin.x + CGFloat(arc4random_uniform(UInt32(self.frame.width))),
+                                      y: self.frame.origin.y + self.frame.width * 2)
+            sword?.isHidden = false
+        };
+        
+        rocket?.position = CGPoint(x: self.frame.origin.x + self.frame.width/2,
+                                   y: self.frame.origin.y + self.frame.height/4)
+        rocket?.isHidden = false
+        
+        over?.position = CGPoint(x: self.frame.origin.x + self.frame.width/2,
+                                 y: self.frame.origin.y + self.frame.height/2)
+        over?.isHidden = true
+        over?.name = "Over-screen"
+        over?.isUserInteractionEnabled = false
+        
+        continued = true;
+        initialized = true;
     }
     /*
     func checkCollision (aSword: SKSpriteNode) -> Bool {
