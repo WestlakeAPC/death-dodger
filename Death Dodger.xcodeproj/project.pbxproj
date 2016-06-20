@@ -19,6 +19,7 @@
 		17C408111D12DA500017B400 /* Death_DodgerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C408101D12DA500017B400 /* Death_DodgerTests.swift */; };
 		17C4081C1D12DA500017B400 /* Death_DodgerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C4081B1D12DA500017B400 /* Death_DodgerUITests.swift */; };
 		17C892C61D174F77007D731D /* Confetti.sks in Resources */ = {isa = PBXBuildFile; fileRef = 17C892C51D174F77007D731D /* Confetti.sks */; };
+		17C892DC1D182C8D007D731D /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17C892DB1D182C8D007D731D /* GameKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		17C4081B1D12DA500017B400 /* Death_DodgerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Death_DodgerUITests.swift; sourceTree = "<group>"; };
 		17C4081D1D12DA500017B400 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17C892C51D174F77007D731D /* Confetti.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Confetti.sks; sourceTree = "<group>"; };
+		17C892DB1D182C8D007D731D /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17C892DC1D182C8D007D731D /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,6 +127,7 @@
 				17C4080F1D12DA500017B400 /* Death DodgerTests */,
 				17C4081A1D12DA500017B400 /* Death DodgerUITests */,
 				17C407F31D12DA500017B400 /* Products */,
+				17C892DA1D182C8D007D731D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -171,6 +175,14 @@
 				17C4081D1D12DA500017B400 /* Info.plist */,
 			);
 			path = "Death DodgerUITests";
+			sourceTree = "<group>";
+		};
+		17C892DA1D182C8D007D731D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				17C892DB1D182C8D007D731D /* GameKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,6 +256,11 @@
 						DevelopmentTeam = M64HPXXUJF;
 						DevelopmentTeamName = "BERTRAM BRADLEY";
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 1;
+							};
+						};
 					};
 					17C4080B1D12DA500017B400 = {
 						CreatedOnToolsVersion = 8.0;

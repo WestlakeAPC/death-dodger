@@ -9,8 +9,9 @@
 import UIKit
 import SpriteKit
 import GameplayKit
+import GameKit
 
-class GameViewController: UIViewController {
+class GameViewController: UIViewController, GKGameCenterControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +31,8 @@ class GameViewController: UIViewController {
             view.showsFPS = true
             view.showsNodeCount = true
         }
+        
+        authenticateLocalPlayer()
     }
 
     override func shouldAutorotate() -> Bool {
@@ -51,5 +54,57 @@ class GameViewController: UIViewController {
 
     override func prefersStatusBarHidden() -> Bool {
         return true
+    }
+    
+    //send high score to leaderboard
+    func saveHighscore(score:CGFloat) {
+        
+        //check if user is signed in
+        if GKLocalPlayer.localPlayer().isAuthenticated {
+            
+            let scoreReporter = GKScore(leaderboardIdentifier: "g_deathdodger") //leaderboard id here
+            
+            scoreReporter.value = Int64(score) //score variable here (same as above)
+            
+            let scoreArray: [GKScore] = [scoreReporter]
+            
+            GKScore.report(scoreArray, withCompletionHandler: {(error : NSError?) -> Void in
+                if error != nil {
+                    // println("error")
+                }
+            })
+            
+        }
+        
+    }
+    
+    //shows leaderboard screen
+    func showLeader() {
+        let vc = self.view?.window?.rootViewController
+        let gc = GKGameCenterViewController()
+        gc.gameCenterDelegate = self
+        vc?.present(gc, animated: true, completion: nil)
+    }
+    
+    //hides leaderboard screen
+    func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController) {
+        gameCenterViewController.dismiss(animated: true, completion: nil)
+    }
+    
+    //initiate gamecenter
+    func authenticateLocalPlayer(){
+        
+        let localPlayer = GKLocalPlayer.localPlayer()
+        
+        localPlayer.authenticateHandler = {(viewController, error) -> Void in
+            
+            if (viewController != nil) {
+                self.present(viewController!, animated: true, completion: nil)
+            }
+                
+            else {
+                // println((GKLocalPlayer.localPlayer().authenticated))
+            }
+        }
     }
 }
