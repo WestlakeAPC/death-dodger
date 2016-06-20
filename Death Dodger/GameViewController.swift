@@ -12,6 +12,9 @@ import GameplayKit
 import GameKit
 
 class GameViewController: UIViewController, GKGameCenterControllerDelegate {
+    
+    private var scene : SKScene?
+    @IBOutlet private var share : UIButton?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +24,7 @@ class GameViewController: UIViewController, GKGameCenterControllerDelegate {
             if let scene = SKScene(fileNamed: "GameScene") {
                 // Set the scale mode to scale to fit the window
                 scene.scaleMode = .aspectFill
+                self.scene = scene as SKScene?
                 
                 // Present the scene
                 view.presentScene(scene)
@@ -31,6 +35,11 @@ class GameViewController: UIViewController, GKGameCenterControllerDelegate {
             view.showsFPS = true
             view.showsNodeCount = true
         }
+        
+        // Position share button
+        self.share?.center = CGPoint(x: UIScreen.main().bounds.size.width - ((self.share?.frame.size.width)!/2 + 20),
+                                     y: (self.share?.frame.size.height)!/2 + 20)
+        
         
         authenticateLocalPlayer()
     }
@@ -54,6 +63,14 @@ class GameViewController: UIViewController, GKGameCenterControllerDelegate {
 
     override func prefersStatusBarHidden() -> Bool {
         return true
+    }
+    
+    @IBAction func shareButton(){
+        
+        //GameCenter-y stuff to do.
+        saveHighscore(score: ((scene as! GameScene?)?.score)!)
+        showLeader()
+        
     }
     
     //send high score to leaderboard
