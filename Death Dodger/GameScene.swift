@@ -9,6 +9,7 @@
 import SpriteKit
 import GameplayKit
 
+@objc(GameScene)
 class GameScene: SKScene {
     
     private var label : SKLabelNode?
