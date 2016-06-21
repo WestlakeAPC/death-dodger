@@ -430,6 +430,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ethertyper.deathdodger.tvos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Debug;
 		};
@@ -443,6 +444,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ethertyper.deathdodger.tvos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Release;
 		};
