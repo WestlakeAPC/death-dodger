@@ -36,6 +36,10 @@ class GameScene: SKScene {
         self.rocket = self.childNode(withName: "//finnCharc") as? SKSpriteNode
         self.over = self.childNode(withName: "overScreen") as? SKShapeNode
         
+        self.physicsBody = SKPhysicsBody(edgeLoopFrom: self.frame)
+        self.physicsWorld.gravity = CGVector(dx: 0,dy: 0)
+        
+        
         if !initialized {
             initialize()
         }
@@ -207,6 +211,8 @@ class GameScene: SKScene {
         
         rocket?.position = CGPoint(x: self.frame.origin.x + self.frame.width/2,
                                    y: self.frame.origin.y + self.frame.height/4)
+        rocket?.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: (rocket?.frame.width)!,
+                                                                height: (rocket?.frame.height)!))
         rocket?.isHidden = false
         
         over?.position = CGPoint(x: self.frame.origin.x + self.frame.width/2,
