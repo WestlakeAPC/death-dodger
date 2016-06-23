@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17811D281D1C7B1D0051AE02 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 17811D271D1C7B1D0051AE02 /* Settings.bundle */; };
+		17811D2D1D1C7D210051AE02 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 17811D2C1D1C7D210051AE02 /* README.md */; };
 		17AA00CB1D134661005E8EB7 /* Gomez10.png in Resources */ = {isa = PBXBuildFile; fileRef = 17AA00CA1D134661005E8EB7 /* Gomez10.png */; };
 		17C407F61D12DA500017B400 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C407F51D12DA500017B400 /* AppDelegate.swift */; };
 		17C407F81D12DA500017B400 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 17C407F71D12DA500017B400 /* GameScene.sks */; };
@@ -62,6 +64,8 @@
 
 /* Begin PBXFileReference section */
 		171418B51D1616970020FC02 /* Death Dodger tvOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Death Dodger tvOS.xcodeproj"; path = "Death Dodger tvOS/Death Dodger tvOS.xcodeproj"; sourceTree = "<group>"; };
+		17811D271D1C7B1D0051AE02 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		17811D2C1D1C7D210051AE02 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		17AA00CA1D134661005E8EB7 /* Gomez10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Gomez10.png; sourceTree = "<group>"; };
 		17C407F21D12DA500017B400 /* Death Dodger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Death Dodger.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		17C407F51D12DA500017B400 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -144,10 +148,12 @@
 		17C407F41D12DA500017B400 /* Death Dodger */ = {
 			isa = PBXGroup;
 			children = (
+				17811D2C1D1C7D210051AE02 /* README.md */,
 				17C407F51D12DA500017B400 /* AppDelegate.swift */,
 				17C407F71D12DA500017B400 /* GameScene.sks */,
 				17C407F91D12DA500017B400 /* Actions.sks */,
 				17C892C51D174F77007D731D /* Confetti.sks */,
+				17811D271D1C7B1D0051AE02 /* Settings.bundle */,
 				17C407FB1D12DA500017B400 /* GameScene.swift */,
 				17C407FD1D12DA500017B400 /* GameViewController.swift */,
 				17AA00CA1D134661005E8EB7 /* Gomez10.png */,
@@ -333,6 +339,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17811D281D1C7B1D0051AE02 /* Settings.bundle in Resources */,
 				17C408011D12DA500017B400 /* Main.storyboard in Resources */,
 				17C407F81D12DA500017B400 /* GameScene.sks in Resources */,
 				17C408031D12DA500017B400 /* Assets.xcassets in Resources */,
@@ -366,6 +373,7 @@
 			files = (
 				17C407FC1D12DA500017B400 /* GameScene.swift in Sources */,
 				17C407FE1D12DA500017B400 /* GameViewController.swift in Sources */,
+				17811D2D1D1C7D210051AE02 /* README.md in Sources */,
 				17C407F61D12DA500017B400 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

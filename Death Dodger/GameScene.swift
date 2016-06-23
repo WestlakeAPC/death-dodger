@@ -23,6 +23,8 @@ class GameScene: SKScene {
     
     let left = SKAction.moveBy(x: -100, y: 0, duration: 0.3)
     let right = SKAction.moveBy(x: 100, y: 0, duration: 0.3)
+    let spinnyStuff = UserDefaults.standard().value(forKey: "spinnyStuff")
+    let numSwords = UserDefaults.standard().value(forKey: "numSwords")
     
     var initialized : Bool = false;
     var continued : Bool = false;
@@ -109,18 +111,22 @@ class GameScene: SKScene {
     }
     
     func touchDown(atPoint pos : CGPoint) {
-        if let n = self.spinnyNode?.copy() as! SKShapeNode? {
-            n.position = pos
-            n.strokeColor = SKColor.green()
-            self.addChild(n)
+        if self.spinnyStuff as! Bool {
+            if let n = self.spinnyNode?.copy() as! SKShapeNode? {
+                n.position = pos
+                n.strokeColor = SKColor.green()
+                self.addChild(n)
+            }
         }
     }
     
     func touchMoved(toPoint pos : CGPoint) {
-        if let n = self.spinnyNode?.copy() as! SKShapeNode? {
-            n.position = pos
-            n.strokeColor = SKColor.blue()
-            self.addChild(n)
+        if self.spinnyStuff as! Bool {
+            if let n = self.spinnyNode?.copy() as! SKShapeNode? {
+                n.position = pos
+                n.strokeColor = SKColor.blue()
+                self.addChild(n)
+            }
         }
         
         if let rocket = self.rocket {
@@ -139,10 +145,12 @@ class GameScene: SKScene {
     }
     
     func touchUp(atPoint pos : CGPoint) {
-        if let n = self.spinnyNode?.copy() as! SKShapeNode? {
-            n.position = pos
-            n.strokeColor = SKColor.red()
-            self.addChild(n)
+        if self.spinnyStuff as! Bool {
+            if let n = self.spinnyNode?.copy() as! SKShapeNode? {
+                n.position = pos
+                n.strokeColor = SKColor.red()
+                self.addChild(n)
+            }
         }
     }
     
@@ -184,12 +192,17 @@ class GameScene: SKScene {
             swords[i]?.run(SKAction.moveBy(x: 0, y: -(CGFloat)(self.downRate), duration: 0.03));
             if ((self.rocket?.intersects(swords[i]!)) == true) {
                 swords[i]?.isHidden = true;
-                self.playerDidDie();
+                if i <= numSwords as! Int {
+                    self.playerDidDie();
+                }
             } else if (swords[i]?.position.y <= self.frame.origin.y + (swords[i]?.frame.height)!/2) {
                 if continued {
                     swords[i]?.position = CGPoint(x: self.frame.origin.x + CGFloat(arc4random_uniform(UInt32(self.frame.width))),
                                                   y: self.frame.origin.y + self.frame.width * 2)
-                    swords[i]?.isHidden = false;
+                    
+                    if i <= numSwords as! Int {
+                        swords[i]?.isHidden = false
+                    }
                     
                     score+=0.5;
                     self.downRate+=0.5
@@ -206,7 +219,11 @@ class GameScene: SKScene {
             
             sword?.position = CGPoint(x: self.frame.origin.x + CGFloat(arc4random_uniform(UInt32(self.frame.width))),
                                       y: self.frame.origin.y + self.frame.width * 2)
-            sword?.isHidden = false
+            if i > numSwords as! Int {
+                swords[i]?.isHidden = true
+            } else {
+                swords[i]?.isHidden = false
+            }
         };
         
         for i in 0...emitter.endIndex-1 {
