@@ -21,11 +21,11 @@ class GameScene: SKScene {
     
     let left = SKAction.moveBy(x: -100, y: 0, duration: 0.3)
     let right = SKAction.moveBy(x: 100, y: 0, duration: 0.3)
-    let down = SKAction.moveBy(x: 0, y: -20, duration: 0.03)
     
     var initialized : Bool = false;
     var continued : Bool = false;
     var score : CGFloat = 0.0;
+    var downRate = 10.0
     
     override func didMove(to view: SKView) {
         
@@ -170,7 +170,7 @@ class GameScene: SKScene {
     
     override func update(_ currentTime: TimeInterval) {
         for i in 1 ... swords.endIndex-1 {
-            swords[i]?.run(self.down);
+            swords[i]?.run(SKAction.moveBy(x: 0, y: -(CGFloat)(self.downRate), duration: 0.03));
             if ((self.rocket?.intersects(swords[i]!)) == true) {
                 swords[i]?.isHidden = true;
                 self.playerDidDie();
@@ -180,6 +180,7 @@ class GameScene: SKScene {
                                                   y: self.frame.origin.y + self.frame.width * 2)
                     swords[i]?.isHidden = false;
                     score+=0.5;
+                    self.downRate+=0.5
                 }
             }
         }
