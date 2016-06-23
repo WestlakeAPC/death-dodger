@@ -16,6 +16,8 @@ class GameScene: SKScene {
     private var rocket : SKSpriteNode?
     private var over : SKShapeNode?
     private var spinnyNode : SKShapeNode?
+    private var scoreDisplay = SKLabelNode()
+    
     private var swords = [SKSpriteNode?](repeating: nil, count: 4);
     private var emitter = [SKEmitterNode?](repeating: nil, count: 4);
     
@@ -35,6 +37,15 @@ class GameScene: SKScene {
         
         self.rocket = self.childNode(withName: "//finnCharc") as? SKSpriteNode
         self.over = self.childNode(withName: "overScreen") as? SKShapeNode
+        
+        //Score Board
+        scoreDisplay.text = String(score)
+        scoreDisplay.fontSize = 150
+        scoreDisplay.fontColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        scoreDisplay.position = CGPoint(x: -(self.frame.size.width * 1/3),
+                                        y: self.frame.size.height * 3/8)
+        self.addChild(scoreDisplay)
+
         
         self.physicsBody = SKPhysicsBody(edgeLoopFrom: self.frame)
         self.physicsWorld.gravity = CGVector(dx: 0,dy: 0)
@@ -179,8 +190,10 @@ class GameScene: SKScene {
                     swords[i]?.position = CGPoint(x: self.frame.origin.x + CGFloat(arc4random_uniform(UInt32(self.frame.width))),
                                                   y: self.frame.origin.y + self.frame.width * 2)
                     swords[i]?.isHidden = false;
+                    
                     score+=0.5;
                     self.downRate+=0.5
+                    self.scoreDisplay.text = String(score)
                 }
             }
         }
