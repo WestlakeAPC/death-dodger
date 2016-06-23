@@ -44,8 +44,8 @@ class GameScene: SKScene {
         scoreDisplay.text = String(score)
         scoreDisplay.fontSize = 150
         scoreDisplay.fontColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-        scoreDisplay.position = CGPoint(x: -(self.frame.size.width * 1/3),
-                                        y: self.frame.size.height * 3/8)
+        scoreDisplay.position = CGPoint(x: self.frame.origin.x + self.frame.size.width * 1/4,
+                                        y: self.frame.origin.y + self.frame.size.height * 7/8)
         self.addChild(scoreDisplay)
 
         

@@ -79,9 +79,10 @@ class GameViewController: UIViewController, GKGameCenterControllerDelegate {
         //check if user is signed in
         if GKLocalPlayer.localPlayer().isAuthenticated {
             
-            let scoreReporter = GKScore(leaderboardIdentifier: "g_death") //leaderboard id here
+            let scoreReporter = GKScore(leaderboardIdentifier: "g_death" +
+                String(UserDefaults.standard().value(forKey: "numSwords") as! Int)) //leaderboard id here
             
-            scoreReporter.value = Int64(score) //score variable here (same as above)
+            scoreReporter.value = Int64(score * 10) //score variable here (same as above)
             
             let scoreArray: [GKScore] = [scoreReporter]
             
