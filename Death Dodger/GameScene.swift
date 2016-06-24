@@ -200,7 +200,7 @@ class GameScene: SKScene {
             } else if (swords[i]?.position.y <= self.frame.origin.y + (swords[i]?.frame.height)!/2) {
                 if continued {
                     swords[i]?.position = CGPoint(x: self.frame.origin.x + CGFloat(arc4random_uniform(UInt32(self.frame.width))),
-                                                  y: self.frame.origin.y + self.frame.width * 2)
+                                                  y: self.frame.origin.y + self.frame.height + CGFloat(arc4random_uniform(UInt32(self.frame.height)/4)))
                     
                     if i <= numSwords as! Int {
                         swords[i]?.isHidden = false
@@ -220,7 +220,7 @@ class GameScene: SKScene {
             let sword = swords[i]
             
             sword?.position = CGPoint(x: self.frame.origin.x + CGFloat(arc4random_uniform(UInt32(self.frame.width))),
-                                      y: self.frame.origin.y + self.frame.width * 2)
+                                      y: self.frame.origin.y + self.frame.height * 5/4)
             if i > numSwords as! Int {
                 swords[i]?.isHidden = true
             } else {
