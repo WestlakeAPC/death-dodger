@@ -23,8 +23,8 @@ class GameScene: SKScene {
     
     let left = SKAction.moveBy(x: -100, y: 0, duration: 0.3)
     let right = SKAction.moveBy(x: 100, y: 0, duration: 0.3)
-    let spinnyStuff = UserDefaults.standard().value(forKey: "spinnyStuff")
-    let numSwords = UserDefaults.standard().value(forKey: "numSwords")
+    let spinnyStuff = UserDefaults.standard().value(forKey: "spinnyStuff") ?? true
+    let numSwords = UserDefaults.standard().value(forKey: "numSwords") ?? 2
     
     var initialized : Bool = false;
     var continued : Bool = false;
