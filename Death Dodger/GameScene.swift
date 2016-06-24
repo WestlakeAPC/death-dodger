@@ -17,6 +17,7 @@ class GameScene: SKScene {
     private var over : SKShapeNode?
     private var spinnyNode : SKShapeNode?
     private var scoreDisplay = SKLabelNode()
+    private var music = SKAudioNode(fileNamed: "Nerves")
     
     private var swords = [SKSpriteNode?](repeating: nil, count: 4);
     private var emitter = [SKEmitterNode?](repeating: nil, count: 4);
@@ -41,6 +42,9 @@ class GameScene: SKScene {
         
         self.rocket = self.childNode(withName: "//finnCharc") as? SKSpriteNode
         self.over = self.childNode(withName: "overScreen") as? SKShapeNode
+        
+        music.autoplayLooped = true
+        self.addChild(music)
         
         //Score Board
         scoreDisplay.text = String(score)

@@ -227,11 +227,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Death Dodger/GameScene.swift"
-            timestampString = "488474500.932928"
+            timestampString = "488492053.479565"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "82"
-            endingLineNumber = "82"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
             landmarkName = "didMove(to:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -243,11 +243,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Death Dodger/GameScene.swift"
-            timestampString = "488474500.932928"
+            timestampString = "488492053.479565"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
             landmarkName = "didMove(to:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -259,11 +259,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Death Dodger/GameScene.swift"
-            timestampString = "488474500.932928"
+            timestampString = "488492053.479565"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "196"
-            endingLineNumber = "196"
+            startingLineNumber = "200"
+            endingLineNumber = "200"
             landmarkName = "update(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -275,11 +275,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Death Dodger/GameScene.swift"
-            timestampString = "488474500.932928"
+            timestampString = "488492053.479565"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "87"
-            endingLineNumber = "87"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
             landmarkName = "playerDidDie()"
             landmarkType = "7">
          </BreakpointContent>
@@ -291,11 +291,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Death Dodger/GameScene.swift"
-            timestampString = "488474500.932928"
+            timestampString = "488492053.479565"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
             landmarkName = "playerDidDie()"
             landmarkType = "7">
          </BreakpointContent>
@@ -307,11 +307,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Death Dodger/GameScene.swift"
-            timestampString = "488474500.932928"
+            timestampString = "488492053.479565"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "213"
-            endingLineNumber = "213"
+            startingLineNumber = "217"
+            endingLineNumber = "217"
             landmarkName = "update(_:)"
             landmarkType = "7">
          </BreakpointContent>
