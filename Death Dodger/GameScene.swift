@@ -29,7 +29,9 @@ class GameScene: SKScene {
     var initialized : Bool = false;
     var continued : Bool = false;
     var score : CGFloat = 0.0;
+    
     var downRate = 10.0
+    var maxSpeed = 25.0
     
     override func didMove(to view: SKView) {
         
@@ -205,7 +207,7 @@ class GameScene: SKScene {
                     }
                     
                     score+=0.5;
-                    self.downRate+=0.5
+                    if self.downRate < maxSpeed { self.downRate+=0.5 }
                     self.scoreDisplay.text = String(score)
                 }
             }
@@ -255,6 +257,7 @@ class GameScene: SKScene {
         continued = true;
         initialized = true;
         self.score = 0.0
+        self.downRate = 10.0
     }
     /*
     func checkCollision (aSword: SKSpriteNode) -> Bool {
