@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		732CF1E51D498A94004C9817 /* backgroundphoto.png in Resources */ = {isa = PBXBuildFile; fileRef = 732CF1E41D498A94004C9817 /* backgroundphoto.png */; };
+		73CF36F01D49907200CE306A /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 73CF36EF1D49907200CE306A /* Settings.bundle */; };
 		73FCD25C1D2C16D600D273D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FCD25B1D2C16D600D273D9 /* AppDelegate.swift */; };
 		73FCD25E1D2C16D600D273D9 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 73FCD25D1D2C16D600D273D9 /* GameScene.sks */; };
 		73FCD2601D2C16D600D273D9 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FCD25F1D2C16D600D273D9 /* GameScene.swift */; };
@@ -15,6 +17,15 @@
 		73FCD2671D2C16D600D273D9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73FCD2661D2C16D600D273D9 /* Images.xcassets */; };
 		73FCD26A1D2C16D600D273D9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73FCD2681D2C16D600D273D9 /* LaunchScreen.xib */; };
 		73FCD2761D2C16D600D273D9 /* Death_DodgerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FCD2751D2C16D600D273D9 /* Death_DodgerTests.swift */; };
+		73FCD2881D2C18C800D273D9 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 73FCD2811D2C18C800D273D9 /* background.png */; };
+		73FCD2891D2C18C800D273D9 /* Crazy.wav in Resources */ = {isa = PBXBuildFile; fileRef = 73FCD2821D2C18C800D273D9 /* Crazy.wav */; };
+		73FCD28A1D2C18C800D273D9 /* gamebackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 73FCD2831D2C18C800D273D9 /* gamebackground.png */; };
+		73FCD28B1D2C18C800D273D9 /* Gomez10.png in Resources */ = {isa = PBXBuildFile; fileRef = 73FCD2841D2C18C800D273D9 /* Gomez10.png */; };
+		73FCD28C1D2C18C800D273D9 /* punch.wav in Resources */ = {isa = PBXBuildFile; fileRef = 73FCD2851D2C18C800D273D9 /* punch.wav */; };
+		73FCD28D1D2C18C800D273D9 /* Sword.wav in Resources */ = {isa = PBXBuildFile; fileRef = 73FCD2861D2C18C800D273D9 /* Sword.wav */; };
+		73FCD28E1D2C18C800D273D9 /* the_sword.png in Resources */ = {isa = PBXBuildFile; fileRef = 73FCD2871D2C18C800D273D9 /* the_sword.png */; };
+		73FCD2911D2DDCDF00D273D9 /* Blood.sks in Resources */ = {isa = PBXBuildFile; fileRef = 73FCD2901D2DDCDF00D273D9 /* Blood.sks */; };
+		73FCD2931D2EBA5F00D273D9 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73FCD2921D2EBA5F00D273D9 /* GameKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		732CF1E41D498A94004C9817 /* backgroundphoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = backgroundphoto.png; path = ../../../../Photos/backgroundphoto.png; sourceTree = "<group>"; };
+		73CF36EF1D49907200CE306A /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		73FCD2561D2C16D600D273D9 /* Death Dodger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Death Dodger.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		73FCD25A1D2C16D600D273D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		73FCD25B1D2C16D600D273D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -40,6 +53,15 @@
 		73FCD26F1D2C16D600D273D9 /* Death DodgerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Death DodgerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		73FCD2741D2C16D600D273D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		73FCD2751D2C16D600D273D9 /* Death_DodgerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Death_DodgerTests.swift; sourceTree = "<group>"; };
+		73FCD2811D2C18C800D273D9 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		73FCD2821D2C18C800D273D9 /* Crazy.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Crazy.wav; sourceTree = "<group>"; };
+		73FCD2831D2C18C800D273D9 /* gamebackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gamebackground.png; sourceTree = "<group>"; };
+		73FCD2841D2C18C800D273D9 /* Gomez10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Gomez10.png; sourceTree = "<group>"; };
+		73FCD2851D2C18C800D273D9 /* punch.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = punch.wav; sourceTree = "<group>"; };
+		73FCD2861D2C18C800D273D9 /* Sword.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Sword.wav; sourceTree = "<group>"; };
+		73FCD2871D2C18C800D273D9 /* the_sword.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = the_sword.png; sourceTree = "<group>"; };
+		73FCD2901D2DDCDF00D273D9 /* Blood.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Blood.sks; sourceTree = "<group>"; };
+		73FCD2921D2EBA5F00D273D9 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73FCD2931D2EBA5F00D273D9 /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +86,7 @@
 		73FCD24D1D2C16D600D273D9 = {
 			isa = PBXGroup;
 			children = (
+				73FCD2921D2EBA5F00D273D9 /* GameKit.framework */,
 				73FCD2581D2C16D600D273D9 /* Death Dodger */,
 				73FCD2721D2C16D600D273D9 /* Death DodgerTests */,
 				73FCD2571D2C16D600D273D9 /* Products */,
@@ -81,8 +105,11 @@
 		73FCD2581D2C16D600D273D9 /* Death Dodger */ = {
 			isa = PBXGroup;
 			children = (
+				73CF36EF1D49907200CE306A /* Settings.bundle */,
+				73FCD28F1D2C18D600D273D9 /* Images & Sound */,
 				73FCD25B1D2C16D600D273D9 /* AppDelegate.swift */,
 				73FCD25D1D2C16D600D273D9 /* GameScene.sks */,
+				73FCD2901D2DDCDF00D273D9 /* Blood.sks */,
 				73FCD25F1D2C16D600D273D9 /* GameScene.swift */,
 				73FCD2611D2C16D600D273D9 /* GameViewController.swift */,
 				73FCD2631D2C16D600D273D9 /* Main.storyboard */,
@@ -116,6 +143,21 @@
 				73FCD2741D2C16D600D273D9 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		73FCD28F1D2C18D600D273D9 /* Images & Sound */ = {
+			isa = PBXGroup;
+			children = (
+				732CF1E41D498A94004C9817 /* backgroundphoto.png */,
+				73FCD2831D2C18C800D273D9 /* gamebackground.png */,
+				73FCD2811D2C18C800D273D9 /* background.png */,
+				73FCD2841D2C18C800D273D9 /* Gomez10.png */,
+				73FCD2871D2C18C800D273D9 /* the_sword.png */,
+				73FCD2821D2C18C800D273D9 /* Crazy.wav */,
+				73FCD2851D2C18C800D273D9 /* punch.wav */,
+				73FCD2861D2C18C800D273D9 /* Sword.wav */,
+			);
+			name = "Images & Sound";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,6 +204,8 @@
 		73FCD24E1D2C16D600D273D9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0730;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = "Animator Joe";
 				TargetAttributes = {
@@ -198,10 +242,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				73FCD2911D2DDCDF00D273D9 /* Blood.sks in Resources */,
 				73FCD26A1D2C16D600D273D9 /* LaunchScreen.xib in Resources */,
+				73FCD28E1D2C18C800D273D9 /* the_sword.png in Resources */,
+				73FCD28B1D2C18C800D273D9 /* Gomez10.png in Resources */,
+				73FCD28D1D2C18C800D273D9 /* Sword.wav in Resources */,
+				73FCD2881D2C18C800D273D9 /* background.png in Resources */,
+				73CF36F01D49907200CE306A /* Settings.bundle in Resources */,
 				73FCD2671D2C16D600D273D9 /* Images.xcassets in Resources */,
 				73FCD25E1D2C16D600D273D9 /* GameScene.sks in Resources */,
+				73FCD2891D2C18C800D273D9 /* Crazy.wav in Resources */,
 				73FCD2651D2C16D600D273D9 /* Main.storyboard in Resources */,
+				732CF1E51D498A94004C9817 /* backgroundphoto.png in Resources */,
+				73FCD28C1D2C18C800D273D9 /* punch.wav in Resources */,
+				73FCD28A1D2C18C800D273D9 /* gamebackground.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +356,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -340,6 +395,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -351,8 +407,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Death Dodger/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.animatorjoe.deathdodger;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -361,7 +420,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Death Dodger/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.animatorjoe.deathdodger;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -419,6 +480,7 @@
 				73FCD27B1D2C16D600D273D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		73FCD27C1D2C16D600D273D9 /* Build configuration list for PBXNativeTarget "Death DodgerTests" */ = {
 			isa = XCConfigurationList;
@@ -427,6 +489,7 @@
 				73FCD27E1D2C16D600D273D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
