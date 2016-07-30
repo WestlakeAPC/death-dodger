@@ -8,6 +8,7 @@
 
 import UIKit
 import SpriteKit
+import GameKit
 
 extension SKNode {
     class func unarchiveFromFile(file : String) -> SKNode? {
@@ -26,12 +27,19 @@ extension SKNode {
     }
 }
 
-class GameViewController: UIViewController {
+class GameViewController: UIViewController, GKGameCenterControllerDelegate {
+    
+    private var scene : SKScene?
+    var deviceType = "Device"
+    @IBOutlet var share: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        var deviceType = "Device"
+        
+        share.frame.size.height = 1
+        share.layer.cornerRadius = 5
+        
+        share.hidden = false
         
         if let scene = GameScene.unarchiveFromFile("GameScene") as? GameScene {
             // Configure the view.
@@ -80,4 +88,70 @@ class GameViewController: UIViewController {
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
+    
+    @IBAction func shareButton() {
+        
+        //GameCenter-y stuff to do.
+        saveHighscore(((scene as! GameScene?)?.score)!)
+        showLeader()
+        
+    }
+    
+    
+    //send high score to leaderboard
+    func saveHighscore(score:CGFloat) {
+        
+        //check if user is signed in
+        if GKLocalPlayer.localPlayer().authenticated {
+            
+            let scoreReporter = GKScore(leaderboardIdentifier: "g_death" +
+                String(NSUserDefaults.standardUserDefaults().valueForKey("numSwords") ?? 2)) //leaderboard id here
+            
+            scoreReporter.value = Int64(score * 10) //score variable here (same as above)
+            
+            let scoreArray: [GKScore] = [scoreReporter]
+            
+            GKScore.reportScores(scoreArray, withCompletionHandler: {(error : NSError?) -> Void in
+                if error != nil {
+                    // println("error")
+                }
+            })
+            
+        }
+        
+    }
+    
+    //shows leaderboard screen
+    func showLeader() {
+        let vc = self.view?.window?.rootViewController
+        let gc = GKGameCenterViewController()
+        gc.gameCenterDelegate = self
+        //vc?.present(gc, animated: true, completion: nil)
+        vc?.presentViewController(gc, animated: true, completion: nil)
+    }
+    
+    //hides leaderboard screen
+    func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController) {
+        //gameCenterViewController.dismiss(animated: true, completion: nil)
+        gameCenterViewController.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    //initiate gamecenter
+    func authenticateLocalPlayer(){
+        
+        let localPlayer = GKLocalPlayer.localPlayer()
+        
+        localPlayer.authenticateHandler = {(viewController, error) -> Void in
+            
+            if (viewController != nil) {
+                //self.present(viewController!, animated: true, completion: nil)
+                self.presentViewController((viewController)!, animated: true, completion: nil)
+            }
+                
+            else {
+                // println((GKLocalPlayer.localPlayer().authenticated))
+            }
+        }
+    }
+    
 }

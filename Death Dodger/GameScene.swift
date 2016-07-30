@@ -298,6 +298,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                         displayScore = displayScore + 0
                     } else {
                         displayScore = displayScore + 1
+                        score = score + 1
                     }
                     
                     if self.downRate < maxSpeed { self.downRate+=0.2 }

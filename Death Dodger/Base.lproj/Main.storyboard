@@ -85,8 +85,31 @@
                     <view key="view" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YVh-sQ-xpq">
+                                <rect key="frame" x="440" y="20" width="134" height="55"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="1xn-72-SWh"/>
+                                    <constraint firstAttribute="width" constant="134" id="3ts-MZ-iug"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <state key="normal" title="Share"/>
+                                <connections>
+                                    <action selector="shareButton" destination="BV1-FR-VrT" eventType="touchUpInside" id="voT-RL-WfD"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YVh-sQ-xpq" firstAttribute="top" secondItem="maK-i9-Uhn" secondAttribute="bottom" id="C97-0A-3bS"/>
+                            <constraint firstItem="khH-OB-KpY" firstAttribute="top" secondItem="YVh-sQ-xpq" secondAttribute="bottom" constant="525" id="QHW-6b-RyR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="YVh-sQ-xpq" secondAttribute="trailing" constant="6" id="VQT-3o-EYw"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="share" destination="YVh-sQ-xpq" id="dBP-nO-QwO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
