@@ -14,14 +14,6 @@ import AVFoundation
 @objc(GameScene)
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
-    enum ColliderType: UInt32 {
-        
-        case Charc = 1
-        case Swords = 2
-        case None = 4
-        
-    }
-    
     let left = SKAction.moveByX(-100, y: 0, duration: 0.3)
     let right = SKAction.moveByX(100, y: 0, duration: 0.3)
     //let spinnyStuff = UserDefaults.standard().value(forKey: "spinnyStuff") ?? false
@@ -166,7 +158,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.over?.setScale(1.0)
         self.over?.hidden = false
         self.over?.alpha = 1.0
-        self.rocket?.hidden = false
+        self.rocket?.hidden = true
         
         deathLabel.text = "Tap to Restart"
         pLabel.text = String(displayScore) + " Points!"
