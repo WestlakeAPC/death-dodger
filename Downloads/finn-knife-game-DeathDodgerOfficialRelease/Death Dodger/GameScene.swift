@@ -55,7 +55,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.physicsWorld.contactDelegate = self
         
         //Background Image
-        let backgroundPhoto = SKTexture(imageNamed: "backgroundphoto.png")
+        let backgroundPhoto = SKTexture(imageNamed: "gamebackground.png")
         backgroundImage = SKSpriteNode(texture: backgroundPhoto)
         backgroundImage.size.height = self.size.height
         backgroundImage.size.width = self.size.height * 900/504
@@ -249,16 +249,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     //*****************************************************
-    override func touchesMoved(_ touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
         for t in touches { self.touchUp(atPoint: t.locationInNode(self)) }
     }
     
-    override func touchesEnded(_ touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
         for t in touches { self.touchMoved(toPoint: t.locationInNode(self)) }
     }
     
-    override func touchesCancelled(touches: Set<UITouch>?, withEvent event: UIEvent?) {
-        for t in touches! { self.touchUp(atPoint: t.locationInNode(self)) }
+    override func touchesCancelled(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        for t in touches { self.touchUp(atPoint: t.locationInNode(self)) }
     }
     
     
@@ -305,7 +305,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         for i in 1 ... swords.endIndex-1 {
             
             //swords[i] = self.childNodeWithName("//sword"+String(i)) as? SKSpriteNode
-            let swordSkin = SKTexture(imageNamed: "the_sword.png")
+            let swordSkin = SKTexture(imageNamed: "rainbowordersword.gif")
             swords[i] = SKSpriteNode(texture: swordSkin)
             
             let sword = swords[i]
@@ -329,7 +329,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             if (emitter[i] == nil) {
                 emitter[i] = SKEmitterNode(fileNamed: "Blood")
                 let extraX = CGFloat(i%2) * self.frame.width/2
-                let extraY = CGFloat((i/2)%2) * self.frame.height/2
+                _ = CGFloat((i/2)%2) * self.frame.height/2
                 emitter[i]?.position = CGPoint(x: self.frame.origin.x + self.frame.width/4 + extraX,
                     y: self.frame.origin.y + self.frame.height/5)
                 

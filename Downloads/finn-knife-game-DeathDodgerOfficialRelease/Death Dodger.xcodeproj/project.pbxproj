@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		73BFB7A11D4FB6FD0087758F /* backgroundphoto.png in Resources */ = {isa = PBXBuildFile; fileRef = 73BFB7A01D4FB6FD0087758F /* backgroundphoto.png */; };
+		172BB7071D53D37700E8BC12 /* rainbowordersword.gif in Resources */ = {isa = PBXBuildFile; fileRef = 172BB7061D53D37700E8BC12 /* rainbowordersword.gif */; };
 		73CF36F01D49907200CE306A /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 73CF36EF1D49907200CE306A /* Settings.bundle */; };
 		73FCD25C1D2C16D600D273D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FCD25B1D2C16D600D273D9 /* AppDelegate.swift */; };
 		73FCD25E1D2C16D600D273D9 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 73FCD25D1D2C16D600D273D9 /* GameScene.sks */; };
@@ -39,7 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		73BFB7A01D4FB6FD0087758F /* backgroundphoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = backgroundphoto.png; path = ../../../Desktop/Photos/backgroundphoto.png; sourceTree = "<group>"; };
+		172BB7061D53D37700E8BC12 /* rainbowordersword.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = rainbowordersword.gif; sourceTree = "<group>"; };
 		73CF36EF1D49907200CE306A /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		73FCD2561D2C16D600D273D9 /* Death Dodger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Death Dodger.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		73FCD25A1D2C16D600D273D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -148,9 +148,9 @@
 		73FCD28F1D2C18D600D273D9 /* Images & Sound */ = {
 			isa = PBXGroup;
 			children = (
-				73BFB7A01D4FB6FD0087758F /* backgroundphoto.png */,
 				73FCD2831D2C18C800D273D9 /* gamebackground.png */,
 				73FCD2811D2C18C800D273D9 /* background.png */,
+				172BB7061D53D37700E8BC12 /* rainbowordersword.gif */,
 				73FCD2841D2C18C800D273D9 /* Gomez10.png */,
 				73FCD2871D2C18C800D273D9 /* the_sword.png */,
 				73FCD2821D2C18C800D273D9 /* Crazy.wav */,
@@ -206,15 +206,17 @@
 			attributes = {
 				LastSwiftMigration = 0730;
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Animator Joe";
 				TargetAttributes = {
 					73FCD2551D2C16D600D273D9 = {
 						CreatedOnToolsVersion = 6.4;
 						DevelopmentTeam = 9SR8L2XE3A;
+						LastSwiftMigration = 0800;
 					};
 					73FCD26E1D2C16D600D273D9 = {
 						CreatedOnToolsVersion = 6.4;
+						LastSwiftMigration = 0800;
 						TestTargetID = 73FCD2551D2C16D600D273D9;
 					};
 				};
@@ -247,11 +249,11 @@
 				73FCD26A1D2C16D600D273D9 /* LaunchScreen.xib in Resources */,
 				73FCD28E1D2C18C800D273D9 /* the_sword.png in Resources */,
 				73FCD28B1D2C18C800D273D9 /* Gomez10.png in Resources */,
+				172BB7071D53D37700E8BC12 /* rainbowordersword.gif in Resources */,
 				73FCD28D1D2C18C800D273D9 /* Sword.wav in Resources */,
 				73FCD2881D2C18C800D273D9 /* background.png in Resources */,
 				73CF36F01D49907200CE306A /* Settings.bundle in Resources */,
 				73FCD2671D2C16D600D273D9 /* Images.xcassets in Resources */,
-				73BFB7A11D4FB6FD0087758F /* backgroundphoto.png in Resources */,
 				73FCD25E1D2C16D600D273D9 /* GameScene.sks in Resources */,
 				73FCD2891D2C18C800D273D9 /* Crazy.wav in Resources */,
 				73FCD2651D2C16D600D273D9 /* Main.storyboard in Resources */,
@@ -339,6 +341,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -413,6 +416,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.animatorjoe.deathdodger;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -425,6 +429,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.animatorjoe.deathdodger;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
@@ -442,7 +448,9 @@
 				);
 				INFOPLIST_FILE = "Death DodgerTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.animatorjoe.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Death Dodger.app/Death Dodger";
 			};
 			name = Debug;
@@ -457,7 +465,10 @@
 				);
 				INFOPLIST_FILE = "Death DodgerTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.animatorjoe.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 2.3;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Death Dodger.app/Death Dodger";
 			};
 			name = Release;

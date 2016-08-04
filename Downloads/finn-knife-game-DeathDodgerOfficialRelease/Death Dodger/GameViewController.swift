@@ -134,7 +134,7 @@ class GameViewController: UIViewController, GKGameCenterControllerDelegate {
     }
     
     //hides leaderboard screen
-    func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController) {
+    func gameCenterViewControllerDidFinish(gameCenterViewController: GKGameCenterViewController) {
         //gameCenterViewController.dismiss(animated: true, completion: nil)
         gameCenterViewController.dismissViewControllerAnimated(true, completion: nil)
     }
