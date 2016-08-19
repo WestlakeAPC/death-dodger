@@ -67,11 +67,11 @@ class GameViewController: UIViewController, GKGameCenterControllerDelegate {
     
     @IBAction func shareButton(){
         
-        /*
+        
         //GameCenter-y stuff to do.
         saveHighscore(score: ((scene as? GameScene?)?.score)!)
         showLeader()
- */       
+ 
  
     }
     

@@ -175,6 +175,7 @@
 				17811D271D1C7B1D0051AE02 /* Settings.bundle */,
 				73471E7F1D1ED5A9005D8D53 /* Sounds & Images */,
 				17811D2C1D1C7D210051AE02 /* README.md */,
+				17C408021D12DA500017B400 /* Assets.xcassets */,
 				17C407F51D12DA500017B400 /* AppDelegate.swift */,
 				17C407F91D12DA500017B400 /* Actions.sks */,
 				739506EF1D27020E002DAE5E /* GameScene.sks */,
@@ -183,7 +184,6 @@
 				17C407FB1D12DA500017B400 /* GameScene.swift */,
 				17C407FD1D12DA500017B400 /* GameViewController.swift */,
 				17C407FF1D12DA500017B400 /* Main.storyboard */,
-				17C408021D12DA500017B400 /* Assets.xcassets */,
 				17C408041D12DA500017B400 /* LaunchScreen.storyboard */,
 				17C408071D12DA500017B400 /* Info.plist */,
 			);

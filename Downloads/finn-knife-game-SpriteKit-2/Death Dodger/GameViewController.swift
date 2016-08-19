@@ -22,17 +22,6 @@ class GameViewController: UIViewController, GKGameCenterControllerDelegate {
         
         share?.isHidden = true
         
-        if UIDevice.current().userInterfaceIdiom == .pad {
-            
-            deviceType = "iPad"
-            
-        } else if UIDevice.current().userInterfaceIdiom == .phone {
-            
-            deviceType = "iPhone"
-            
-        }
-        
-        
         print(deviceType)
         
         share?.layer.cornerRadius = 5
@@ -151,4 +140,8 @@ class GameViewController: UIViewController, GKGameCenterControllerDelegate {
             }
         }
     }
+    
+    
+    
+    
 }

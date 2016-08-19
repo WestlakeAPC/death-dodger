@@ -47,10 +47,10 @@ class GameScene: SKScene {
         
         //Score Board
         scoreDisplay.text = String(showedScore)
-        scoreDisplay.fontSize = 150
+        scoreDisplay.fontSize = 100
         scoreDisplay.fontColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         scoreDisplay.position = CGPoint(x: self.frame.origin.x + self.frame.size.width * 1/4,
-                                        y: self.frame.origin.y + self.frame.size.height * 7/8)
+                                        y: self.frame.size.height - 50)
         self.addChild(scoreDisplay)
 
         
@@ -254,8 +254,7 @@ class GameScene: SKScene {
             emitter[i]?.particleBirthRate = 0
         }
         
-        rocket?.position = CGPoint(x: self.frame.origin.x + self.frame.width/2,
-                                   y: self.frame.origin.y + self.frame.height/4)
+        rocket?.position = CGPoint(x: self.frame.origin.x + self.frame.width/2, y: self.frame.origin.y + self.frame.height/4)
         rocket?.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: (rocket?.frame.width)!,
                                                                 height: (rocket?.frame.height)!))
         rocket?.isHidden = false

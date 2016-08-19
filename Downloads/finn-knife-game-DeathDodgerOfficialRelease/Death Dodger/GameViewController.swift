@@ -39,7 +39,7 @@ class GameViewController: UIViewController, GKGameCenterControllerDelegate {
         share.frame.size.height = 1
         share.layer.cornerRadius = 5
         
-        share.hidden = false
+        share.hidden = true
         
         if let scene = GameScene.unarchiveFromFile("GameScene") as? GameScene {
             // Configure the view.
@@ -61,6 +61,8 @@ class GameViewController: UIViewController, GKGameCenterControllerDelegate {
             } else {
                 scene.scaleMode = .AspectFill
             }
+            
+            self.scene = scene as SKScene?
             
             print(deviceType)
             

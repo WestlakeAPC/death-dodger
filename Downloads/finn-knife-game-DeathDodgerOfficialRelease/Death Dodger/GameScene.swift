@@ -24,8 +24,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     let left = SKAction.moveByX(-100, y: 0, duration: 0.3)
     let right = SKAction.moveByX(100, y: 0, duration: 0.3)
-    //let spinnyStuff = UserDefaults.standard().value(forKey: "spinnyStuff") ?? false
-    //let numSwords = UserDefaults.standard().value(forKey: "numSwords") ?? 3
     let spinnyStuff = NSUserDefaults.standardUserDefaults().valueForKey("spinnyStuff") ?? false
     let numSwords = NSUserDefaults.standardUserDefaults().valueForKey("numSwords") ?? 3
     
@@ -172,10 +170,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         pLabel.text = String(displayScore) + " Points!"
         
             
-        for i in emitter { i?.particleBirthRate = 500;
+        for i in emitter { i?.particleBirthRate = 1500;
             i?.position = (rocket?.position)! }
 
-        self.over?.runAction(SKAction.scaleTo(4.0, duration: 1.0))
+        self.over?.runAction(SKAction.scaleTo(4.0, duration: 1.5))
             
             
             
@@ -204,6 +202,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
         }
         
+        //print(self.rocket?.position.x)
+        
         if let rocket = self.rocket {
             if continued {
                 if pos.x < self.frame.origin.x + self.frame.width/2{
@@ -230,7 +230,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
-    //***************************************************** Restart
+    //***************************************************** When Tapped (Restart)
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         if let label = self.label {
             label.runAction(SKAction.init(named: "Pulse")!, withKey: "fadeInOut")
@@ -243,13 +243,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 if !continued && i.name == "Over-screen" {
                     self.initialized = false
                     
+                    self.over?.runAction(SKAction.fadeOutWithDuration(1.5), completion: {
+                        self.initialize()
+                    })
+                    
                     for i in 1 ... swords.endIndex-1 {
                         swords[i]?.runAction(SKAction.removeFromParent())
                     }
-                    
-                    self.over?.runAction(SKAction.fadeOutWithDuration(1.0), completion: {
-                        self.initialize()
-                    })
                     
                 }
             }
@@ -310,6 +310,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     //***************************************************** Initialize
     func initialize() {
+        
+        for i in 1 ... swords.endIndex-1 {
+            swords[i]?.runAction(SKAction.removeFromParent())
+        }
+        
         for i in 1 ... swords.endIndex-1 {
             
             //swords[i] = self.childNodeWithName("//sword"+String(i)) as? SKSpriteNode
@@ -380,8 +385,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func checkCollision (aSword: SKSpriteNode) -> Bool {
-        let swordX = aSword.position.x - aSword.frame.width/5;
-        let swordXRight = aSword.position.x + aSword.frame.width/5;
+        let swordX = aSword.position.x - aSword.frame.width/80;
+        let swordXRight = aSword.position.x + aSword.frame.width/80;
         let swordY = aSword.position.y - aSword.frame.height/2;
         let swordYRight = aSword.position.y + aSword.frame.height/2;
         

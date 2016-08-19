@@ -24,6 +24,8 @@
 		17C892DC1D182C8D007D731D /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17C892DB1D182C8D007D731D /* GameKit.framework */; };
 		73D04BEB1D1CD2290039C1E2 /* Crazy.wav in Resources */ = {isa = PBXBuildFile; fileRef = 73D04BE91D1CD2290039C1E2 /* Crazy.wav */; };
 		73D04BEC1D1CD2290039C1E2 /* Sword.wav in Resources */ = {isa = PBXBuildFile; fileRef = 73D04BEA1D1CD2290039C1E2 /* Sword.wav */; };
+		73E863391D1DAACF000F971B /* finn_charc.png in Resources */ = {isa = PBXBuildFile; fileRef = 73E863371D1DAACF000F971B /* finn_charc.png */; };
+		73E8633A1D1DAACF000F971B /* the_sword.png in Resources */ = {isa = PBXBuildFile; fileRef = 73E863381D1DAACF000F971B /* the_sword.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +91,8 @@
 		17C892DB1D182C8D007D731D /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		73D04BE91D1CD2290039C1E2 /* Crazy.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Crazy.wav; sourceTree = "<group>"; };
 		73D04BEA1D1CD2290039C1E2 /* Sword.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Sword.wav; sourceTree = "<group>"; };
+		73E863371D1DAACF000F971B /* finn_charc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = finn_charc.png; sourceTree = "<group>"; };
+		73E863381D1DAACF000F971B /* the_sword.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = the_sword.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +167,8 @@
 				17AA00CA1D134661005E8EB7 /* Gomez10.png */,
 				73D04BE91D1CD2290039C1E2 /* Crazy.wav */,
 				73D04BEA1D1CD2290039C1E2 /* Sword.wav */,
+				73E863371D1DAACF000F971B /* finn_charc.png */,
+				73E863381D1DAACF000F971B /* the_sword.png */,
 				17C407FF1D12DA500017B400 /* Main.storyboard */,
 				17C408021D12DA500017B400 /* Assets.xcassets */,
 				17C408041D12DA500017B400 /* LaunchScreen.storyboard */,
@@ -346,7 +352,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				17811D281D1C7B1D0051AE02 /* Settings.bundle in Resources */,
+				73E863391D1DAACF000F971B /* finn_charc.png in Resources */,
 				17C408011D12DA500017B400 /* Main.storyboard in Resources */,
+				73E8633A1D1DAACF000F971B /* the_sword.png in Resources */,
 				73D04BEC1D1CD2290039C1E2 /* Sword.wav in Resources */,
 				17C407F81D12DA500017B400 /* GameScene.sks in Resources */,
 				17C408031D12DA500017B400 /* Assets.xcassets in Resources */,
@@ -530,6 +538,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Death Dodger/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -543,6 +552,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Death Dodger/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
