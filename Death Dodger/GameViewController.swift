@@ -67,6 +67,8 @@ class GameViewController: UIViewController, GKGameCenterControllerDelegate {
             print(deviceType)
             
             skView.presentScene(scene)
+            
+            self.scene = scene
         }
     }
 

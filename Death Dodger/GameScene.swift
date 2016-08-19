@@ -37,7 +37,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var removeElement = SKAction.removeFromParent()
     var initialized : Bool = false
     var continued : Bool = false
-    var playerRekt = false
     var secondDeath = false
     var score : CGFloat = 0.0
     var displayScore = 0
@@ -53,7 +52,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.physicsWorld.contactDelegate = self
         
         //Background Image
-        let backgroundPhoto = SKTexture(imageNamed: "backgroundphoto.png")
+        let backgroundPhoto = SKTexture(imageNamed: "gamebackground.png")
         backgroundImage = SKSpriteNode(texture: backgroundPhoto)
         backgroundImage.size.height = self.size.height
         backgroundImage.size.width = self.size.height * 900/504
@@ -143,8 +142,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //***************************************************** Death
     func playerDidDie(){
         
-        if (playerRekt == false){
-            
         //Music Stop
         backgroundMusic.stop()
         backgroundMusic.currentTime = 0.0
@@ -152,7 +149,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         punchSoundEffect.play()
         
         continued = false;
-        playerRekt = true
         self.over?.setScale(1.0)
         self.over?.hidden = false
         self.over?.alpha = 1.0
@@ -166,10 +162,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             i?.position = (rocket?.position)! }
 
         self.over?.runAction(SKAction.scaleTo(4.0, duration: 1.5))
-            
-            
-            
-        }
         
     }
     
@@ -364,7 +356,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         //Settings
         continued = true;
         initialized = true;
-        self.playerRekt = false
         self.displayScore = 0
         self.score = 0.0
         scoreDisplay.text = String(displayScore)
