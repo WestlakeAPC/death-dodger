@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7361DDD41D548C7B002C80EA /* Gomez10.png in Resources */ = {isa = PBXBuildFile; fileRef = 7361DDD31D548C7B002C80EA /* Gomez10.png */; };
+		73AC191A1D71F5710098ED49 /* justAWhiteCube.png in Resources */ = {isa = PBXBuildFile; fileRef = 73AC19191D71F5710098ED49 /* justAWhiteCube.png */; };
+		73AF1BB71D71F6CA008396B3 /* gamebackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 73AF1BB61D71F6CA008396B3 /* gamebackground.png */; };
 		73CF36F01D49907200CE306A /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 73CF36EF1D49907200CE306A /* Settings.bundle */; };
 		73FCD25C1D2C16D600D273D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FCD25B1D2C16D600D273D9 /* AppDelegate.swift */; };
 		73FCD25E1D2C16D600D273D9 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 73FCD25D1D2C16D600D273D9 /* GameScene.sks */; };
@@ -19,7 +21,6 @@
 		73FCD2761D2C16D600D273D9 /* Death_DodgerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FCD2751D2C16D600D273D9 /* Death_DodgerTests.swift */; };
 		73FCD2881D2C18C800D273D9 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 73FCD2811D2C18C800D273D9 /* background.png */; };
 		73FCD2891D2C18C800D273D9 /* Crazy.wav in Resources */ = {isa = PBXBuildFile; fileRef = 73FCD2821D2C18C800D273D9 /* Crazy.wav */; };
-		73FCD28A1D2C18C800D273D9 /* gamebackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 73FCD2831D2C18C800D273D9 /* gamebackground.png */; };
 		73FCD28C1D2C18C800D273D9 /* punch.wav in Resources */ = {isa = PBXBuildFile; fileRef = 73FCD2851D2C18C800D273D9 /* punch.wav */; };
 		73FCD28D1D2C18C800D273D9 /* Sword.wav in Resources */ = {isa = PBXBuildFile; fileRef = 73FCD2861D2C18C800D273D9 /* Sword.wav */; };
 		73FCD28E1D2C18C800D273D9 /* the_sword.png in Resources */ = {isa = PBXBuildFile; fileRef = 73FCD2871D2C18C800D273D9 /* the_sword.png */; };
@@ -39,6 +40,8 @@
 
 /* Begin PBXFileReference section */
 		7361DDD31D548C7B002C80EA /* Gomez10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Gomez10.png; sourceTree = "<group>"; };
+		73AC19191D71F5710098ED49 /* justAWhiteCube.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = justAWhiteCube.png; sourceTree = "<group>"; };
+		73AF1BB61D71F6CA008396B3 /* gamebackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gamebackground.png; sourceTree = "<group>"; };
 		73CF36EF1D49907200CE306A /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		73FCD2561D2C16D600D273D9 /* Death Dodger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Death Dodger.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		73FCD25A1D2C16D600D273D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,7 +57,6 @@
 		73FCD2751D2C16D600D273D9 /* Death_DodgerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Death_DodgerTests.swift; sourceTree = "<group>"; };
 		73FCD2811D2C18C800D273D9 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		73FCD2821D2C18C800D273D9 /* Crazy.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Crazy.wav; sourceTree = "<group>"; };
-		73FCD2831D2C18C800D273D9 /* gamebackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gamebackground.png; sourceTree = "<group>"; };
 		73FCD2851D2C18C800D273D9 /* punch.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = punch.wav; sourceTree = "<group>"; };
 		73FCD2861D2C18C800D273D9 /* Sword.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Sword.wav; sourceTree = "<group>"; };
 		73FCD2871D2C18C800D273D9 /* the_sword.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = the_sword.png; sourceTree = "<group>"; };
@@ -146,10 +148,11 @@
 		73FCD28F1D2C18D600D273D9 /* Images & Sound */ = {
 			isa = PBXGroup;
 			children = (
-				73FCD2831D2C18C800D273D9 /* gamebackground.png */,
+				73AF1BB61D71F6CA008396B3 /* gamebackground.png */,
 				73FCD2811D2C18C800D273D9 /* background.png */,
 				7361DDD31D548C7B002C80EA /* Gomez10.png */,
 				73FCD2871D2C18C800D273D9 /* the_sword.png */,
+				73AC19191D71F5710098ED49 /* justAWhiteCube.png */,
 				73FCD2821D2C18C800D273D9 /* Crazy.wav */,
 				73FCD2851D2C18C800D273D9 /* punch.wav */,
 				73FCD2861D2C18C800D273D9 /* Sword.wav */,
@@ -250,11 +253,12 @@
 				73CF36F01D49907200CE306A /* Settings.bundle in Resources */,
 				73FCD2671D2C16D600D273D9 /* Images.xcassets in Resources */,
 				73FCD25E1D2C16D600D273D9 /* GameScene.sks in Resources */,
+				73AC191A1D71F5710098ED49 /* justAWhiteCube.png in Resources */,
 				73FCD2891D2C18C800D273D9 /* Crazy.wav in Resources */,
 				73FCD2651D2C16D600D273D9 /* Main.storyboard in Resources */,
 				73FCD28C1D2C18C800D273D9 /* punch.wav in Resources */,
-				73FCD28A1D2C18C800D273D9 /* gamebackground.png in Resources */,
 				7361DDD41D548C7B002C80EA /* Gomez10.png in Resources */,
+				73AF1BB71D71F6CA008396B3 /* gamebackground.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

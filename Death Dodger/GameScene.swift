@@ -249,11 +249,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         for t in touches { self.touchMoved(toPoint: t.locationInNode(self)) }
     }
     
-    override func touchesCancelled(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        for t in touches { self.touchUp(atPoint: t.locationInNode(self)) }
-    }
-    
-    
     //***************************************************** Swords
     override func update(currentTime: NSTimeInterval) {
         for i in 1 ... swords.endIndex-1 {
