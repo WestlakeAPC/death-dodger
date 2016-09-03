@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="fs5-ZE-DOy">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fs5-ZE-DOy">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -14,14 +14,11 @@
                         <viewControllerLayoutGuide type="bottom" id="3ic-yZ-JNL"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="AKW-li-gWv">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="gamebackground.png" translatesAutoresizingMaskIntoConstraints="NO" id="DBF-6P-SLT">
-                                <frame key="frameInset" width="600" height="600"/>
-                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="gamebackground.png" translatesAutoresizingMaskIntoConstraints="NO" id="DBF-6P-SLT"/>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Death Dodger" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q6v-on-jgq">
-                                <frame key="frameInset" minX="46" minY="98" width="400" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="400" id="aPM-VX-ffE"/>
                                     <constraint firstAttribute="height" constant="64" id="c2w-Bs-eIP"/>
@@ -31,7 +28,6 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Created by Animator Joe, Eli B. and Sam H." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fch-Ip-wb7">
-                                <frame key="frameInset" minX="46" minY="159" width="500" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="mA1-lg-efS"/>
                                 </constraints>
@@ -40,7 +36,6 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggq-Ww-sgE">
-                                <frame key="frameInset" minX="12" minY="292" width="138" height="63"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="138" id="K4d-YA-geg"/>
                                 </constraints>
@@ -83,11 +78,10 @@
                         <viewControllerLayoutGuide type="bottom" id="khH-OB-KpY"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YVh-sQ-xpq">
-                                <frame key="frameInset" minX="387" minY="69" width="134" height="55"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="39" id="gY8-hU-RMD"/>

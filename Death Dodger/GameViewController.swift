@@ -39,7 +39,7 @@ class GameViewController: UIViewController, GKGameCenterControllerDelegate {
         share.frame.size.height = 1
         share.layer.cornerRadius = 5
         
-        share.hidden = true
+        share.hidden = false
         
         if let scene = GameScene.unarchiveFromFile("GameScene") as? GameScene {
             // Configure the view.
@@ -70,10 +70,13 @@ class GameViewController: UIViewController, GKGameCenterControllerDelegate {
             
             self.scene = scene
         }
+        
+        authenticateLocalPlayer()
+        
     }
 
     override func shouldAutorotate() -> Bool {
-        return true
+        return false
     }
 
     override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
@@ -96,7 +99,6 @@ class GameViewController: UIViewController, GKGameCenterControllerDelegate {
     @IBAction func shareButton() {
         
         //GameCenter-y stuff to do.
-        //print(((scene as! GameScene?)?.crap)!)
         print(String(((scene as! GameScene?)?.score)!))
         saveHighscore(((scene as! GameScene?)?.score)!)
         showLeader()
@@ -104,42 +106,42 @@ class GameViewController: UIViewController, GKGameCenterControllerDelegate {
     }
     
     
+    //shows leaderboard screen
+    func showLeader() {
+        //let vc = self.view?.window?.rootViewController
+        let vc = self
+        let gc = GKGameCenterViewController()
+        gc.gameCenterDelegate = self
+        vc.presentViewController(gc, animated: true, completion: nil)
+    }
+    
+    //hides leaderboard screen
+    func gameCenterViewControllerDidFinish(gameCenterViewController: GKGameCenterViewController)
+    {
+        gameCenterViewController.dismissViewControllerAnimated(true, completion: nil)
+        
+    }
+    
     //send high score to leaderboard
     func saveHighscore(score:CGFloat) {
         
         //check if user is signed in
         if GKLocalPlayer.localPlayer().authenticated {
             
-            let scoreReporter = GKScore(leaderboardIdentifier: "g_death" +
-                String(NSUserDefaults.standardUserDefaults().valueForKey("numSwords") ?? 2)) //leaderboard id here
+            let scoreReporter = GKScore(leaderboardIdentifier: "g_death3") //leaderboard id here
             
-            scoreReporter.value = Int64(score * 10) //score variable here (same as above)
+            scoreReporter.value = Int64(score) //score variable here (same as above)
             
             let scoreArray: [GKScore] = [scoreReporter]
             
             GKScore.reportScores(scoreArray, withCompletionHandler: {(error : NSError?) -> Void in
                 if error != nil {
-                    // println("error")
+                    print("error")
                 }
             })
             
         }
         
-    }
-    
-    //shows leaderboard screen
-    func showLeader() {
-        let vc = self.view?.window?.rootViewController
-        let gc = GKGameCenterViewController()
-        gc.gameCenterDelegate = self
-        //vc?.present(gc, animated: true, completion: nil)
-        vc?.presentViewController(gc, animated: true, completion: nil)
-    }
-    
-    //hides leaderboard screen
-    func gameCenterViewControllerDidFinish(gameCenterViewController: GKGameCenterViewController) {
-        //gameCenterViewController.dismiss(animated: true, completion: nil)
-        gameCenterViewController.dismissViewControllerAnimated(true, completion: nil)
     }
     
     //initiate gamecenter
@@ -150,12 +152,11 @@ class GameViewController: UIViewController, GKGameCenterControllerDelegate {
         localPlayer.authenticateHandler = {(viewController, error) -> Void in
             
             if (viewController != nil) {
-                //self.present(viewController!, animated: true, completion: nil)
-                self.presentViewController((viewController)!, animated: true, completion: nil)
+                self.presentViewController(viewController!, animated: true, completion: nil)
             }
                 
             else {
-                // println((GKLocalPlayer.localPlayer().authenticated))
+                print((GKLocalPlayer.localPlayer().authenticated))
             }
         }
     }
