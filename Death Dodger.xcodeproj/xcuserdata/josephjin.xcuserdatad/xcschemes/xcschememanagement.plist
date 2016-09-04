@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Death Dodger tvOS.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>Death Dodger.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -12,6 +17,21 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>73AF1BF51D7C9EFB008396B3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>73AF1C0B1D7C9EFB008396B3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>73AF1C161D7C9EFB008396B3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>73FCD2551D2C16D600D273D9</key>
 		<dict>
 			<key>primary</key>
