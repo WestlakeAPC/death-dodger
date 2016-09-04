@@ -17,9 +17,9 @@
 			<string>PSMultiValueSpecifier</string>
 			<key>Titles</key>
 			<array>
-				<string>1</string>
-				<string>2</string>
-				<string>3</string>
+				<string>Loser Mode (1 sword)</string>
+				<string>Normal Mode (2 swords)</string>
+				<string>Pro Mode (3 swords)</string>
 			</array>
 			<key>Title</key>
 			<string>Number Of Swords</string>

@@ -128,7 +128,9 @@ class GameViewController: UIViewController, GKGameCenterControllerDelegate {
         //check if user is signed in
         if GKLocalPlayer.localPlayer().authenticated {
             
-            let scoreReporter = GKScore(leaderboardIdentifier: "g_death3") //leaderboard id here
+            //let scoreReporter = GKScore(leaderboardIdentifier: "DeathDodgerLeaderBoardID" + String(NSUserDefaults.standardUserDefaults().valueForKey("numSwords") ?? 3)) //leaderboard id here
+            
+            let scoreReporter = GKScore(leaderboardIdentifier: "g_death3")
             
             scoreReporter.value = Int64(score) //score variable here (same as above)
             

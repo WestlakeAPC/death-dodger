@@ -149,6 +149,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         punchSoundEffect.play()
         
         continued = false;
+        initialized = false;
         self.over?.setScale(1.0)
         self.over?.hidden = false
         self.over?.alpha = 1.0
@@ -224,14 +225,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             self.touchDown(atPoint: t.locationInNode(self))
             
             for i in self.nodesAtPoint(t.locationInNode(self)) {
-                if !continued && i.name == "Over-screen" {
-                    self.initialized = false
+                if !initialized && i.name == "Over-screen" {
+                    self.initialized = true
                     
                     self.over?.runAction(SKAction.fadeOutWithDuration(1.5), completion: {
+                        self.over?.userInteractionEnabled = false
                         self.initialize()
                     })
                     
                     for i in 1 ... swords.endIndex-1 {
+                        
                         swords[i]?.runAction(SKAction.removeFromParent())
                     }
                     
