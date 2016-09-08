@@ -383,6 +383,7 @@
 					73AF1BF51D7C9EFB008396B3 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = M64HPXXUJF;
+						LastSwiftMigration = 0800;
 						SystemCapabilities = {
 							com.apple.GameCenter = {
 								enabled = 1;
@@ -392,11 +393,13 @@
 					73AF1C0B1D7C9EFB008396B3 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = M64HPXXUJF;
+						LastSwiftMigration = 0800;
 						TestTargetID = 73AF1BF51D7C9EFB008396B3;
 					};
 					73AF1C161D7C9EFB008396B3 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = M64HPXXUJF;
+						LastSwiftMigration = 0800;
 						TestTargetID = 73AF1BF51D7C9EFB008396B3;
 					};
 					73FCD2551D2C16D600D273D9 = {
@@ -606,6 +609,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = appletvos;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.2;
 			};
@@ -626,6 +630,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = appletvos;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.2;
 			};
@@ -643,6 +648,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.animatorjoe.Death-Dodger-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Death Dodger tvOS.app/Death Dodger tvOS";
 				TVOS_DEPLOYMENT_TARGET = 9.2;
 			};
@@ -659,6 +665,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.animatorjoe.Death-Dodger-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Death Dodger tvOS.app/Death Dodger tvOS";
 				TVOS_DEPLOYMENT_TARGET = 9.2;
 			};
@@ -675,6 +682,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.animatorjoe.Death-Dodger-tvOSUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "Death Dodger tvOS";
 				TVOS_DEPLOYMENT_TARGET = 9.2;
 			};
@@ -690,6 +698,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.animatorjoe.Death-Dodger-tvOSUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "Death Dodger tvOS";
 				TVOS_DEPLOYMENT_TARGET = 9.2;
 			};
@@ -799,7 +808,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ethertyper.deathdodger;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -816,7 +825,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ethertyper.deathdodger;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -840,7 +849,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.animatorjoe.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Death Dodger.app/Death Dodger";
 			};
 			name = Debug;
@@ -861,7 +870,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.animatorjoe.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Death Dodger.app/Death Dodger";
 			};
 			name = Release;

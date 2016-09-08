@@ -11,14 +11,14 @@ import SpriteKit
 import GameKit
 
 extension SKNode {
-    class func unarchiveFromFile(file : String) -> SKNode? {
-        if let path = NSBundle.mainBundle().pathForResource(file, ofType: "sks") {
+    class func unarchiveFromFile(_ file : String) -> SKNode? {
+        if let path = Bundle.main.path(forResource: file, ofType: "sks") {
             //var sceneData = NSData(contentsOfFile: path, options: .DataReadingMappedIfSafe, error: nil)!
-            let sceneData = try! NSData(contentsOfFile: path, options: .DataReadingMappedIfSafe)
-            let archiver = NSKeyedUnarchiver(forReadingWithData: sceneData)
+            let sceneData = try! Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+            let archiver = NSKeyedUnarchiver(forReadingWith: sceneData)
             
             archiver.setClass(self.classForKeyedUnarchiver(), forClassName: "SKScene")
-            let scene = archiver.decodeObjectForKey(NSKeyedArchiveRootObjectKey) as! GameScene
+            let scene = archiver.decodeObject(forKey: NSKeyedArchiveRootObjectKey) as! GameScene
             archiver.finishDecoding()
             return scene
         } else {
@@ -29,7 +29,7 @@ extension SKNode {
 
 class GameViewController: UIViewController, GKGameCenterControllerDelegate {
     
-    private var scene : SKScene?
+    fileprivate var scene : SKScene?
     var deviceType = "Device"
     @IBOutlet var share: UIButton!
 
@@ -39,7 +39,7 @@ class GameViewController: UIViewController, GKGameCenterControllerDelegate {
         share.frame.size.height = 1
         share.layer.cornerRadius = 5
         
-        share.hidden = false
+        share.isHidden = false
         
         if let scene = GameScene.unarchiveFromFile("GameScene") as? GameScene {
             // Configure the view.
@@ -52,14 +52,14 @@ class GameViewController: UIViewController, GKGameCenterControllerDelegate {
             
             /* Set the scale mode to scale to fit the window */
             //Also made game work on different devices
-            if (UIDevice.currentDevice().model == "iPhone"){
+            if (UIDevice.current.model == "iPhone"){
                 deviceType = "Iphone"
-                scene.scaleMode = .AspectFill
-            } else if (UIDevice.currentDevice().model == "iPad"){
+                scene.scaleMode = .aspectFill
+            } else if (UIDevice.current.model == "iPad"){
                 deviceType = "Ipad"
-                scene.scaleMode = .ResizeFill
+                scene.scaleMode = .resizeFill
             } else {
-                scene.scaleMode = .AspectFill
+                scene.scaleMode = .aspectFill
             }
             
             self.scene = scene as SKScene?
@@ -75,15 +75,15 @@ class GameViewController: UIViewController, GKGameCenterControllerDelegate {
         
     }
 
-    override func shouldAutorotate() -> Bool {
+    override var shouldAutorotate : Bool {
         return false
     }
 
-    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
-        if UIDevice.currentDevice().userInterfaceIdiom == .Phone {
-            return UIInterfaceOrientationMask.AllButUpsideDown
+    override var supportedInterfaceOrientations : UIInterfaceOrientationMask {
+        if UIDevice.current.userInterfaceIdiom == .phone {
+            return UIInterfaceOrientationMask.allButUpsideDown
         } else {
-            return UIInterfaceOrientationMask.All
+            return UIInterfaceOrientationMask.all
         }
     }
 
@@ -92,14 +92,14 @@ class GameViewController: UIViewController, GKGameCenterControllerDelegate {
         // Release any cached data, images, etc that aren't in use.
     }
 
-    override func prefersStatusBarHidden() -> Bool {
+    override var prefersStatusBarHidden : Bool {
         return true
     }
     
     @IBAction func shareButton() {
         
         //GameCenter-y stuff to do.
-        print(String(((scene as! GameScene?)?.score)!))
+        print(String(describing: ((scene as! GameScene?)?.score)!))
         saveHighscore(((scene as! GameScene?)?.score)!)
         showLeader()
         
@@ -112,21 +112,21 @@ class GameViewController: UIViewController, GKGameCenterControllerDelegate {
         let vc = self
         let gc = GKGameCenterViewController()
         gc.gameCenterDelegate = self
-        vc.presentViewController(gc, animated: true, completion: nil)
+        vc.present(gc, animated: true, completion: nil)
     }
     
     //hides leaderboard screen
-    func gameCenterViewControllerDidFinish(gameCenterViewController: GKGameCenterViewController)
+    func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController)
     {
-        gameCenterViewController.dismissViewControllerAnimated(true, completion: nil)
+        gameCenterViewController.dismiss(animated: true, completion: nil)
         
     }
     
     //send high score to leaderboard
-    func saveHighscore(score:CGFloat) {
+    func saveHighscore(_ score:CGFloat) {
         
         //check if user is signed in
-        if GKLocalPlayer.localPlayer().authenticated {
+        if GKLocalPlayer.localPlayer().isAuthenticated {
             
             //let scoreReporter = GKScore(leaderboardIdentifier: "DeathDodgerLeaderBoardID" + String(NSUserDefaults.standardUserDefaults().valueForKey("numSwords") ?? 3)) //leaderboard id here
             
@@ -136,7 +136,7 @@ class GameViewController: UIViewController, GKGameCenterControllerDelegate {
             
             let scoreArray: [GKScore] = [scoreReporter]
             
-            GKScore.reportScores(scoreArray, withCompletionHandler: {(error : NSError?) -> Void in
+            GKScore.report(scoreArray, withCompletionHandler: {(error : Error?) -> Void in
                 if error != nil {
                     print("error")
                 }
@@ -154,11 +154,11 @@ class GameViewController: UIViewController, GKGameCenterControllerDelegate {
         localPlayer.authenticateHandler = {(viewController, error) -> Void in
             
             if (viewController != nil) {
-                self.presentViewController(viewController!, animated: true, completion: nil)
+                self.present(viewController!, animated: true, completion: nil)
             }
                 
             else {
-                print((GKLocalPlayer.localPlayer().authenticated))
+                print((GKLocalPlayer.localPlayer().isAuthenticated))
             }
         }
     }

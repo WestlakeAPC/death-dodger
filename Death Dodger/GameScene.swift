@@ -14,22 +14,22 @@ import AVFoundation
 @objc(GameScene)
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
-    let left = SKAction.moveByX(-100, y: 0, duration: 0.3)
-    let right = SKAction.moveByX(100, y: 0, duration: 0.3)
-    let spinnyStuff = NSUserDefaults.standardUserDefaults().valueForKey("spinnyStuff") ?? false
-    let numSwords = NSUserDefaults.standardUserDefaults().valueForKey("numSwords") ?? 3
+    let left = SKAction.moveBy(x: -100, y: 0, duration: TimeInterval(0.3))
+    let right = SKAction.moveBy(x: 100, y: 0, duration: TimeInterval(0.3))
+    let spinnyStuff = UserDefaults.standard.value(forKey: "spinnyStuff") ?? false
+    let numSwords = UserDefaults.standard.value(forKey: "numSwords") ?? 3
     
     var backgroundImage = SKSpriteNode()
     var screenBoarder = SKNode()
     var deathLabel = SKLabelNode()
     var pLabel = SKLabelNode()
-    private var label : SKLabelNode?
-    private var rocket : SKSpriteNode?
-    private var over : SKShapeNode?
-    private var spinnyNode : SKShapeNode?
-    private var scoreDisplay = SKLabelNode()
-    private var swords = [SKSpriteNode?](count: 4, repeatedValue: nil)
-    private var emitter = [SKEmitterNode?](count: 1, repeatedValue: nil)
+    var label : SKLabelNode?
+    var rocket : SKSpriteNode?
+    var over : SKShapeNode?
+    var spinnyNode : SKShapeNode?
+    var scoreDisplay = SKLabelNode()
+    var swords = [SKSpriteNode?](repeating: nil, count: 4)
+    var emitter = [SKEmitterNode?](repeating: nil, count: 1)
     
     var backgroundMusic = AVAudioPlayer()
     var swordSoundEffect = AVAudioPlayer()
@@ -46,7 +46,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var maxSpeed = 30.0
     
     //******************************************************************************* Did Move To View
-    override func didMoveToView(view: SKView){
+    override func didMove(to view: SKView){
         
         //Setup For Collisions
         self.physicsWorld.contactDelegate = self
@@ -61,47 +61,47 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.addChild(backgroundImage)
         
         //Music
-        let music = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("Crazy", ofType: "wav")!)
-        backgroundMusic = try! AVAudioPlayer.init(contentsOfURL: music)
+        let music = URL(fileURLWithPath: Bundle.main.path(forResource: "Crazy", ofType: "wav")!)
+        backgroundMusic = try! AVAudioPlayer.init(contentsOf: music)
         backgroundMusic.prepareToPlay()
         backgroundMusic.numberOfLoops = -1
         
         //Sword Sound
-        let swordSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("Sword", ofType: "wav")!)
-        swordSoundEffect = try! AVAudioPlayer.init(contentsOfURL: swordSound)
+        let swordSound = URL(fileURLWithPath: Bundle.main.path(forResource: "Sword", ofType: "wav")!)
+        swordSoundEffect = try! AVAudioPlayer.init(contentsOf: swordSound)
         swordSoundEffect.prepareToPlay()
         swordSoundEffect.numberOfLoops = 0
         
         //Punch Sound
-        let punchSound = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("punch", ofType: "wav")!)
-        punchSoundEffect = try! AVAudioPlayer.init(contentsOfURL: punchSound)
+        let punchSound = URL(fileURLWithPath: Bundle.main.path(forResource: "punch", ofType: "wav")!)
+        punchSoundEffect = try! AVAudioPlayer.init(contentsOf: punchSound)
         punchSoundEffect.prepareToPlay()
         punchSoundEffect.numberOfLoops = 0
         
         //Sprites
-        self.rocket = self.childNodeWithName("finnCharc") as? SKSpriteNode
-        self.over = self.childNodeWithName("overScreen") as? SKShapeNode
+        self.rocket = self.childNode(withName: "finnCharc") as? SKSpriteNode
+        self.over = self.childNode(withName: "overScreen") as? SKShapeNode
         
         //Setup For Player Info
         //let deathLabel = SKLabelNode.init()
         deathLabel.text = "Tap to Restart"
         deathLabel.fontSize = 30;
         deathLabel.setScale(0.33);
-        deathLabel.fontColor = UIColor.blackColor()
+        deathLabel.fontColor = UIColor.black
         deathLabel.position = CGPoint(x: 0,y: -10)
         deathLabel.zPosition = 15
         self.over?.addChild(deathLabel)
         
         pLabel.fontSize = 45;
         pLabel.setScale(0.33);
-        pLabel.fontColor = UIColor.blackColor()
+        pLabel.fontColor = UIColor.black
         pLabel.position = CGPoint(x: 0,y: 20)
         self.over?.addChild(pLabel)
         
         //Score Board
         scoreDisplay.text = String(displayScore)
         scoreDisplay.fontSize = 120
-        scoreDisplay.fontColor = UIColor.whiteColor()
+        scoreDisplay.fontColor = UIColor.white
         scoreDisplay.zPosition = 12
         scoreDisplay.position = CGPoint(x: self.frame.origin.x + self.frame.size.width * 1/2,
         y: self.frame.origin.y + self.frame.size.height * 0.9)
@@ -109,8 +109,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.addChild(scoreDisplay)
         
         //Physics
-        self.physicsBody = SKPhysicsBody(edgeLoopFromRect: CGRect(x: 0,y: 0, width: self.frame.size.width,height: self.frame.size.height * 1.5))
-        self.physicsBody?.dynamic = true
+        self.physicsBody = SKPhysicsBody(edgeLoopFrom: CGRect(x: 0,y: 0, width: self.frame.size.width,height: self.frame.size.height * 1.5))
+        self.physicsBody?.isDynamic = true
         
         self.physicsWorld.gravity = CGVector(dx: 0,dy: 0)
         
@@ -123,18 +123,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if continued {
             if let label = self.label {
                 label.alpha = 0.0
-                label.runAction(SKAction.fadeInWithDuration(2.0))
+                label.run(SKAction.fadeIn(withDuration: 2.0))
                 label.text = String("Spaceship");
             }
             
             // Create shape node to use during mouse interaction
             let w = (self.size.width + self.size.height) * 0.05
-            self.spinnyNode = SKShapeNode.init(rectOfSize: CGSize.init(width: w, height: w), cornerRadius: w * 0.3)
+            self.spinnyNode = SKShapeNode.init(rectOf: CGSize.init(width: w, height: w), cornerRadius: w * 0.3)
             
             if let spinnyNode = self.spinnyNode {
                 spinnyNode.lineWidth = 2.5
-                spinnyNode.runAction(SKAction.repeatActionForever(SKAction.rotateByAngle(CGFloat(M_PI), duration: 1)))
-                spinnyNode.runAction(SKAction.sequence([SKAction.waitForDuration(0.5),SKAction.fadeOutWithDuration(0.5),SKAction.removeFromParent()]))
+                spinnyNode.run(SKAction.repeatForever(SKAction.rotate(byAngle: CGFloat(M_PI), duration: 1)))
+                spinnyNode.run(SKAction.sequence([SKAction.wait(forDuration: 0.5),SKAction.fadeOut(withDuration: 0.5),SKAction.removeFromParent()]))
             }
         }
     }
@@ -151,9 +151,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         continued = false;
         initialized = false;
         self.over?.setScale(1.0)
-        self.over?.hidden = false
+        self.over?.isHidden = false
         self.over?.alpha = 1.0
-        self.rocket?.hidden = false
+        self.rocket?.isHidden = false
         
         deathLabel.text = "Tap to Restart"
         pLabel.text = String(displayScore) + " Points!"
@@ -162,7 +162,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         for i in emitter { i?.particleBirthRate = 1500;
             i?.position = (rocket?.position)! }
 
-        self.over?.runAction(SKAction.scaleTo(4.0, duration: 1.5))
+        self.over?.run(SKAction.scale(to: 4.0, duration: 1.5))
         
     }
     
@@ -171,7 +171,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if self.spinnyStuff as! Bool {
             if let n = self.spinnyNode?.copy() as! SKShapeNode? {
                 n.position = pos
-                n.strokeColor = UIColor.greenColor()
+                n.strokeColor = UIColor.green
                 self.addChild(n)
             }
         }
@@ -182,7 +182,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if self.spinnyStuff as! Bool {
             if let n = self.spinnyNode?.copy() as! SKShapeNode? {
                 n.position = pos
-                n.strokeColor = UIColor.blueColor()
+                n.strokeColor = UIColor.blue
                 self.addChild(n)
             }
         }
@@ -193,11 +193,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             if continued {
                 if pos.x < self.frame.origin.x + self.frame.width/2{
                     if (self.rocket?.position.x)! - ((self.rocket?.frame.width)!/2) >= self.frame.origin.x {
-                        rocket.runAction(self.left);
+                        rocket.run(self.left);
                     }
                 } else if pos.x >= self.frame.origin.x + self.frame.width/2 {
                     if (self.rocket?.position.x)! + ((self.rocket?.frame.width)!/2) <= self.frame.origin.x + self.frame.size.width {
-                        rocket.runAction(self.right);
+                        rocket.run(self.right);
                     }
                 }
             }
@@ -209,33 +209,33 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if self.spinnyStuff as! Bool {
             if let n = self.spinnyNode?.copy() as! SKShapeNode? {
                 n.position = pos
-                n.strokeColor = UIColor.redColor()
+                n.strokeColor = UIColor.red
                 self.addChild(n)
             }
         }
     }
     
     //***************************************************** When Tapped (Restart)
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let label = self.label {
-            label.runAction(SKAction.init(named: "Pulse")!, withKey: "fadeInOut")
+            label.run(SKAction.init(named: "Pulse")!, withKey: "fadeInOut")
         }
         
         for t in touches {
-            self.touchDown(atPoint: t.locationInNode(self))
+            self.touchDown(atPoint: t.location(in: self))
             
-            for i in self.nodesAtPoint(t.locationInNode(self)) {
+            for i in self.nodes(at: t.location(in: self)) {
                 if !initialized && i.name == "Over-screen" {
                     self.initialized = true
                     
-                    self.over?.runAction(SKAction.fadeOutWithDuration(1.5), completion: {
-                        self.over?.userInteractionEnabled = false
+                    self.over?.run(SKAction.fadeOut(withDuration: 1.5), completion: {
+                        self.over?.isUserInteractionEnabled = false
                         self.initialize()
                     })
                     
                     for i in 1 ... swords.endIndex-1 {
                         
-                        swords[i]?.runAction(SKAction.removeFromParent())
+                        swords[i]?.run(SKAction.removeFromParent())
                     }
                     
                 }
@@ -244,28 +244,28 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     //*****************************************************
-    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        for t in touches { self.touchUp(atPoint: t.locationInNode(self)) }
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        for t in touches { self.touchUp(atPoint: t.location(in: self)) }
     }
     
-    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        for t in touches { self.touchMoved(toPoint: t.locationInNode(self)) }
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        for t in touches { self.touchMoved(toPoint: t.location(in: self)) }
     }
     
     //***************************************************** Swords
-    override func update(currentTime: NSTimeInterval) {
+    override func update(_ currentTime: TimeInterval) {
         for i in 1 ... swords.endIndex-1 {
             
             //print((swords[i]?.position)!)
             
-            swords[i]?.runAction(SKAction.moveByX(0, y: -(CGFloat)(self.downRate), duration: 0.03))
+            swords[i]?.run(SKAction.moveBy(x: 0, y: -(CGFloat)(self.downRate), duration: 0.03))
             
             if ((checkCollision(swords[i]!)) == true) {
                 if i <= numSwords as! Int {
                     self.playerDidDie()
                 }
                 
-            } else if (swords[i]?.position.y <= self.frame.origin.y - (swords[i]?.frame.height)!/2) {
+            } else if ((swords[i]?.position.y)! <= self.frame.origin.y - (swords[i]?.frame.height)!/2) {
                 if continued {
                     swords[i]?.position = CGPoint(x: self.frame.origin.x + CGFloat(arc4random_uniform(UInt32(self.frame.width))),
                         y: self.frame.origin.y + self.frame.height + CGFloat(i * 50))
@@ -273,7 +273,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     
                     //Score
                     if i <= numSwords as! Int {
-                        swords[i]?.hidden = false
+                        swords[i]?.isHidden = false
                     }
                     
                     if i > numSwords as! Int {
@@ -294,7 +294,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func initialize() {
         
         for i in 1 ... swords.endIndex-1 {
-            swords[i]?.runAction(SKAction.removeFromParent())
+            swords[i]?.run(SKAction.removeFromParent())
         }
         
         for i in 1 ... swords.endIndex-1 {
@@ -307,15 +307,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
  
             sword?.position = CGPoint(x: self.frame.origin.x + CGFloat(arc4random_uniform(UInt32(self.frame.width))),       y: self.frame.origin.y + self.frame.height * 1.2)
             
-            sword?.physicsBody?.dynamic = false
+            sword?.physicsBody?.isDynamic = false
             
             sword?.zPosition = 8
             self.addChild((sword)!)
             
             if i > numSwords as! Int {
-                swords[i]?.hidden = true
+                swords[i]?.isHidden = true
             } else {
-                swords[i]?.hidden = false
+                swords[i]?.isHidden = false
             }
             
         };
@@ -337,19 +337,19 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         //Rocket
         rocket?.position = CGPoint(x: self.frame.origin.x + self.frame.width/2,
             y: self.frame.origin.y + self.frame.height/6)
-        rocket?.physicsBody = SKPhysicsBody(rectangleOfSize: CGSize(width: (rocket?.frame.width)!,
+        rocket?.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: (rocket?.frame.width)!,
             height: (rocket?.frame.height)!))
-        rocket?.physicsBody?.dynamic = true
-        rocket?.hidden = false
+        rocket?.physicsBody?.isDynamic = true
+        rocket?.isHidden = false
         rocket?.zPosition = 10
         
         //Over Screen
         over?.position = CGPoint(x: self.frame.origin.x + self.frame.width/2,
             y: self.frame.origin.y + self.frame.height/2)
         
-        over?.hidden = true
+        over?.isHidden = true
         over?.name = "Over-screen"
-        over?.userInteractionEnabled = false
+        over?.isUserInteractionEnabled = false
         
         //Settings
         continued = true;
@@ -365,7 +365,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
     }
     
-    func checkCollision (aSword: SKSpriteNode) -> Bool {
+    func checkCollision (_ aSword: SKSpriteNode) -> Bool {
         let swordX = aSword.position.x - aSword.frame.width/80;
         let swordXRight = aSword.position.x + aSword.frame.width/80;
         let swordY = aSword.position.y - aSword.frame.height/2;
