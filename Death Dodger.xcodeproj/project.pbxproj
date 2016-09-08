@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17386D371D81C0A0005659BA /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17386D361D81C0A0005659BA /* GameKit.framework */; };
 		7361DDD41D548C7B002C80EA /* Gomez10.png in Resources */ = {isa = PBXBuildFile; fileRef = 7361DDD31D548C7B002C80EA /* Gomez10.png */; };
 		73AC191A1D71F5710098ED49 /* justAWhiteCube.png in Resources */ = {isa = PBXBuildFile; fileRef = 73AC19191D71F5710098ED49 /* justAWhiteCube.png */; };
 		73AF1BB71D71F6CA008396B3 /* gamebackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 73AF1BB61D71F6CA008396B3 /* gamebackground.png */; };
@@ -70,6 +71,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		17386D361D81C0A0005659BA /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS10.0.sdk/System/Library/Frameworks/GameKit.framework; sourceTree = DEVELOPER_DIR; };
 		7361DDD31D548C7B002C80EA /* Gomez10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Gomez10.png; sourceTree = "<group>"; };
 		73AC19191D71F5710098ED49 /* justAWhiteCube.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = justAWhiteCube.png; sourceTree = "<group>"; };
 		73AF1BB61D71F6CA008396B3 /* gamebackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gamebackground.png; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17386D371D81C0A0005659BA /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,6 +153,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		17386D351D81C0A0005659BA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				17386D361D81C0A0005659BA /* GameKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		73AF1BF71D7C9EFB008396B3 /* Death Dodger tvOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -193,6 +204,7 @@
 				73AF1C0F1D7C9EFB008396B3 /* Death Dodger tvOSTests */,
 				73AF1C1A1D7C9EFB008396B3 /* Death Dodger tvOSUITests */,
 				73FCD2571D2C16D600D273D9 /* Products */,
+				17386D351D81C0A0005659BA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -370,24 +382,31 @@
 				TargetAttributes = {
 					73AF1BF51D7C9EFB008396B3 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 9SR8L2XE3A;
+						DevelopmentTeam = M64HPXXUJF;
+						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 1;
+							};
+						};
 					};
 					73AF1C0B1D7C9EFB008396B3 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = M64HPXXUJF;
 						TestTargetID = 73AF1BF51D7C9EFB008396B3;
 					};
 					73AF1C161D7C9EFB008396B3 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = M64HPXXUJF;
 						TestTargetID = 73AF1BF51D7C9EFB008396B3;
 					};
 					73FCD2551D2C16D600D273D9 = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = 9SR8L2XE3A;
+						DevelopmentTeam = M64HPXXUJF;
 						LastSwiftMigration = 0800;
 					};
 					73FCD26E1D2C16D600D273D9 = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = 9SR8L2XE3A;
+						DevelopmentTeam = M64HPXXUJF;
 						LastSwiftMigration = 0800;
 						TestTargetID = 73FCD2551D2C16D600D273D9;
 					};
@@ -580,6 +599,7 @@
 				CLANG_ANALYZER_NONNULL = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = M64HPXXUJF;
 				INFOPLIST_FILE = "Death Dodger tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ethertyper.deathdodger;
@@ -599,6 +619,7 @@
 				CLANG_ANALYZER_NONNULL = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = M64HPXXUJF;
 				INFOPLIST_FILE = "Death Dodger tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ethertyper.deathdodger;
@@ -616,6 +637,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = M64HPXXUJF;
 				INFOPLIST_FILE = "Death Dodger tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.animatorjoe.Death-Dodger-tvOSTests";
@@ -631,6 +653,7 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
+				DEVELOPMENT_TEAM = M64HPXXUJF;
 				INFOPLIST_FILE = "Death Dodger tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.animatorjoe.Death-Dodger-tvOSTests";
@@ -646,6 +669,7 @@
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = M64HPXXUJF;
 				INFOPLIST_FILE = "Death Dodger tvOSUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.animatorjoe.Death-Dodger-tvOSUITests";
@@ -660,6 +684,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ANALYZER_NONNULL = YES;
+				DEVELOPMENT_TEAM = M64HPXXUJF;
 				INFOPLIST_FILE = "Death Dodger tvOSUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.animatorjoe.Death-Dodger-tvOSUITests";
@@ -771,7 +796,7 @@
 				INFOPLIST_FILE = "Death Dodger/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.animatorjoe.deathdodger;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ethertyper.deathdodger;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 2.3;
@@ -788,7 +813,7 @@
 				INFOPLIST_FILE = "Death Dodger/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.animatorjoe.deathdodger;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ethertyper.deathdodger;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_VERSION = 2.3;
@@ -801,6 +826,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = M64HPXXUJF;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -825,6 +851,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = M64HPXXUJF;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
