@@ -8,6 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		17386D371D81C0A0005659BA /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17386D361D81C0A0005659BA /* GameKit.framework */; };
+		17A6F93E1D831F200021B513 /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17A6F93D1D831F200021B513 /* Messages.framework */; };
+		17A6F9411D831F200021B513 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A6F9401D831F200021B513 /* MessagesViewController.swift */; };
+		17A6F9441D831F200021B513 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17A6F9421D831F200021B513 /* MainInterface.storyboard */; };
+		17A6F9461D831F200021B513 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17A6F9451D831F200021B513 /* Assets.xcassets */; };
+		17A6F94A1D831F200021B513 /* Death Dodger iMessage.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 17A6F93C1D831F200021B513 /* Death Dodger iMessage.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		17A6F94F1D831F390021B513 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73FCD2921D2EBA5F00D273D9 /* GameKit.framework */; };
+		17A6F9501D831FA50021B513 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FCD25B1D2C16D600D273D9 /* AppDelegate.swift */; };
+		17A6F9511D831FA50021B513 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FCD25F1D2C16D600D273D9 /* GameScene.swift */; };
+		17A6F9521D831FE60021B513 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 73CF36EF1D49907200CE306A /* Settings.bundle */; };
+		17A6F9531D831FE60021B513 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 73FCD2811D2C18C800D273D9 /* background.png */; };
+		17A6F9541D831FE60021B513 /* the_sword.png in Resources */ = {isa = PBXBuildFile; fileRef = 73FCD2871D2C18C800D273D9 /* the_sword.png */; };
+		17A6F9551D831FE60021B513 /* justAWhiteCube.png in Resources */ = {isa = PBXBuildFile; fileRef = 73AC19191D71F5710098ED49 /* justAWhiteCube.png */; };
+		17A6F9561D831FE60021B513 /* Crazy.wav in Resources */ = {isa = PBXBuildFile; fileRef = 73FCD2821D2C18C800D273D9 /* Crazy.wav */; };
+		17A6F9571D831FE60021B513 /* punch.wav in Resources */ = {isa = PBXBuildFile; fileRef = 73FCD2851D2C18C800D273D9 /* punch.wav */; };
+		17A6F9581D831FE60021B513 /* Sword.wav in Resources */ = {isa = PBXBuildFile; fileRef = 73FCD2861D2C18C800D273D9 /* Sword.wav */; };
+		17A6F9591D831FE60021B513 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 73FCD25D1D2C16D600D273D9 /* GameScene.sks */; };
+		17A6F95A1D831FE60021B513 /* Blood.sks in Resources */ = {isa = PBXBuildFile; fileRef = 73FCD2901D2DDCDF00D273D9 /* Blood.sks */; };
+		17A6F95B1D831FF00021B513 /* gamebackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 73AF1BB61D71F6CA008396B3 /* gamebackground.png */; };
+		17A6F95C1D831FF00021B513 /* Gomez10.png in Resources */ = {isa = PBXBuildFile; fileRef = 7361DDD31D548C7B002C80EA /* Gomez10.png */; };
 		7361DDD41D548C7B002C80EA /* Gomez10.png in Resources */ = {isa = PBXBuildFile; fileRef = 7361DDD31D548C7B002C80EA /* Gomez10.png */; };
 		73AC191A1D71F5710098ED49 /* justAWhiteCube.png in Resources */ = {isa = PBXBuildFile; fileRef = 73AC19191D71F5710098ED49 /* justAWhiteCube.png */; };
 		73AF1BB71D71F6CA008396B3 /* gamebackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 73AF1BB61D71F6CA008396B3 /* gamebackground.png */; };
@@ -47,6 +66,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		17A6F9481D831F200021B513 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 73FCD24E1D2C16D600D273D9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 17A6F93B1D831F200021B513;
+			remoteInfo = "Death Dodger iMessage";
+		};
 		73AF1C0D1D7C9EFB008396B3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 73FCD24E1D2C16D600D273D9 /* Project object */;
@@ -70,8 +96,28 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		17A6F94E1D831F200021B513 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				17A6F94A1D831F200021B513 /* Death Dodger iMessage.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		17386D361D81C0A0005659BA /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS10.0.sdk/System/Library/Frameworks/GameKit.framework; sourceTree = DEVELOPER_DIR; };
+		17A6F93C1D831F200021B513 /* Death Dodger iMessage.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Death Dodger iMessage.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		17A6F93D1D831F200021B513 /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Messages.framework; path = System/Library/Frameworks/Messages.framework; sourceTree = SDKROOT; };
+		17A6F9401D831F200021B513 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
+		17A6F9431D831F200021B513 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		17A6F9451D831F200021B513 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		17A6F9471D831F200021B513 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7361DDD31D548C7B002C80EA /* Gomez10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Gomez10.png; sourceTree = "<group>"; };
 		73AC19191D71F5710098ED49 /* justAWhiteCube.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = justAWhiteCube.png; sourceTree = "<group>"; };
 		73AF1BB61D71F6CA008396B3 /* gamebackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gamebackground.png; sourceTree = "<group>"; };
@@ -113,6 +159,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		17A6F9391D831F200021B513 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17A6F93E1D831F200021B513 /* Messages.framework in Frameworks */,
+				17A6F94F1D831F390021B513 /* GameKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		73AF1BF31D7C9EFB008396B3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -157,8 +212,20 @@
 			isa = PBXGroup;
 			children = (
 				17386D361D81C0A0005659BA /* GameKit.framework */,
+				17A6F93D1D831F200021B513 /* Messages.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		17A6F93F1D831F200021B513 /* Death Dodger iMessage */ = {
+			isa = PBXGroup;
+			children = (
+				17A6F9401D831F200021B513 /* MessagesViewController.swift */,
+				17A6F9421D831F200021B513 /* MainInterface.storyboard */,
+				17A6F9451D831F200021B513 /* Assets.xcassets */,
+				17A6F9471D831F200021B513 /* Info.plist */,
+			);
+			path = "Death Dodger iMessage";
 			sourceTree = "<group>";
 		};
 		73AF1BF71D7C9EFB008396B3 /* Death Dodger tvOS */ = {
@@ -203,6 +270,7 @@
 				73AF1BF71D7C9EFB008396B3 /* Death Dodger tvOS */,
 				73AF1C0F1D7C9EFB008396B3 /* Death Dodger tvOSTests */,
 				73AF1C1A1D7C9EFB008396B3 /* Death Dodger tvOSUITests */,
+				17A6F93F1D831F200021B513 /* Death Dodger iMessage */,
 				73FCD2571D2C16D600D273D9 /* Products */,
 				17386D351D81C0A0005659BA /* Frameworks */,
 			);
@@ -216,6 +284,7 @@
 				73AF1BF61D7C9EFB008396B3 /* Death Dodger tvOS.app */,
 				73AF1C0C1D7C9EFB008396B3 /* Death Dodger tvOSTests.xctest */,
 				73AF1C171D7C9EFB008396B3 /* Death Dodger tvOSUITests.xctest */,
+				17A6F93C1D831F200021B513 /* Death Dodger iMessage.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -281,6 +350,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		17A6F93B1D831F200021B513 /* Death Dodger iMessage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17A6F94D1D831F200021B513 /* Build configuration list for PBXNativeTarget "Death Dodger iMessage" */;
+			buildPhases = (
+				17A6F9381D831F200021B513 /* Sources */,
+				17A6F9391D831F200021B513 /* Frameworks */,
+				17A6F93A1D831F200021B513 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Death Dodger iMessage";
+			productName = "Death Dodger iMessage";
+			productReference = 17A6F93C1D831F200021B513 /* Death Dodger iMessage.appex */;
+			productType = "com.apple.product-type.app-extension.messages";
+		};
 		73AF1BF51D7C9EFB008396B3 /* Death Dodger tvOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 73AF1C241D7C9EFB008396B3 /* Build configuration list for PBXNativeTarget "Death Dodger tvOS" */;
@@ -341,10 +427,12 @@
 				73FCD2521D2C16D600D273D9 /* Sources */,
 				73FCD2531D2C16D600D273D9 /* Frameworks */,
 				73FCD2541D2C16D600D273D9 /* Resources */,
+				17A6F94E1D831F200021B513 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				17A6F9491D831F200021B513 /* PBXTargetDependency */,
 			);
 			name = "Death Dodger";
 			productName = "Death Dodger";
@@ -376,10 +464,20 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftMigration = 0730;
-				LastSwiftUpdateCheck = 0730;
+				LastSwiftUpdateCheck = 0800;
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Animator Joe";
 				TargetAttributes = {
+					17A6F93B1D831F200021B513 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = M64HPXXUJF;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 1;
+							};
+						};
+					};
 					73AF1BF51D7C9EFB008396B3 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = M64HPXXUJF;
@@ -433,11 +531,32 @@
 				73AF1BF51D7C9EFB008396B3 /* Death Dodger tvOS */,
 				73AF1C0B1D7C9EFB008396B3 /* Death Dodger tvOSTests */,
 				73AF1C161D7C9EFB008396B3 /* Death Dodger tvOSUITests */,
+				17A6F93B1D831F200021B513 /* Death Dodger iMessage */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		17A6F93A1D831F200021B513 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17A6F95A1D831FE60021B513 /* Blood.sks in Resources */,
+				17A6F9541D831FE60021B513 /* the_sword.png in Resources */,
+				17A6F9581D831FE60021B513 /* Sword.wav in Resources */,
+				17A6F9531D831FE60021B513 /* background.png in Resources */,
+				17A6F9521D831FE60021B513 /* Settings.bundle in Resources */,
+				17A6F9591D831FE60021B513 /* GameScene.sks in Resources */,
+				17A6F9551D831FE60021B513 /* justAWhiteCube.png in Resources */,
+				17A6F9561D831FE60021B513 /* Crazy.wav in Resources */,
+				17A6F9571D831FE60021B513 /* punch.wav in Resources */,
+				17A6F95B1D831FF00021B513 /* gamebackground.png in Resources */,
+				17A6F95C1D831FF00021B513 /* Gomez10.png in Resources */,
+				17A6F9461D831F200021B513 /* Assets.xcassets in Resources */,
+				17A6F9441D831F200021B513 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		73AF1BF41D7C9EFB008396B3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -502,6 +621,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		17A6F9381D831F200021B513 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17A6F9511D831FA50021B513 /* GameScene.swift in Sources */,
+				17A6F9411D831F200021B513 /* MessagesViewController.swift in Sources */,
+				17A6F9501D831FA50021B513 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		73AF1BF21D7C9EFB008396B3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -549,6 +678,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		17A6F9491D831F200021B513 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 17A6F93B1D831F200021B513 /* Death Dodger iMessage */;
+			targetProxy = 17A6F9481D831F200021B513 /* PBXContainerItemProxy */;
+		};
 		73AF1C0E1D7C9EFB008396B3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 73AF1BF51D7C9EFB008396B3 /* Death Dodger tvOS */;
@@ -567,6 +701,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		17A6F9421D831F200021B513 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				17A6F9431D831F200021B513 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		73AF1C021D7C9EFB008396B3 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -594,6 +736,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		17A6F94B1D831F200021B513 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = M64HPXXUJF;
+				INFOPLIST_FILE = "Death Dodger iMessage/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ethertyper.deathdodger.iMessage;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		17A6F94C1D831F200021B513 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = M64HPXXUJF;
+				INFOPLIST_FILE = "Death Dodger iMessage/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ethertyper.deathdodger.iMessage;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 		73AF1C1E1D7C9EFB008396B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -798,6 +982,7 @@
 		73FCD27A1D2C16D600D273D9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -815,6 +1000,7 @@
 		73FCD27B1D2C16D600D273D9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -878,6 +1064,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		17A6F94D1D831F200021B513 /* Build configuration list for PBXNativeTarget "Death Dodger iMessage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17A6F94B1D831F200021B513 /* Debug */,
+				17A6F94C1D831F200021B513 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		73AF1C241D7C9EFB008396B3 /* Build configuration list for PBXNativeTarget "Death Dodger tvOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
