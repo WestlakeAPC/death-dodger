@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		171CD4761D8377C900CBAE8D /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 73CF36EF1D49907200CE306A /* Settings.bundle */; };
 		17386D371D81C0A0005659BA /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17386D361D81C0A0005659BA /* GameKit.framework */; };
 		17A6F93E1D831F200021B513 /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17A6F93D1D831F200021B513 /* Messages.framework */; };
 		17A6F9411D831F200021B513 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A6F9401D831F200021B513 /* MessagesViewController.swift */; };
@@ -561,6 +562,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				171CD4761D8377C900CBAE8D /* Settings.bundle in Resources */,
 				73AF1C2A1D7CAAD2008396B3 /* gamebackground.png in Resources */,
 				73AF1C2B1D7CAAD2008396B3 /* background.png in Resources */,
 				73AF1C2C1D7CAAD2008396B3 /* Gomez10.png in Resources */,
@@ -1071,6 +1073,7 @@
 				17A6F94C1D831F200021B513 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		73AF1C241D7C9EFB008396B3 /* Build configuration list for PBXNativeTarget "Death Dodger tvOS" */ = {
 			isa = XCConfigurationList;
