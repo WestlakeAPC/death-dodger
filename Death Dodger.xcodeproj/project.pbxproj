@@ -9,6 +9,14 @@
 /* Begin PBXBuildFile section */
 		171CD4761D8377C900CBAE8D /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 73CF36EF1D49907200CE306A /* Settings.bundle */; };
 		17386D371D81C0A0005659BA /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17386D361D81C0A0005659BA /* GameKit.framework */; };
+		1784A82C1D8472030088D302 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1784A82B1D8472030088D302 /* AppDelegate.swift */; };
+		1784A82E1D8472030088D302 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1784A82D1D8472030088D302 /* GameView.swift */; };
+		1784A8301D8472030088D302 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1784A82F1D8472030088D302 /* GameViewController.swift */; };
+		1784A8321D8472030088D302 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 1784A8311D8472030088D302 /* art.scnassets */; };
+		1784A8341D8472030088D302 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1784A8331D8472030088D302 /* Assets.xcassets */; };
+		1784A8371D8472030088D302 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1784A8351D8472030088D302 /* MainMenu.xib */; };
+		1784A8421D8472030088D302 /* Death_Dodger_3DTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1784A8411D8472030088D302 /* Death_Dodger_3DTests.swift */; };
+		1784A84D1D8472030088D302 /* Death_Dodger_3DUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1784A84C1D8472030088D302 /* Death_Dodger_3DUITests.swift */; };
 		17A6F93E1D831F200021B513 /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17A6F93D1D831F200021B513 /* Messages.framework */; };
 		17A6F9411D831F200021B513 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A6F9401D831F200021B513 /* MessagesViewController.swift */; };
 		17A6F9441D831F200021B513 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17A6F9421D831F200021B513 /* MainInterface.storyboard */; };
@@ -67,6 +75,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		1784A83E1D8472030088D302 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 73FCD24E1D2C16D600D273D9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1784A8281D8472030088D302;
+			remoteInfo = "Death Dodger 3D";
+		};
+		1784A8491D8472030088D302 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 73FCD24E1D2C16D600D273D9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1784A8281D8472030088D302;
+			remoteInfo = "Death Dodger 3D";
+		};
 		17A6F9481D831F200021B513 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 73FCD24E1D2C16D600D273D9 /* Project object */;
@@ -113,6 +135,20 @@
 
 /* Begin PBXFileReference section */
 		17386D361D81C0A0005659BA /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS10.0.sdk/System/Library/Frameworks/GameKit.framework; sourceTree = DEVELOPER_DIR; };
+		1784A8291D8472030088D302 /* Death Dodger 3D.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Death Dodger 3D.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1784A82B1D8472030088D302 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1784A82D1D8472030088D302 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		1784A82F1D8472030088D302 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		1784A8311D8472030088D302 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
+		1784A8331D8472030088D302 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1784A8361D8472030088D302 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		1784A8381D8472030088D302 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1784A83D1D8472030088D302 /* Death Dodger 3DTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Death Dodger 3DTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1784A8411D8472030088D302 /* Death_Dodger_3DTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Death_Dodger_3DTests.swift; sourceTree = "<group>"; };
+		1784A8431D8472030088D302 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1784A8481D8472030088D302 /* Death Dodger 3DUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Death Dodger 3DUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1784A84C1D8472030088D302 /* Death_Dodger_3DUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Death_Dodger_3DUITests.swift; sourceTree = "<group>"; };
+		1784A84E1D8472030088D302 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17A6F93C1D831F200021B513 /* Death Dodger iMessage.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Death Dodger iMessage.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		17A6F93D1D831F200021B513 /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Messages.framework; path = System/Library/Frameworks/Messages.framework; sourceTree = SDKROOT; };
 		17A6F9401D831F200021B513 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
@@ -160,6 +196,27 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1784A8261D8472030088D302 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1784A83A1D8472030088D302 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1784A8451D8472030088D302 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		17A6F9391D831F200021B513 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -218,6 +275,38 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		1784A82A1D8472030088D302 /* Death Dodger 3D */ = {
+			isa = PBXGroup;
+			children = (
+				1784A82B1D8472030088D302 /* AppDelegate.swift */,
+				1784A82D1D8472030088D302 /* GameView.swift */,
+				1784A82F1D8472030088D302 /* GameViewController.swift */,
+				1784A8311D8472030088D302 /* art.scnassets */,
+				1784A8331D8472030088D302 /* Assets.xcassets */,
+				1784A8351D8472030088D302 /* MainMenu.xib */,
+				1784A8381D8472030088D302 /* Info.plist */,
+			);
+			path = "Death Dodger 3D";
+			sourceTree = "<group>";
+		};
+		1784A8401D8472030088D302 /* Death Dodger 3DTests */ = {
+			isa = PBXGroup;
+			children = (
+				1784A8411D8472030088D302 /* Death_Dodger_3DTests.swift */,
+				1784A8431D8472030088D302 /* Info.plist */,
+			);
+			path = "Death Dodger 3DTests";
+			sourceTree = "<group>";
+		};
+		1784A84B1D8472030088D302 /* Death Dodger 3DUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1784A84C1D8472030088D302 /* Death_Dodger_3DUITests.swift */,
+				1784A84E1D8472030088D302 /* Info.plist */,
+			);
+			path = "Death Dodger 3DUITests";
+			sourceTree = "<group>";
+		};
 		17A6F93F1D831F200021B513 /* Death Dodger iMessage */ = {
 			isa = PBXGroup;
 			children = (
@@ -272,6 +361,9 @@
 				73AF1C0F1D7C9EFB008396B3 /* Death Dodger tvOSTests */,
 				73AF1C1A1D7C9EFB008396B3 /* Death Dodger tvOSUITests */,
 				17A6F93F1D831F200021B513 /* Death Dodger iMessage */,
+				1784A82A1D8472030088D302 /* Death Dodger 3D */,
+				1784A8401D8472030088D302 /* Death Dodger 3DTests */,
+				1784A84B1D8472030088D302 /* Death Dodger 3DUITests */,
 				73FCD2571D2C16D600D273D9 /* Products */,
 				17386D351D81C0A0005659BA /* Frameworks */,
 			);
@@ -286,6 +378,9 @@
 				73AF1C0C1D7C9EFB008396B3 /* Death Dodger tvOSTests.xctest */,
 				73AF1C171D7C9EFB008396B3 /* Death Dodger tvOSUITests.xctest */,
 				17A6F93C1D831F200021B513 /* Death Dodger iMessage.appex */,
+				1784A8291D8472030088D302 /* Death Dodger 3D.app */,
+				1784A83D1D8472030088D302 /* Death Dodger 3DTests.xctest */,
+				1784A8481D8472030088D302 /* Death Dodger 3DUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -351,6 +446,59 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		1784A8281D8472030088D302 /* Death Dodger 3D */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1784A8551D8472030088D302 /* Build configuration list for PBXNativeTarget "Death Dodger 3D" */;
+			buildPhases = (
+				1784A8251D8472030088D302 /* Sources */,
+				1784A8261D8472030088D302 /* Frameworks */,
+				1784A8271D8472030088D302 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Death Dodger 3D";
+			productName = "Death Dodger 3D";
+			productReference = 1784A8291D8472030088D302 /* Death Dodger 3D.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1784A83C1D8472030088D302 /* Death Dodger 3DTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1784A8561D8472030088D302 /* Build configuration list for PBXNativeTarget "Death Dodger 3DTests" */;
+			buildPhases = (
+				1784A8391D8472030088D302 /* Sources */,
+				1784A83A1D8472030088D302 /* Frameworks */,
+				1784A83B1D8472030088D302 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1784A83F1D8472030088D302 /* PBXTargetDependency */,
+			);
+			name = "Death Dodger 3DTests";
+			productName = "Death Dodger 3DTests";
+			productReference = 1784A83D1D8472030088D302 /* Death Dodger 3DTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1784A8471D8472030088D302 /* Death Dodger 3DUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1784A8571D8472030088D302 /* Build configuration list for PBXNativeTarget "Death Dodger 3DUITests" */;
+			buildPhases = (
+				1784A8441D8472030088D302 /* Sources */,
+				1784A8451D8472030088D302 /* Frameworks */,
+				1784A8461D8472030088D302 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1784A84A1D8472030088D302 /* PBXTargetDependency */,
+			);
+			name = "Death Dodger 3DUITests";
+			productName = "Death Dodger 3DUITests";
+			productReference = 1784A8481D8472030088D302 /* Death Dodger 3DUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		17A6F93B1D831F200021B513 /* Death Dodger iMessage */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 17A6F94D1D831F200021B513 /* Build configuration list for PBXNativeTarget "Death Dodger iMessage" */;
@@ -469,6 +617,23 @@
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Animator Joe";
 				TargetAttributes = {
+					1784A8281D8472030088D302 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = M64HPXXUJF;
+						ProvisioningStyle = Automatic;
+					};
+					1784A83C1D8472030088D302 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = M64HPXXUJF;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 1784A8281D8472030088D302;
+					};
+					1784A8471D8472030088D302 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = M64HPXXUJF;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 1784A8281D8472030088D302;
+					};
 					17A6F93B1D831F200021B513 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = M64HPXXUJF;
@@ -533,11 +698,38 @@
 				73AF1C0B1D7C9EFB008396B3 /* Death Dodger tvOSTests */,
 				73AF1C161D7C9EFB008396B3 /* Death Dodger tvOSUITests */,
 				17A6F93B1D831F200021B513 /* Death Dodger iMessage */,
+				1784A8281D8472030088D302 /* Death Dodger 3D */,
+				1784A83C1D8472030088D302 /* Death Dodger 3DTests */,
+				1784A8471D8472030088D302 /* Death Dodger 3DUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1784A8271D8472030088D302 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1784A8341D8472030088D302 /* Assets.xcassets in Resources */,
+				1784A8321D8472030088D302 /* art.scnassets in Resources */,
+				1784A8371D8472030088D302 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1784A83B1D8472030088D302 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1784A8461D8472030088D302 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		17A6F93A1D831F200021B513 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -623,6 +815,32 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1784A8251D8472030088D302 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1784A82E1D8472030088D302 /* GameView.swift in Sources */,
+				1784A8301D8472030088D302 /* GameViewController.swift in Sources */,
+				1784A82C1D8472030088D302 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1784A8391D8472030088D302 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1784A8421D8472030088D302 /* Death_Dodger_3DTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1784A8441D8472030088D302 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1784A84D1D8472030088D302 /* Death_Dodger_3DUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		17A6F9381D831F200021B513 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -680,6 +898,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		1784A83F1D8472030088D302 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1784A8281D8472030088D302 /* Death Dodger 3D */;
+			targetProxy = 1784A83E1D8472030088D302 /* PBXContainerItemProxy */;
+		};
+		1784A84A1D8472030088D302 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1784A8281D8472030088D302 /* Death Dodger 3D */;
+			targetProxy = 1784A8491D8472030088D302 /* PBXContainerItemProxy */;
+		};
 		17A6F9491D831F200021B513 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 17A6F93B1D831F200021B513 /* Death Dodger iMessage */;
@@ -703,6 +931,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		1784A8351D8472030088D302 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1784A8361D8472030088D302 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
 		17A6F9421D831F200021B513 /* MainInterface.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -738,6 +974,138 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		1784A84F1D8472030088D302 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = M64HPXXUJF;
+				INFOPLIST_FILE = "Death Dodger 3D/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ethertyper.deathdodger.3d;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		1784A8501D8472030088D302 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = M64HPXXUJF;
+				INFOPLIST_FILE = "Death Dodger 3D/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ethertyper.deathdodger.3d;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		1784A8511D8472030088D302 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = M64HPXXUJF;
+				INFOPLIST_FILE = "Death Dodger 3DTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ethertyper.Death-Dodger-3DTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Death Dodger 3D.app/Contents/MacOS/Death Dodger 3D";
+			};
+			name = Debug;
+		};
+		1784A8521D8472030088D302 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = M64HPXXUJF;
+				INFOPLIST_FILE = "Death Dodger 3DTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ethertyper.Death-Dodger-3DTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Death Dodger 3D.app/Contents/MacOS/Death Dodger 3D";
+			};
+			name = Release;
+		};
+		1784A8531D8472030088D302 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = M64HPXXUJF;
+				INFOPLIST_FILE = "Death Dodger 3DUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ethertyper.Death-Dodger-3DUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Death Dodger 3D";
+			};
+			name = Debug;
+		};
+		1784A8541D8472030088D302 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = M64HPXXUJF;
+				INFOPLIST_FILE = "Death Dodger 3DUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ethertyper.Death-Dodger-3DUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "Death Dodger 3D";
+			};
+			name = Release;
+		};
 		17A6F94B1D831F200021B513 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1066,6 +1434,30 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1784A8551D8472030088D302 /* Build configuration list for PBXNativeTarget "Death Dodger 3D" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1784A84F1D8472030088D302 /* Debug */,
+				1784A8501D8472030088D302 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1784A8561D8472030088D302 /* Build configuration list for PBXNativeTarget "Death Dodger 3DTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1784A8511D8472030088D302 /* Debug */,
+				1784A8521D8472030088D302 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		1784A8571D8472030088D302 /* Build configuration list for PBXNativeTarget "Death Dodger 3DUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1784A8531D8472030088D302 /* Debug */,
+				1784A8541D8472030088D302 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		17A6F94D1D831F200021B513 /* Build configuration list for PBXNativeTarget "Death Dodger iMessage" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
