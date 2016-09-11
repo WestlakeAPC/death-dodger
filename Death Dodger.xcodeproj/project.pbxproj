@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		171CD4761D8377C900CBAE8D /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 73CF36EF1D49907200CE306A /* Settings.bundle */; };
 		17386D371D81C0A0005659BA /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17386D361D81C0A0005659BA /* GameKit.framework */; };
+		177445431D85DDF000C505F8 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 177445421D85DDF000C505F8 /* GameKit.framework */; };
 		1784A82C1D8472030088D302 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1784A82B1D8472030088D302 /* AppDelegate.swift */; };
 		1784A82E1D8472030088D302 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1784A82D1D8472030088D302 /* GameView.swift */; };
 		1784A8301D8472030088D302 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1784A82F1D8472030088D302 /* GameViewController.swift */; };
@@ -143,6 +144,8 @@
 
 /* Begin PBXFileReference section */
 		17386D361D81C0A0005659BA /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS10.0.sdk/System/Library/Frameworks/GameKit.framework; sourceTree = DEVELOPER_DIR; };
+		177445411D85DDF000C505F8 /* Death Dodger 3D.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Death Dodger 3D.entitlements"; sourceTree = "<group>"; };
+		177445421D85DDF000C505F8 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/GameKit.framework; sourceTree = DEVELOPER_DIR; };
 		1784A8291D8472030088D302 /* Death Dodger 3D.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Death Dodger 3D.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1784A82B1D8472030088D302 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1784A82D1D8472030088D302 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
@@ -211,6 +214,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				177445431D85DDF000C505F8 /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +291,7 @@
 		17386D351D81C0A0005659BA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				177445421D85DDF000C505F8 /* GameKit.framework */,
 				17386D361D81C0A0005659BA /* GameKit.framework */,
 				17A6F93D1D831F200021B513 /* Messages.framework */,
 			);
@@ -296,6 +301,7 @@
 		1784A82A1D8472030088D302 /* Death Dodger 3D */ = {
 			isa = PBXGroup;
 			children = (
+				177445411D85DDF000C505F8 /* Death Dodger 3D.entitlements */,
 				1784A82B1D8472030088D302 /* AppDelegate.swift */,
 				1784A82D1D8472030088D302 /* GameView.swift */,
 				1784A82F1D8472030088D302 /* GameViewController.swift */,
@@ -668,6 +674,14 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = M64HPXXUJF;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 1;
+							};
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 					1784A83C1D8472030088D302 = {
 						CreatedOnToolsVersion = 8.0;
@@ -1055,6 +1069,7 @@
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CODE_SIGN_ENTITLEMENTS = "Death Dodger 3D/Death Dodger 3D.entitlements";
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -1077,6 +1092,7 @@
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CODE_SIGN_ENTITLEMENTS = "Death Dodger 3D/Death Dodger 3D.entitlements";
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = M64HPXXUJF;
