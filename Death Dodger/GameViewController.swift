@@ -100,7 +100,7 @@ class GameViewController: UIViewController, GKGameCenterControllerDelegate {
         
         //GameCenter-y stuff to do.
         print(String(describing: ((scene as! GameScene?)?.score)!))
-        saveHighscore(((scene as! GameScene?)?.score)!)
+        saveHighscore(((scene as! GameScene?)?.displayScore)!)
         showLeader()
         
     }
@@ -123,14 +123,12 @@ class GameViewController: UIViewController, GKGameCenterControllerDelegate {
     }
     
     //send high score to leaderboard
-    func saveHighscore(_ score:CGFloat) {
+    func saveHighscore(_ score:Int) {
         
         //check if user is signed in
         if GKLocalPlayer.localPlayer().isAuthenticated {
             
-            //let scoreReporter = GKScore(leaderboardIdentifier: "DeathDodgerLeaderBoardID" + String(NSUserDefaults.standardUserDefaults().valueForKey("numSwords") ?? 3)) //leaderboard id here
-            
-            let scoreReporter = GKScore(leaderboardIdentifier: "g_death3")
+            let scoreReporter = GKScore(leaderboardIdentifier: "DeathDodgerLeaderBoardGameCenterIDNumber" + String(describing: (UserDefaults.standard.value(forKey: "numSwords") ?? 3)!)) //leaderboard id here
             
             scoreReporter.value = Int64(score) //score variable here (same as above)
             
