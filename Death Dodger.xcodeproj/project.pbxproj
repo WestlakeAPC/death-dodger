@@ -38,6 +38,29 @@
 		17A6F95A1D831FE60021B513 /* Blood.sks in Resources */ = {isa = PBXBuildFile; fileRef = 73FCD2901D2DDCDF00D273D9 /* Blood.sks */; };
 		17A6F95B1D831FF00021B513 /* gamebackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 73AF1BB61D71F6CA008396B3 /* gamebackground.png */; };
 		17A6F95C1D831FF00021B513 /* Gomez10.png in Resources */ = {isa = PBXBuildFile; fileRef = 7361DDD31D548C7B002C80EA /* Gomez10.png */; };
+		17A97FAE1D860956003302D6 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17A97FAC1D860956003302D6 /* Interface.storyboard */; };
+		17A97FB01D860956003302D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17A97FAF1D860956003302D6 /* Assets.xcassets */; };
+		17A97FB71D860956003302D6 /* Death Dodger watchOS Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 17A97FB61D860956003302D6 /* Death Dodger watchOS Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		17A97FBE1D860956003302D6 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A97FBD1D860956003302D6 /* InterfaceController.swift */; };
+		17A97FC01D860956003302D6 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 17A97FBF1D860956003302D6 /* GameScene.sks */; };
+		17A97FC41D860956003302D6 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A97FC31D860956003302D6 /* ExtensionDelegate.swift */; };
+		17A97FC61D860956003302D6 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A97FC51D860956003302D6 /* NotificationController.swift */; };
+		17A97FC81D860956003302D6 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A97FC71D860956003302D6 /* ComplicationController.swift */; };
+		17A97FCA1D860956003302D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17A97FC91D860956003302D6 /* Assets.xcassets */; };
+		17A97FCE1D860956003302D6 /* Death Dodger watchOS.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 17A97FAA1D860956003302D6 /* Death Dodger watchOS.app */; };
+		17A97FD81D860A08003302D6 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17A97FD71D860A08003302D6 /* GameKit.framework */; };
+		17A97FD91D860A3B003302D6 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FCD25F1D2C16D600D273D9 /* GameScene.swift */; };
+		17A97FDA1D860ABE003302D6 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 73CF36EF1D49907200CE306A /* Settings.bundle */; };
+		17A97FDB1D860ABE003302D6 /* gamebackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 73AF1BB61D71F6CA008396B3 /* gamebackground.png */; };
+		17A97FDC1D860ABE003302D6 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 73FCD2811D2C18C800D273D9 /* background.png */; };
+		17A97FDD1D860ABE003302D6 /* Gomez10.png in Resources */ = {isa = PBXBuildFile; fileRef = 7361DDD31D548C7B002C80EA /* Gomez10.png */; };
+		17A97FDE1D860ABE003302D6 /* the_sword.png in Resources */ = {isa = PBXBuildFile; fileRef = 73FCD2871D2C18C800D273D9 /* the_sword.png */; };
+		17A97FDF1D860ABE003302D6 /* justAWhiteCube.png in Resources */ = {isa = PBXBuildFile; fileRef = 73AC19191D71F5710098ED49 /* justAWhiteCube.png */; };
+		17A97FE01D860ABE003302D6 /* Crazy.wav in Resources */ = {isa = PBXBuildFile; fileRef = 73FCD2821D2C18C800D273D9 /* Crazy.wav */; };
+		17A97FE11D860ABE003302D6 /* punch.wav in Resources */ = {isa = PBXBuildFile; fileRef = 73FCD2851D2C18C800D273D9 /* punch.wav */; };
+		17A97FE21D860ABE003302D6 /* Sword.wav in Resources */ = {isa = PBXBuildFile; fileRef = 73FCD2861D2C18C800D273D9 /* Sword.wav */; };
+		17A97FE31D860ABE003302D6 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 73FCD25D1D2C16D600D273D9 /* GameScene.sks */; };
+		17A97FE41D860ABE003302D6 /* Blood.sks in Resources */ = {isa = PBXBuildFile; fileRef = 73FCD2901D2DDCDF00D273D9 /* Blood.sks */; };
 		7361DDD41D548C7B002C80EA /* Gomez10.png in Resources */ = {isa = PBXBuildFile; fileRef = 7361DDD31D548C7B002C80EA /* Gomez10.png */; };
 		73AC191A1D71F5710098ED49 /* justAWhiteCube.png in Resources */ = {isa = PBXBuildFile; fileRef = 73AC19191D71F5710098ED49 /* justAWhiteCube.png */; };
 		73AF1BB71D71F6CA008396B3 /* gamebackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 73AF1BB61D71F6CA008396B3 /* gamebackground.png */; };
@@ -105,6 +128,20 @@
 			remoteGlobalIDString = 17A6F93B1D831F200021B513;
 			remoteInfo = "Death Dodger iMessage";
 		};
+		17A97FB81D860956003302D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 73FCD24E1D2C16D600D273D9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 17A97FB51D860956003302D6;
+			remoteInfo = "Death Dodger watchOS Extension";
+		};
+		17A97FCC1D860956003302D6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 73FCD24E1D2C16D600D273D9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 17A97FA91D860956003302D6;
+			remoteInfo = "Death Dodger watchOS";
+		};
 		73AF1C0D1D7C9EFB008396B3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 73FCD24E1D2C16D600D273D9 /* Project object */;
@@ -140,6 +177,28 @@
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		17A97FD41D860956003302D6 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				17A97FB71D860956003302D6 /* Death Dodger watchOS Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17A97FD61D860956003302D6 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				17A97FCE1D860956003302D6 /* Death Dodger watchOS.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -169,6 +228,21 @@
 		17A6F9431D831F200021B513 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		17A6F9451D831F200021B513 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		17A6F9471D831F200021B513 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17A97FAA1D860956003302D6 /* Death Dodger watchOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Death Dodger watchOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		17A97FAD1D860956003302D6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		17A97FAF1D860956003302D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		17A97FB11D860956003302D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17A97FB61D860956003302D6 /* Death Dodger watchOS Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Death Dodger watchOS Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		17A97FBC1D860956003302D6 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		17A97FBD1D860956003302D6 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		17A97FBF1D860956003302D6 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		17A97FC11D860956003302D6 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		17A97FC31D860956003302D6 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		17A97FC51D860956003302D6 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		17A97FC71D860956003302D6 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		17A97FC91D860956003302D6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		17A97FCB1D860956003302D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17A97FD71D860A08003302D6 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS3.0.sdk/System/Library/Frameworks/GameKit.framework; sourceTree = DEVELOPER_DIR; };
 		7361DDD31D548C7B002C80EA /* Gomez10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Gomez10.png; sourceTree = "<group>"; };
 		73AC19191D71F5710098ED49 /* justAWhiteCube.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = justAWhiteCube.png; sourceTree = "<group>"; };
 		73AF1BB61D71F6CA008396B3 /* gamebackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gamebackground.png; sourceTree = "<group>"; };
@@ -248,6 +322,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		17A97FB31D860956003302D6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17A97FD81D860A08003302D6 /* GameKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		73AF1BF31D7C9EFB008396B3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -291,6 +373,7 @@
 		17386D351D81C0A0005659BA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				17A97FD71D860A08003302D6 /* GameKit.framework */,
 				177445421D85DDF000C505F8 /* GameKit.framework */,
 				17386D361D81C0A0005659BA /* GameKit.framework */,
 				17A6F93D1D831F200021B513 /* Messages.framework */,
@@ -351,6 +434,40 @@
 			path = "Death Dodger iMessage";
 			sourceTree = "<group>";
 		};
+		17A97FAB1D860956003302D6 /* Death Dodger watchOS */ = {
+			isa = PBXGroup;
+			children = (
+				17A97FAC1D860956003302D6 /* Interface.storyboard */,
+				17A97FAF1D860956003302D6 /* Assets.xcassets */,
+				17A97FB11D860956003302D6 /* Info.plist */,
+			);
+			path = "Death Dodger watchOS";
+			sourceTree = "<group>";
+		};
+		17A97FBA1D860956003302D6 /* Death Dodger watchOS Extension */ = {
+			isa = PBXGroup;
+			children = (
+				17A97FBD1D860956003302D6 /* InterfaceController.swift */,
+				17A97FBF1D860956003302D6 /* GameScene.sks */,
+				17A97FC11D860956003302D6 /* GameScene.swift */,
+				17A97FC31D860956003302D6 /* ExtensionDelegate.swift */,
+				17A97FC51D860956003302D6 /* NotificationController.swift */,
+				17A97FC71D860956003302D6 /* ComplicationController.swift */,
+				17A97FC91D860956003302D6 /* Assets.xcassets */,
+				17A97FCB1D860956003302D6 /* Info.plist */,
+				17A97FBB1D860956003302D6 /* Supporting Files */,
+			);
+			path = "Death Dodger watchOS Extension";
+			sourceTree = "<group>";
+		};
+		17A97FBB1D860956003302D6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				17A97FBC1D860956003302D6 /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		73AF1BF71D7C9EFB008396B3 /* Death Dodger tvOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -398,6 +515,8 @@
 				1784A8401D8472030088D302 /* Death Dodger 3DTests */,
 				1784A84B1D8472030088D302 /* Death Dodger 3DUITests */,
 				1784A85D1D8473FA0088D302 /* Death DodgerUITests */,
+				17A97FAB1D860956003302D6 /* Death Dodger watchOS */,
+				17A97FBA1D860956003302D6 /* Death Dodger watchOS Extension */,
 				73FCD2571D2C16D600D273D9 /* Products */,
 				17386D351D81C0A0005659BA /* Frameworks */,
 			);
@@ -416,6 +535,8 @@
 				1784A83D1D8472030088D302 /* Death Dodger 3DTests.xctest */,
 				1784A8481D8472030088D302 /* Death Dodger 3DUITests.xctest */,
 				1784A85C1D8473FA0088D302 /* Death DodgerUITests.xctest */,
+				17A97FAA1D860956003302D6 /* Death Dodger watchOS.app */,
+				17A97FB61D860956003302D6 /* Death Dodger watchOS Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -569,6 +690,40 @@
 			productReference = 17A6F93C1D831F200021B513 /* Death Dodger iMessage.appex */;
 			productType = "com.apple.product-type.app-extension.messages";
 		};
+		17A97FA91D860956003302D6 /* Death Dodger watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17A97FD51D860956003302D6 /* Build configuration list for PBXNativeTarget "Death Dodger watchOS" */;
+			buildPhases = (
+				17A97FA81D860956003302D6 /* Resources */,
+				17A97FD41D860956003302D6 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				17A97FB91D860956003302D6 /* PBXTargetDependency */,
+			);
+			name = "Death Dodger watchOS";
+			productName = "Death Dodger watchOS";
+			productReference = 17A97FAA1D860956003302D6 /* Death Dodger watchOS.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		17A97FB51D860956003302D6 /* Death Dodger watchOS Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17A97FD31D860956003302D6 /* Build configuration list for PBXNativeTarget "Death Dodger watchOS Extension" */;
+			buildPhases = (
+				17A97FB21D860956003302D6 /* Sources */,
+				17A97FB31D860956003302D6 /* Frameworks */,
+				17A97FB41D860956003302D6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Death Dodger watchOS Extension";
+			productName = "Death Dodger watchOS Extension";
+			productReference = 17A97FB61D860956003302D6 /* Death Dodger watchOS Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 		73AF1BF51D7C9EFB008396B3 /* Death Dodger tvOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 73AF1C241D7C9EFB008396B3 /* Build configuration list for PBXNativeTarget "Death Dodger tvOS" */;
@@ -630,11 +785,13 @@
 				73FCD2531D2C16D600D273D9 /* Frameworks */,
 				73FCD2541D2C16D600D273D9 /* Resources */,
 				17A6F94E1D831F200021B513 /* Embed App Extensions */,
+				17A97FD61D860956003302D6 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				17A6F9491D831F200021B513 /* PBXTargetDependency */,
+				17A97FCD1D860956003302D6 /* PBXTargetDependency */,
 			);
 			name = "Death Dodger";
 			productName = "Death Dodger";
@@ -711,6 +868,21 @@
 							};
 						};
 					};
+					17A97FA91D860956003302D6 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = M64HPXXUJF;
+						ProvisioningStyle = Automatic;
+					};
+					17A97FB51D860956003302D6 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = M64HPXXUJF;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 1;
+							};
+						};
+					};
 					73AF1BF51D7C9EFB008396B3 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = M64HPXXUJF;
@@ -769,6 +941,8 @@
 				1784A8281D8472030088D302 /* Death Dodger 3D */,
 				1784A83C1D8472030088D302 /* Death Dodger 3DTests */,
 				1784A8471D8472030088D302 /* Death Dodger 3DUITests */,
+				17A97FA91D860956003302D6 /* Death Dodger watchOS */,
+				17A97FB51D860956003302D6 /* Death Dodger watchOS Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -822,6 +996,35 @@
 				17A6F95C1D831FF00021B513 /* Gomez10.png in Resources */,
 				17A6F9461D831F200021B513 /* Assets.xcassets in Resources */,
 				17A6F9441D831F200021B513 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17A97FA81D860956003302D6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17A97FB01D860956003302D6 /* Assets.xcassets in Resources */,
+				17A97FAE1D860956003302D6 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17A97FB41D860956003302D6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17A97FDA1D860ABE003302D6 /* Settings.bundle in Resources */,
+				17A97FDB1D860ABE003302D6 /* gamebackground.png in Resources */,
+				17A97FDC1D860ABE003302D6 /* background.png in Resources */,
+				17A97FDD1D860ABE003302D6 /* Gomez10.png in Resources */,
+				17A97FDE1D860ABE003302D6 /* the_sword.png in Resources */,
+				17A97FDF1D860ABE003302D6 /* justAWhiteCube.png in Resources */,
+				17A97FE01D860ABE003302D6 /* Crazy.wav in Resources */,
+				17A97FE11D860ABE003302D6 /* punch.wav in Resources */,
+				17A97FE21D860ABE003302D6 /* Sword.wav in Resources */,
+				17A97FE31D860ABE003302D6 /* GameScene.sks in Resources */,
+				17A97FE41D860ABE003302D6 /* Blood.sks in Resources */,
+				17A97FCA1D860956003302D6 /* Assets.xcassets in Resources */,
+				17A97FC01D860956003302D6 /* GameScene.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -934,6 +1137,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		17A97FB21D860956003302D6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17A97FD91D860A3B003302D6 /* GameScene.swift in Sources */,
+				17A97FBE1D860956003302D6 /* InterfaceController.swift in Sources */,
+				17A97FC81D860956003302D6 /* ComplicationController.swift in Sources */,
+				17A97FC61D860956003302D6 /* NotificationController.swift in Sources */,
+				17A97FC41D860956003302D6 /* ExtensionDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		73AF1BF21D7C9EFB008396B3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1001,6 +1216,16 @@
 			target = 17A6F93B1D831F200021B513 /* Death Dodger iMessage */;
 			targetProxy = 17A6F9481D831F200021B513 /* PBXContainerItemProxy */;
 		};
+		17A97FB91D860956003302D6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 17A97FB51D860956003302D6 /* Death Dodger watchOS Extension */;
+			targetProxy = 17A97FB81D860956003302D6 /* PBXContainerItemProxy */;
+		};
+		17A97FCD1D860956003302D6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 17A97FA91D860956003302D6 /* Death Dodger watchOS */;
+			targetProxy = 17A97FCC1D860956003302D6 /* PBXContainerItemProxy */;
+		};
 		73AF1C0E1D7C9EFB008396B3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 73AF1BF51D7C9EFB008396B3 /* Death Dodger tvOS */;
@@ -1033,6 +1258,14 @@
 				17A6F9431D831F200021B513 /* Base */,
 			);
 			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
+		17A97FAC1D860956003302D6 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				17A97FAD1D860956003302D6 /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 		73AF1C021D7C9EFB008396B3 /* Main.storyboard */ = {
@@ -1271,6 +1504,96 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		17A97FCF1D860956003302D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = M64HPXXUJF;
+				IBSC_MODULE = Death_Dodger_watchOS_Extension;
+				INFOPLIST_FILE = "Death Dodger watchOS/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ethertyper.deathdodger.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+			};
+			name = Debug;
+		};
+		17A97FD01D860956003302D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = M64HPXXUJF;
+				IBSC_MODULE = Death_Dodger_watchOS_Extension;
+				INFOPLIST_FILE = "Death Dodger watchOS/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ethertyper.deathdodger.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+			};
+			name = Release;
+		};
+		17A97FD11D860956003302D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = M64HPXXUJF;
+				INFOPLIST_FILE = "Death Dodger watchOS Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ethertyper.deathdodger.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+			};
+			name = Debug;
+		};
+		17A97FD21D860956003302D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				DEVELOPMENT_TEAM = M64HPXXUJF;
+				INFOPLIST_FILE = "Death Dodger watchOS Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ethertyper.deathdodger.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
 			};
 			name = Release;
 		};
@@ -1606,6 +1929,22 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		17A97FD31D860956003302D6 /* Build configuration list for PBXNativeTarget "Death Dodger watchOS Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17A97FD11D860956003302D6 /* Debug */,
+				17A97FD21D860956003302D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		17A97FD51D860956003302D6 /* Build configuration list for PBXNativeTarget "Death Dodger watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17A97FCF1D860956003302D6 /* Debug */,
+				17A97FD01D860956003302D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		73AF1C241D7C9EFB008396B3 /* Build configuration list for PBXNativeTarget "Death Dodger tvOS" */ = {
 			isa = XCConfigurationList;

@@ -8,7 +8,9 @@
 
 import UIKit
 import SpriteKit
-import GameplayKit
+#if(os(iOS)||os(tvOS))
+    import GameplayKit
+#endif
 import AVFoundation
 
 @objc(GameScene)
