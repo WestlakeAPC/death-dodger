@@ -198,92 +198,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
     }
     
-    //***************************************************** Touch Down
-    func touchDown(atPoint pos : CGPoint) {
-        if self.spinnyStuff as! Bool {
-            if let n = self.spinnyNode?.copy() as! SKShapeNode? {
-                n.position = pos
-                n.strokeColor = UIColor.green
-                self.addChild(n)
-            }
-        }
-    }
-    
-    //***************************************************** Move Charc
-    func touchMoved(toPoint pos : CGPoint) {
-        if self.spinnyStuff as! Bool {
-            if let n = self.spinnyNode?.copy() as! SKShapeNode? {
-                n.position = pos
-                n.strokeColor = UIColor.blue
-                self.addChild(n)
-            }
-        }
-        
-        //print(self.rocket?.position.x)
-        
-        if let rocket = self.rocket {
-            if continued {
-                if pos.x < self.frame.origin.x + self.frame.width/2{
-                    if (self.rocket?.position.x)! - ((self.rocket?.frame.width)!/2) >= self.frame.origin.x {
-                        rocket.run(self.left);
-                    }
-                } else if pos.x >= self.frame.origin.x + self.frame.width/2 {
-                    if (self.rocket?.position.x)! + ((self.rocket?.frame.width)!/2) <= self.frame.origin.x + self.frame.size.width {
-                        rocket.run(self.right);
-                    }
-                }
-            }
-        }
-    }
-    
-    //***************************************************** Spinny Stuff
-    func touchUp(atPoint pos : CGPoint) {
-        if self.spinnyStuff as! Bool {
-            if let n = self.spinnyNode?.copy() as! SKShapeNode? {
-                n.position = pos
-                n.strokeColor = UIColor.red
-                self.addChild(n)
-            }
-        }
-    }
-    
-    //***************************************************** When Tapped (Restart)
-    #if (os(iOS)||os(tvOS))
-        override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-            if let label = self.label {
-                label.run(SKAction.init(named: "Pulse")!, withKey: "fadeInOut")
-            }
-        
-            for t in touches {
-                self.touchDown(atPoint: t.location(in: self))
-            
-                for i in self.nodes(at: t.location(in: self)) {
-                    if !initialized && i.name == "Over-screen" {
-                        self.initialized = true
-                    
-                        self.over?.run(SKAction.fadeOut(withDuration: 1.5), completion: {
-                            self.over?.isUserInteractionEnabled = false
-                            self.initialize()
-                        })
-                    
-                        for i in 1 ... swords.endIndex-1 {
-                            swords[i]?.run(SKAction.removeFromParent())
-                        }
-                    
-                    }
-                }
-            }
-        }
-    
-        override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-            for t in touches { self.touchUp(atPoint: t.location(in: self)) }
-        }
-    
-        override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-            for t in touches { self.touchMoved(toPoint: t.location(in: self)) }
-        }
-    #endif
-    
     //***************************************************** Swords
     override func update(_ currentTime: TimeInterval) {
         for i in 1 ... swords.endIndex-1 {
@@ -414,3 +328,91 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
 }
+
+#if (os(iOS)||os(tvOS))
+    extension GameScene {
+        //***************************************************** Touch Down
+        func touchDown(atPoint pos : CGPoint) {
+            if self.spinnyStuff as! Bool {
+                if let n = self.spinnyNode?.copy() as! SKShapeNode? {
+                    n.position = pos
+                    n.strokeColor = UIColor.green
+                    self.addChild(n)
+                }
+            }
+        }
+        
+        //***************************************************** Move Charc
+        func touchMoved(toPoint pos : CGPoint) {
+            if self.spinnyStuff as! Bool {
+                if let n = self.spinnyNode?.copy() as! SKShapeNode? {
+                    n.position = pos
+                    n.strokeColor = UIColor.blue
+                    self.addChild(n)
+                }
+            }
+            
+            //print(self.rocket?.position.x)
+            
+            if let rocket = self.rocket {
+                if continued {
+                    if pos.x < self.frame.origin.x + self.frame.width/2{
+                        if (self.rocket?.position.x)! - ((self.rocket?.frame.width)!/2) >= self.frame.origin.x {
+                            rocket.run(self.left);
+                        }
+                    } else if pos.x >= self.frame.origin.x + self.frame.width/2 {
+                        if (self.rocket?.position.x)! + ((self.rocket?.frame.width)!/2) <= self.frame.origin.x + self.frame.size.width {
+                            rocket.run(self.right);
+                        }
+                    }
+                }
+            }
+        }
+        
+        //***************************************************** Spinny Stuff
+        func touchUp(atPoint pos : CGPoint) {
+            if self.spinnyStuff as! Bool {
+                if let n = self.spinnyNode?.copy() as! SKShapeNode? {
+                    n.position = pos
+                    n.strokeColor = UIColor.red
+                    self.addChild(n)
+                }
+            }
+        }
+        
+        //***************************************************** When Tapped (Restart)
+        override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+            if let label = self.label {
+                label.run(SKAction.init(named: "Pulse")!, withKey: "fadeInOut")
+            }
+            
+            for t in touches {
+                self.touchDown(atPoint: t.location(in: self))
+                
+                for i in self.nodes(at: t.location(in: self)) {
+                    if !initialized && i.name == "Over-screen" {
+                        self.initialized = true
+                        
+                        self.over?.run(SKAction.fadeOut(withDuration: 1.5), completion: {
+                            self.over?.isUserInteractionEnabled = false
+                            self.initialize()
+                        })
+                        
+                        for i in 1 ... swords.endIndex-1 {
+                            swords[i]?.run(SKAction.removeFromParent())
+                        }
+                        
+                    }
+                }
+            }
+        }
+        
+        override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+            for t in touches { self.touchUp(atPoint: t.location(in: self)) }
+        }
+        
+        override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+            for t in touches { self.touchMoved(toPoint: t.location(in: self)) }
+        }
+    }
+#endif
