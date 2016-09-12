@@ -234,8 +234,6 @@
 		17A97FB61D860956003302D6 /* Death Dodger watchOS Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Death Dodger watchOS Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		17A97FBC1D860956003302D6 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		17A97FBD1D860956003302D6 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
-		17A97FBF1D860956003302D6 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		17A97FC11D860956003302D6 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		17A97FC31D860956003302D6 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		17A97FC51D860956003302D6 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
 		17A97FC71D860956003302D6 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
@@ -246,9 +244,6 @@
 		73AC19191D71F5710098ED49 /* justAWhiteCube.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = justAWhiteCube.png; sourceTree = "<group>"; };
 		73AF1BB61D71F6CA008396B3 /* gamebackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gamebackground.png; sourceTree = "<group>"; };
 		73AF1BF61D7C9EFB008396B3 /* Death Dodger tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Death Dodger tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		73AF1BF81D7C9EFB008396B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		73AF1BFA1D7C9EFB008396B3 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		73AF1BFC1D7C9EFB008396B3 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		73AF1BFE1D7C9EFB008396B3 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		73AF1C001D7C9EFB008396B3 /* Game.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Game.xcassets; sourceTree = "<group>"; };
 		73AF1C031D7C9EFB008396B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -447,8 +442,6 @@
 			isa = PBXGroup;
 			children = (
 				17A97FBD1D860956003302D6 /* InterfaceController.swift */,
-				17A97FBF1D860956003302D6 /* GameScene.sks */,
-				17A97FC11D860956003302D6 /* GameScene.swift */,
 				17A97FC31D860956003302D6 /* ExtensionDelegate.swift */,
 				17A97FC51D860956003302D6 /* NotificationController.swift */,
 				17A97FC71D860956003302D6 /* ComplicationController.swift */,
@@ -470,9 +463,6 @@
 		73AF1BF71D7C9EFB008396B3 /* Death Dodger tvOS */ = {
 			isa = PBXGroup;
 			children = (
-				73AF1BF81D7C9EFB008396B3 /* AppDelegate.swift */,
-				73AF1BFA1D7C9EFB008396B3 /* GameScene.sks */,
-				73AF1BFC1D7C9EFB008396B3 /* GameScene.swift */,
 				73AF1BFE1D7C9EFB008396B3 /* GameViewController.swift */,
 				73AF1C001D7C9EFB008396B3 /* Game.xcassets */,
 				73AF1C021D7C9EFB008396B3 /* Main.storyboard */,

@@ -8,10 +8,13 @@
 
 import UIKit
 import SpriteKit
-#if(os(iOS)||os(tvOS))
+#if (os(iOS)||os(tvOS))
     import GameplayKit
+    import AVFoundation
+#elseif os(watchOS)
+    import WatchKit
+    typealias SKColor = UIColor
 #endif
-import AVFoundation
 
 @objc(GameScene)
 class GameScene: SKScene, SKPhysicsContactDelegate {
@@ -33,9 +36,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var swords = [SKSpriteNode?](repeating: nil, count: 4)
     var emitter = [SKEmitterNode?](repeating: nil, count: 1)
     
-    var backgroundMusic = AVAudioPlayer()
-    var swordSoundEffect = AVAudioPlayer()
-    var punchSoundEffect = AVAudioPlayer()
+    #if (os(iOS)||os(tvOS))
+        var backgroundMusic : AVAudioPlayer?
+        var swordSoundEffect : AVAudioPlayer?
+        var punchSoundEffect : AVAudioPlayer?
+    #elseif os(watchOS)
+        var backgroundMusic : WKAudioFilePlayer?
+        var swordSoundEffect : WKAudioFilePlayer?
+        var punchSoundEffect : WKAudioFilePlayer?
+    #endif
+    
     var removeElement = SKAction.removeFromParent()
     var initialized : Bool = false
     var continued : Bool = false
@@ -48,8 +58,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var maxSpeed = 30.0
     
     //******************************************************************************* Did Move To View
-    override func didMove(to view: SKView){
-        
+    #if os(watchOS)
+        override func sceneDidLoad() {
+            self.setUpScene()
+        }
+    #else
+        override func didMove(to view: SKView) {
+            self.setUpScene()
+        }
+    #endif
+    
+    func setUpScene(){
         //Setup For Collisions
         self.physicsWorld.contactDelegate = self
         
@@ -62,23 +81,30 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         backgroundImage.zPosition = -5
         self.addChild(backgroundImage)
         
-        //Music
         let music = URL(fileURLWithPath: Bundle.main.path(forResource: "Crazy", ofType: "wav")!)
-        backgroundMusic = try! AVAudioPlayer.init(contentsOf: music)
-        backgroundMusic.prepareToPlay()
-        backgroundMusic.numberOfLoops = -1
-        
-        //Sword Sound
         let swordSound = URL(fileURLWithPath: Bundle.main.path(forResource: "Sword", ofType: "wav")!)
-        swordSoundEffect = try! AVAudioPlayer.init(contentsOf: swordSound)
-        swordSoundEffect.prepareToPlay()
-        swordSoundEffect.numberOfLoops = 0
-        
-        //Punch Sound
         let punchSound = URL(fileURLWithPath: Bundle.main.path(forResource: "punch", ofType: "wav")!)
-        punchSoundEffect = try! AVAudioPlayer.init(contentsOf: punchSound)
-        punchSoundEffect.prepareToPlay()
-        punchSoundEffect.numberOfLoops = 0
+
+        #if (os(iOS)||os(tvOS))
+            //Music
+            backgroundMusic = try! AVAudioPlayer.init(contentsOf: music)
+            backgroundMusic?.prepareToPlay()
+            backgroundMusic?.numberOfLoops = -1
+        
+            //Sword Sound
+            swordSoundEffect = try! AVAudioPlayer.init(contentsOf: swordSound)
+            swordSoundEffect?.prepareToPlay()
+            swordSoundEffect?.numberOfLoops = 0
+        
+            //Punch Sound
+            punchSoundEffect = try! AVAudioPlayer.init(contentsOf: punchSound)
+            punchSoundEffect?.prepareToPlay()
+            punchSoundEffect?.numberOfLoops = 0
+        #elseif os(watchOS)
+            backgroundMusic = WKAudioFilePlayer(playerItem:  WKAudioFilePlayerItem(asset: WKAudioFileAsset(url: music)))
+            swordSoundEffect = WKAudioFilePlayer(playerItem:  WKAudioFilePlayerItem(asset: WKAudioFileAsset(url: swordSound)))
+            punchSoundEffect = WKAudioFilePlayer(playerItem:  WKAudioFilePlayerItem(asset: WKAudioFileAsset(url: punchSound)))
+        #endif
         
         //Sprites
         self.rocket = self.childNode(withName: "finnCharc") as? SKSpriteNode
@@ -145,10 +171,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func playerDidDie(){
         
         //Music Stop
-        backgroundMusic.stop()
-        backgroundMusic.currentTime = 0.0
+        #if (os(iOS)||os(tvOS))
+            backgroundMusic?.stop()
+            backgroundMusic?.currentTime = 0.0
+        #elseif os(watchOS)
+            backgroundMusic?.pause()
+        #endif
         
-        punchSoundEffect.play()
+        punchSoundEffect?.play()
         
         continued = false;
         initialized = false;
@@ -218,41 +248,41 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     //***************************************************** When Tapped (Restart)
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        if let label = self.label {
-            label.run(SKAction.init(named: "Pulse")!, withKey: "fadeInOut")
-        }
+    #if (os(iOS)||os(tvOS))
+        override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+            if let label = self.label {
+                label.run(SKAction.init(named: "Pulse")!, withKey: "fadeInOut")
+            }
         
-        for t in touches {
-            self.touchDown(atPoint: t.location(in: self))
+            for t in touches {
+                self.touchDown(atPoint: t.location(in: self))
             
-            for i in self.nodes(at: t.location(in: self)) {
-                if !initialized && i.name == "Over-screen" {
-                    self.initialized = true
+                for i in self.nodes(at: t.location(in: self)) {
+                    if !initialized && i.name == "Over-screen" {
+                        self.initialized = true
                     
-                    self.over?.run(SKAction.fadeOut(withDuration: 1.5), completion: {
-                        self.over?.isUserInteractionEnabled = false
-                        self.initialize()
-                    })
+                        self.over?.run(SKAction.fadeOut(withDuration: 1.5), completion: {
+                            self.over?.isUserInteractionEnabled = false
+                            self.initialize()
+                        })
                     
-                    for i in 1 ... swords.endIndex-1 {
-                        
-                        swords[i]?.run(SKAction.removeFromParent())
+                        for i in 1 ... swords.endIndex-1 {
+                            swords[i]?.run(SKAction.removeFromParent())
+                        }
+                    
                     }
-                    
                 }
             }
         }
-    }
     
-    //*****************************************************
-    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-        for t in touches { self.touchUp(atPoint: t.location(in: self)) }
-    }
+        override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+            for t in touches { self.touchUp(atPoint: t.location(in: self)) }
+        }
     
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        for t in touches { self.touchMoved(toPoint: t.location(in: self)) }
-    }
+        override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+            for t in touches { self.touchMoved(toPoint: t.location(in: self)) }
+        }
+    #endif
     
     //***************************************************** Swords
     override func update(_ currentTime: TimeInterval) {
@@ -271,7 +301,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 if continued {
                     swords[i]?.position = CGPoint(x: self.frame.origin.x + CGFloat(arc4random_uniform(UInt32(self.frame.width))),
                         y: self.frame.origin.y + self.frame.height + CGFloat(i * 50))
-                    swordSoundEffect.play()
+                    swordSoundEffect?.play()
                     
                     //Score
                     if i <= numSwords as! Int {
@@ -307,7 +337,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             let sword = swords[i]
  
-            sword?.position = CGPoint(x: self.frame.origin.x + CGFloat(arc4random_uniform(UInt32(self.frame.width))),       y: self.frame.origin.y + self.frame.height * 1.2)
+            sword?.position = CGPoint(x: self.frame.origin.x + CGFloat(arc4random_uniform(UInt32(self.frame.width))),
+                                      y: self.frame.origin.y + self.frame.height * 1.2)
             
             sword?.physicsBody?.isDynamic = false
             
@@ -362,8 +393,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.downRate = 10.0
         
         //Music and Sound
-        backgroundMusic.play()
-        swordSoundEffect.play()
+        backgroundMusic?.play()
+        swordSoundEffect?.play()
         
     }
     
