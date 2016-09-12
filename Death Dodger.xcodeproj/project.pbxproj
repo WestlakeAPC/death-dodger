@@ -42,7 +42,6 @@
 		17A97FB01D860956003302D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17A97FAF1D860956003302D6 /* Assets.xcassets */; };
 		17A97FB71D860956003302D6 /* Death Dodger watchOS Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 17A97FB61D860956003302D6 /* Death Dodger watchOS Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		17A97FBE1D860956003302D6 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A97FBD1D860956003302D6 /* InterfaceController.swift */; };
-		17A97FC01D860956003302D6 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 17A97FBF1D860956003302D6 /* GameScene.sks */; };
 		17A97FC41D860956003302D6 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A97FC31D860956003302D6 /* ExtensionDelegate.swift */; };
 		17A97FC61D860956003302D6 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A97FC51D860956003302D6 /* NotificationController.swift */; };
 		17A97FC81D860956003302D6 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A97FC71D860956003302D6 /* ComplicationController.swift */; };
@@ -1024,7 +1023,6 @@
 				17A97FE31D860ABE003302D6 /* GameScene.sks in Resources */,
 				17A97FE41D860ABE003302D6 /* Blood.sks in Resources */,
 				17A97FCA1D860956003302D6 /* Assets.xcassets in Resources */,
-				17A97FC01D860956003302D6 /* GameScene.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1937,6 +1935,7 @@
 				17A97FD21D860956003302D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		17A97FD51D860956003302D6 /* Build configuration list for PBXNativeTarget "Death Dodger watchOS" */ = {
 			isa = XCConfigurationList;
@@ -1945,6 +1944,7 @@
 				17A97FD01D860956003302D6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		73AF1C241D7C9EFB008396B3 /* Build configuration list for PBXNativeTarget "Death Dodger tvOS" */ = {
 			isa = XCConfigurationList;
