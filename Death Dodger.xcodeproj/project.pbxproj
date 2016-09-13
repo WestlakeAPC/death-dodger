@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		171CD4761D8377C900CBAE8D /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 73CF36EF1D49907200CE306A /* Settings.bundle */; };
 		17386D371D81C0A0005659BA /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17386D361D81C0A0005659BA /* GameKit.framework */; };
+		1750DB931D88898A00CE58A5 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1750DB921D88898A00CE58A5 /* Cocoa.framework */; };
+		1750DB981D88898A00CE58A5 /* SourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1750DB971D88898A00CE58A5 /* SourceEditorExtension.swift */; };
+		1750DB9A1D88898A00CE58A5 /* SourceEditorCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1750DB991D88898A00CE58A5 /* SourceEditorCommand.swift */; };
+		1750DB9E1D88898A00CE58A5 /* XcodeEditor.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1750DB911D88898A00CE58A5 /* XcodeEditor.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		1750DBA31D888C8500CE58A5 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 177445421D85DDF000C505F8 /* GameKit.framework */; };
 		177445431D85DDF000C505F8 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 177445421D85DDF000C505F8 /* GameKit.framework */; };
 		1784A82C1D8472030088D302 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1784A82B1D8472030088D302 /* AppDelegate.swift */; };
 		1784A82E1D8472030088D302 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1784A82D1D8472030088D302 /* GameView.swift */; };
@@ -99,6 +104,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		1750DB9C1D88898A00CE58A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 73FCD24E1D2C16D600D273D9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1750DB901D88898A00CE58A5;
+			remoteInfo = XcodeEditor;
+		};
 		1784A83E1D8472030088D302 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 73FCD24E1D2C16D600D273D9 /* Project object */;
@@ -165,6 +177,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		1750DBA21D88898A00CE58A5 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				1750DB9E1D88898A00CE58A5 /* XcodeEditor.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		17A6F94E1D831F200021B513 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -202,6 +225,12 @@
 
 /* Begin PBXFileReference section */
 		17386D361D81C0A0005659BA /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS10.0.sdk/System/Library/Frameworks/GameKit.framework; sourceTree = DEVELOPER_DIR; };
+		1750DB911D88898A00CE58A5 /* XcodeEditor.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = XcodeEditor.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		1750DB921D88898A00CE58A5 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		1750DB961D88898A00CE58A5 /* XcodeEditor.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = XcodeEditor.entitlements; sourceTree = "<group>"; };
+		1750DB971D88898A00CE58A5 /* SourceEditorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorExtension.swift; sourceTree = "<group>"; };
+		1750DB991D88898A00CE58A5 /* SourceEditorCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorCommand.swift; sourceTree = "<group>"; };
+		1750DB9B1D88898A00CE58A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		177445411D85DDF000C505F8 /* Death Dodger 3D.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Death Dodger 3D.entitlements"; sourceTree = "<group>"; };
 		177445421D85DDF000C505F8 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/GameKit.framework; sourceTree = DEVELOPER_DIR; };
 		1784A8291D8472030088D302 /* Death Dodger 3D.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Death Dodger 3D.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -278,6 +307,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1750DB8E1D88898A00CE58A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1750DB931D88898A00CE58A5 /* Cocoa.framework in Frameworks */,
+				1750DBA31D888C8500CE58A5 /* GameKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1784A8261D8472030088D302 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -371,8 +409,28 @@
 				177445421D85DDF000C505F8 /* GameKit.framework */,
 				17386D361D81C0A0005659BA /* GameKit.framework */,
 				17A6F93D1D831F200021B513 /* Messages.framework */,
+				1750DB921D88898A00CE58A5 /* Cocoa.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1750DB941D88898A00CE58A5 /* XcodeEditor */ = {
+			isa = PBXGroup;
+			children = (
+				1750DB971D88898A00CE58A5 /* SourceEditorExtension.swift */,
+				1750DB991D88898A00CE58A5 /* SourceEditorCommand.swift */,
+				1750DB9B1D88898A00CE58A5 /* Info.plist */,
+				1750DB951D88898A00CE58A5 /* Supporting Files */,
+			);
+			path = XcodeEditor;
+			sourceTree = "<group>";
+		};
+		1750DB951D88898A00CE58A5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1750DB961D88898A00CE58A5 /* XcodeEditor.entitlements */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		1784A82A1D8472030088D302 /* Death Dodger 3D */ = {
@@ -506,6 +564,7 @@
 				1784A85D1D8473FA0088D302 /* Death DodgerUITests */,
 				17A97FAB1D860956003302D6 /* Death Dodger watchOS */,
 				17A97FBA1D860956003302D6 /* Death Dodger watchOS Extension */,
+				1750DB941D88898A00CE58A5 /* XcodeEditor */,
 				73FCD2571D2C16D600D273D9 /* Products */,
 				17386D351D81C0A0005659BA /* Frameworks */,
 			);
@@ -526,6 +585,7 @@
 				1784A85C1D8473FA0088D302 /* Death DodgerUITests.xctest */,
 				17A97FAA1D860956003302D6 /* Death Dodger watchOS.app */,
 				17A97FB61D860956003302D6 /* Death Dodger watchOS Extension.appex */,
+				1750DB911D88898A00CE58A5 /* XcodeEditor.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -591,6 +651,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		1750DB901D88898A00CE58A5 /* XcodeEditor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1750DB9F1D88898A00CE58A5 /* Build configuration list for PBXNativeTarget "XcodeEditor" */;
+			buildPhases = (
+				1750DB8D1D88898A00CE58A5 /* Sources */,
+				1750DB8E1D88898A00CE58A5 /* Frameworks */,
+				1750DB8F1D88898A00CE58A5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = XcodeEditor;
+			productName = XcodeEditor;
+			productReference = 1750DB911D88898A00CE58A5 /* XcodeEditor.appex */;
+			productType = "com.apple.product-type.xcode-extension";
+		};
 		1784A8281D8472030088D302 /* Death Dodger 3D */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1784A8551D8472030088D302 /* Build configuration list for PBXNativeTarget "Death Dodger 3D" */;
@@ -598,10 +675,12 @@
 				1784A8251D8472030088D302 /* Sources */,
 				1784A8261D8472030088D302 /* Frameworks */,
 				1784A8271D8472030088D302 /* Resources */,
+				1750DBA21D88898A00CE58A5 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				1750DB9D1D88898A00CE58A5 /* PBXTargetDependency */,
 			);
 			name = "Death Dodger 3D";
 			productName = "Death Dodger 3D";
@@ -816,6 +895,19 @@
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Animator Joe";
 				TargetAttributes = {
+					1750DB901D88898A00CE58A5 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = M64HPXXUJF;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 1;
+							};
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
+					};
 					1784A8281D8472030088D302 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = M64HPXXUJF;
@@ -932,11 +1024,19 @@
 				1784A8471D8472030088D302 /* Death Dodger 3DUITests */,
 				17A97FA91D860956003302D6 /* Death Dodger watchOS */,
 				17A97FB51D860956003302D6 /* Death Dodger watchOS Extension */,
+				1750DB901D88898A00CE58A5 /* XcodeEditor */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1750DB8F1D88898A00CE58A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1784A8271D8472030088D302 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1081,6 +1181,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1750DB8D1D88898A00CE58A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1750DB981D88898A00CE58A5 /* SourceEditorExtension.swift in Sources */,
+				1750DB9A1D88898A00CE58A5 /* SourceEditorCommand.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1784A8251D8472030088D302 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1184,6 +1293,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		1750DB9D1D88898A00CE58A5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1750DB901D88898A00CE58A5 /* XcodeEditor */;
+			targetProxy = 1750DB9C1D88898A00CE58A5 /* PBXContainerItemProxy */;
+		};
 		1784A83F1D8472030088D302 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 1784A8281D8472030088D302 /* Death Dodger 3D */;
@@ -1283,9 +1397,54 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		1750DBA01D88898A00CE58A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CODE_SIGN_ENTITLEMENTS = XcodeEditor/XcodeEditor.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = M64HPXXUJF;
+				INFOPLIST_FILE = XcodeEditor/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ethertyper.deathdodger.3d.XcodeEditor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		1750DBA11D88898A00CE58A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CODE_SIGN_ENTITLEMENTS = XcodeEditor/XcodeEditor.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = M64HPXXUJF;
+				INFOPLIST_FILE = XcodeEditor/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ethertyper.deathdodger.3d.XcodeEditor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 		1784A84F1D8472030088D302 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -1309,6 +1468,7 @@
 		1784A8501D8472030088D302 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
@@ -1873,6 +2033,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1750DB9F1D88898A00CE58A5 /* Build configuration list for PBXNativeTarget "XcodeEditor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1750DBA01D88898A00CE58A5 /* Debug */,
+				1750DBA11D88898A00CE58A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		1784A8551D8472030088D302 /* Build configuration list for PBXNativeTarget "Death Dodger 3D" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
