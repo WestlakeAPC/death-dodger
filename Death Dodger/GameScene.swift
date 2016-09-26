@@ -19,11 +19,14 @@ import SpriteKit
 @objc(GameScene)
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
+    // MARK: Prebuilt actions
     let left = SKAction.moveBy(x: -100, y: 0, duration: TimeInterval(0.3))
     let right = SKAction.moveBy(x: 100, y: 0, duration: TimeInterval(0.3))
     let spinnyStuff = UserDefaults.standard.value(forKey: "spinnyStuff") ?? false
     let numSwords = UserDefaults.standard.value(forKey: "numSwords") ?? 3
+    var removeElement = SKAction.removeFromParent()
     
+    // MARK: UI components
     var backgroundImage = SKSpriteNode()
     var screenBoarder = SKNode()
     var deathLabel = SKLabelNode()
@@ -36,6 +39,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var swords = [SKSpriteNode?](repeating: nil, count: 4)
     var emitter = [SKEmitterNode?](repeating: nil, count: 1)
     
+    // MARK: Audio components
     #if (os(iOS)||os(tvOS))
         var backgroundMusic : AVAudioPlayer?
         var swordSoundEffect : AVAudioPlayer?
@@ -46,7 +50,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         var punchSoundEffect : WKAudioFilePlayer?
     #endif
     
-    var removeElement = SKAction.removeFromParent()
+    // MARK: Game variables
     var initialized : Bool = false
     var continued : Bool = false
     var secondDeath = false
@@ -57,7 +61,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var downRate = 10.0
     var maxSpeed = 30.0
     
-    //******************************************************************************* Did Move To View
+    // MARK: Run on view setup
     #if os(watchOS)
         override func sceneDidLoad() {
             self.setUpScene()
@@ -69,10 +73,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     #endif
     
     func setUpScene(){
-        //Setup For Collisions
+        // Setup for collisions
         self.physicsWorld.contactDelegate = self
         
-        //Background Image
+        // Background image
         let backgroundPhoto = SKTexture(imageNamed: "gamebackground.png")
         backgroundImage = SKSpriteNode(texture: backgroundPhoto)
         backgroundImage.size.height = self.size.height
@@ -86,17 +90,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let punchSound = URL(fileURLWithPath: Bundle.main.path(forResource: "punch", ofType: "wav")!)
 
         #if (os(iOS)||os(tvOS))
-            //Music
+            // Music
             backgroundMusic = try! AVAudioPlayer.init(contentsOf: music)
             backgroundMusic?.prepareToPlay()
             backgroundMusic?.numberOfLoops = -1
         
-            //Sword Sound
+            // Sword sound
             swordSoundEffect = try! AVAudioPlayer.init(contentsOf: swordSound)
             swordSoundEffect?.prepareToPlay()
             swordSoundEffect?.numberOfLoops = 0
         
-            //Punch Sound
+            // Punch sound
             punchSoundEffect = try! AVAudioPlayer.init(contentsOf: punchSound)
             punchSoundEffect?.prepareToPlay()
             punchSoundEffect?.numberOfLoops = 0
@@ -106,12 +110,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             punchSoundEffect = WKAudioFilePlayer(playerItem:  WKAudioFilePlayerItem(asset: WKAudioFileAsset(url: punchSound)))
         #endif
         
-        //Sprites
+        // Sprites
         self.rocket = self.childNode(withName: "finnCharc") as? SKSpriteNode
         self.over = self.childNode(withName: "overScreen") as? SKShapeNode
         
-        //Setup For Player Info
-        //let deathLabel = SKLabelNode.init()
+        // Restart label, displayed on death
         deathLabel.text = "Tap to Restart"
         deathLabel.fontSize = 30;
         deathLabel.setScale(0.33);
@@ -120,29 +123,29 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         deathLabel.zPosition = 15
         self.over?.addChild(deathLabel)
         
+        // Score label, displayed on death
         pLabel.fontSize = 45;
         pLabel.setScale(0.33);
         pLabel.fontColor = UIColor.black
         pLabel.position = CGPoint(x: 0,y: 20)
         self.over?.addChild(pLabel)
         
-        //Score Board
+        // Score board
         scoreDisplay.text = String(displayScore)
         scoreDisplay.fontSize = 120
         scoreDisplay.fontColor = UIColor.white
-        scoreDisplay.zPosition = 12
         scoreDisplay.position = CGPoint(x: self.frame.origin.x + self.frame.size.width * 1/2,
-        y: self.frame.origin.y + self.frame.size.height * 0.9)
+                                        y: self.frame.origin.y + self.frame.size.height * 0.9)
         scoreDisplay.zPosition = -3
         self.addChild(scoreDisplay)
         
-        //Physics
+        // Physics
         self.physicsBody = SKPhysicsBody(edgeLoopFrom: CGRect(x: 0,y: 0, width: self.frame.size.width,height: self.frame.size.height * 1.5))
         self.physicsBody?.isDynamic = true
         
         self.physicsWorld.gravity = CGVector(dx: 0,dy: 0)
         
-        //Initialize
+        // Initialize
         if !initialized {
             initialize()
         }
@@ -167,10 +170,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
-    //***************************************************** Death
+    // MARK: Run on death
     func playerDidDie(){
         
-        //Music Stop
+        // Music Stop
         #if (os(iOS)||os(tvOS))
             backgroundMusic?.stop()
             backgroundMusic?.currentTime = 0.0
@@ -198,11 +201,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
     }
     
-    //***************************************************** Swords
+    // MARK: Frame step
     override func update(_ currentTime: TimeInterval) {
         for i in 1 ... swords.endIndex-1 {
-            
-            //print((swords[i]?.position)!)
             
             swords[i]?.run(SKAction.moveBy(x: 0, y: -(CGFloat)(self.downRate), duration: 0.03))
             
@@ -214,14 +215,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             } else if ((swords[i]?.position.y)! <= self.frame.origin.y - (swords[i]?.frame.height)!/2) {
                 if continued {
                     swords[i]?.position = CGPoint(x: self.frame.origin.x + CGFloat(arc4random_uniform(UInt32(self.frame.width))),
-                        y: self.frame.origin.y + self.frame.height + CGFloat(i * 50))
+                                                  y: self.frame.origin.y + self.frame.height + CGFloat(i * 50))
                     swordSoundEffect?.play()
                     
-                    //Score
+                    // Sword regeneration
                     if i <= numSwords as! Int {
                         swords[i]?.isHidden = false
                     }
                     
+                    // Score Incrementation
                     if i > numSwords as! Int {
                         displayScore = displayScore + 0
                     } else {
@@ -229,6 +231,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                         score = score + 1
                     }
                     
+                    // Sword speed increase
                     if self.downRate < maxSpeed { self.downRate+=0.2 }
                     self.scoreDisplay.text = String(displayScore)
                 }
@@ -236,7 +239,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
     }
     
-    //***************************************************** Initialize
+    // MARK: Initialization
     func initialize() {
         
         for i in 1 ... swords.endIndex-1 {
@@ -273,7 +276,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 let extraX = CGFloat(i%2) * self.frame.width/2
                 _ = CGFloat((i/2)%2) * self.frame.height/2
                 emitter[i]?.position = CGPoint(x: self.frame.origin.x + self.frame.width/4 + extraX,
-                    y: self.frame.origin.y + self.frame.height/5)
+                                               y: self.frame.origin.y + self.frame.height/5)
                 
                 self.addChild(emitter[i]!)
             }
@@ -283,9 +286,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         //Rocket
         rocket?.position = CGPoint(x: self.frame.origin.x + self.frame.width/2,
-            y: self.frame.origin.y + self.frame.height/6)
+                                   y: self.frame.origin.y + self.frame.height/6)
         rocket?.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: (rocket?.frame.width)!,
-            height: (rocket?.frame.height)!))
+                                                                height: (rocket?.frame.height)!))
         rocket?.physicsBody?.isDynamic = true
         rocket?.isHidden = false
         rocket?.zPosition = 10
@@ -309,9 +312,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         //Music and Sound
         backgroundMusic?.play()
         swordSoundEffect?.play()
-        
     }
     
+    // MARK: Collision detection
     func checkCollision (_ aSword: SKSpriteNode) -> Bool {
         let swordX = aSword.position.x - aSword.frame.width/80;
         let swordXRight = aSword.position.x + aSword.frame.width/80;
@@ -324,14 +327,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let rocketYRight = (self.rocket?.position.y)! + (self.rocket?.frame.height)! * 2/5;
         
         return (rocketX < swordXRight && swordX < rocketXRight && // X Overlap
-            rocketY < swordYRight && swordY < rocketYRight); // Y Overlap
+                rocketY < swordYRight && swordY < rocketYRight); // Y Overlap
     }
     
 }
 
+/**
+ UIKit-specific GameScene extension, for controls.
+ */
 #if (os(iOS)||os(tvOS))
     extension GameScene {
-        //***************************************************** Touch Down
+        // MARK: Begin press
         func touchDown(atPoint pos : CGPoint) {
             if self.spinnyStuff as! Bool {
                 if let n = self.spinnyNode?.copy() as! SKShapeNode? {
@@ -342,7 +348,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
         }
         
-        //***************************************************** Move Charc
+        // MARK: Check for moved finger
         func touchMoved(toPoint pos : CGPoint) {
             if self.spinnyStuff as! Bool {
                 if let n = self.spinnyNode?.copy() as! SKShapeNode? {
@@ -351,8 +357,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     self.addChild(n)
                 }
             }
-            
-            //print(self.rocket?.position.x)
             
             if let rocket = self.rocket {
                 if continued {
@@ -369,7 +373,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
         }
         
-        //***************************************************** Spinny Stuff
+        // MARK: Touch released
         func touchUp(atPoint pos : CGPoint) {
             if self.spinnyStuff as! Bool {
                 if let n = self.spinnyNode?.copy() as! SKShapeNode? {
@@ -380,7 +384,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
         }
         
-        //***************************************************** When Tapped (Restart)
+        // MARK: Check for touches in restart button
         override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
             if let label = self.label {
                 label.run(SKAction.init(named: "Pulse")!, withKey: "fadeInOut")
@@ -401,7 +405,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                         for i in 1 ... swords.endIndex-1 {
                             swords[i]?.run(SKAction.removeFromParent())
                         }
-                        
                     }
                 }
             }
