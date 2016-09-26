@@ -30,7 +30,6 @@
 		17A6F9441D831F200021B513 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17A6F9421D831F200021B513 /* MainInterface.storyboard */; };
 		17A6F9461D831F200021B513 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17A6F9451D831F200021B513 /* Assets.xcassets */; };
 		17A6F94A1D831F200021B513 /* Death Dodger iMessage.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 17A6F93C1D831F200021B513 /* Death Dodger iMessage.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		17A6F94F1D831F390021B513 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73FCD2921D2EBA5F00D273D9 /* GameKit.framework */; };
 		17A6F9501D831FA50021B513 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FCD25B1D2C16D600D273D9 /* AppDelegate.swift */; };
 		17A6F9511D831FA50021B513 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73FCD25F1D2C16D600D273D9 /* GameScene.swift */; };
 		17A6F9521D831FE60021B513 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 73CF36EF1D49907200CE306A /* Settings.bundle */; };
@@ -101,7 +100,6 @@
 		73FCD28D1D2C18C800D273D9 /* Sword.wav in Resources */ = {isa = PBXBuildFile; fileRef = 73FCD2861D2C18C800D273D9 /* Sword.wav */; };
 		73FCD28E1D2C18C800D273D9 /* the_sword.png in Resources */ = {isa = PBXBuildFile; fileRef = 73FCD2871D2C18C800D273D9 /* the_sword.png */; };
 		73FCD2911D2DDCDF00D273D9 /* Blood.sks in Resources */ = {isa = PBXBuildFile; fileRef = 73FCD2901D2DDCDF00D273D9 /* Blood.sks */; };
-		73FCD2931D2EBA5F00D273D9 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73FCD2921D2EBA5F00D273D9 /* GameKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -305,7 +303,6 @@
 		73FCD2861D2C18C800D273D9 /* Sword.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Sword.wav; sourceTree = "<group>"; };
 		73FCD2871D2C18C800D273D9 /* the_sword.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = the_sword.png; sourceTree = "<group>"; };
 		73FCD2901D2DDCDF00D273D9 /* Blood.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Blood.sks; sourceTree = "<group>"; };
-		73FCD2921D2EBA5F00D273D9 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -352,7 +349,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				17A6F93E1D831F200021B513 /* Messages.framework in Frameworks */,
-				17A6F94F1D831F390021B513 /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,7 +386,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73FCD2931D2EBA5F00D273D9 /* GameKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -553,7 +548,6 @@
 		73FCD24D1D2C16D600D273D9 = {
 			isa = PBXGroup;
 			children = (
-				73FCD2921D2EBA5F00D273D9 /* GameKit.framework */,
 				73FCD2581D2C16D600D273D9 /* Death Dodger */,
 				73FCD2721D2C16D600D273D9 /* Death DodgerTests */,
 				73AF1BF71D7C9EFB008396B3 /* Death Dodger tvOS */,
@@ -948,7 +942,7 @@
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.GameCenter = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};

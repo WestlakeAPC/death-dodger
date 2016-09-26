@@ -11,7 +11,7 @@ import SpriteKit
 import GameKit
 import Messages
 
-class MessagesViewController: MSMessagesAppViewController, GKGameCenterControllerDelegate {
+class MessagesViewController: MSMessagesAppViewController {
     
     fileprivate var scene : SKScene?
     var deviceType = "Device"
@@ -96,65 +96,23 @@ class MessagesViewController: MSMessagesAppViewController, GKGameCenterControlle
         
         //GameCenter-y stuff to do.
         print(String(describing: ((scene as! GameScene?)?.score)!))
-        saveHighscore(((scene as! GameScene?)?.score)!)
-        showLeader()
+        let score = ((scene as! GameScene?)?.score)!
         
-    }
-    
-    //shows leaderboard screen
-    func showLeader() {
-        //let vc = self.view?.window?.rootViewController
-        let vc = self
-        let gc = GKGameCenterViewController()
-        gc.gameCenterDelegate = self
-        vc.present(gc, animated: true, completion: nil)
-    }
-    
-    //hides leaderboard screen
-    func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController)
-    {
-        gameCenterViewController.dismiss(animated: true, completion: nil)
+        let skView = self.view as! SKView
+        let image = UIImage(cgImage: skView.texture(from: (scene as! GameScene))!.cgImage())
         
-    }
-    
-    //send high score to leaderboard
-    func saveHighscore(_ score:CGFloat) {
-        
-        //check if user is signed in
-        if GKLocalPlayer.localPlayer().isAuthenticated {
+        if let conversation = activeConversation {
+            let layout = MSMessageTemplateLayout()
+            layout.image = image
+            layout.caption = "I got a score of \(score) in Death Dodger!"
             
-            //let scoreReporter = GKScore(leaderboardIdentifier: "DeathDodgerLeaderBoardID" + String(NSUserDefaults.standardUserDefaults().valueForKey("numSwords") ?? 3)) //leaderboard id here
+            let message = MSMessage()
+            message.layout = layout
+            message.url = URL(string: "emptyURL")
             
-            let scoreReporter = GKScore(leaderboardIdentifier: "g_death3")
-            
-            scoreReporter.value = Int64(score) //score variable here (same as above)
-            
-            let scoreArray: [GKScore] = [scoreReporter]
-            
-            GKScore.report(scoreArray, withCompletionHandler: {(error : Error?) -> Void in
-                if error != nil {
-                    print("error")
-                }
+            conversation.insert(message, completionHandler: { (error: Error?) -> Void in
+                print(error)
             })
-            
-        }
-        
-    }
-    
-    //initiate gamecenter
-    func authenticateLocalPlayer(){
-        
-        let localPlayer = GKLocalPlayer.localPlayer()
-        
-        localPlayer.authenticateHandler = {(viewController, error) -> Void in
-            
-            if (viewController != nil) {
-                self.present(viewController!, animated: true, completion: nil)
-            }
-                
-            else {
-                print((GKLocalPlayer.localPlayer().isAuthenticated))
-            }
         }
     }
 }
