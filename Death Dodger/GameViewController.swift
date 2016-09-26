@@ -10,23 +10,6 @@ import UIKit
 import SpriteKit
 import GameKit
 
-extension SKNode {
-    class func unarchiveFromFile(_ file : String) -> SKNode? {
-        if let path = Bundle.main.path(forResource: file, ofType: "sks") {
-            //var sceneData = NSData(contentsOfFile: path, options: .DataReadingMappedIfSafe, error: nil)!
-            let sceneData = try! Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
-            let archiver = NSKeyedUnarchiver(forReadingWith: sceneData)
-            
-            archiver.setClass(self.classForKeyedUnarchiver(), forClassName: "SKScene")
-            let scene = archiver.decodeObject(forKey: NSKeyedArchiveRootObjectKey) as! GameScene
-            archiver.finishDecoding()
-            return scene
-        } else {
-            return nil
-        }
-    }
-}
-
 class GameViewController: UIViewController, GKGameCenterControllerDelegate {
     
     fileprivate var scene : SKScene?
@@ -41,7 +24,7 @@ class GameViewController: UIViewController, GKGameCenterControllerDelegate {
         
         share.isHidden = false
         
-        if let scene = GameScene.unarchiveFromFile("GameScene") as? GameScene {
+        if let scene = GameScene(fileNamed: "GameScene") {
             // Configure the view.
             let skView = self.view as! SKView
             skView.showsFPS = false
