@@ -373,6 +373,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
         }
         
+        override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+            for t in touches { self.touchMoved(toPoint: t.location(in: self)) }
+        }
+
+        
         // MARK: Touch released
         func touchUp(atPoint pos : CGPoint) {
             if self.spinnyStuff as! Bool {
@@ -382,6 +387,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     self.addChild(n)
                 }
             }
+        }
+        
+        override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+            for t in touches { self.touchUp(atPoint: t.location(in: self)) }
         }
         
         // MARK: Check for touches in restart button
@@ -408,14 +417,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     }
                 }
             }
-        }
-        
-        override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
-            for t in touches { self.touchUp(atPoint: t.location(in: self)) }
-        }
-        
-        override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-            for t in touches { self.touchMoved(toPoint: t.location(in: self)) }
         }
     }
 #endif
