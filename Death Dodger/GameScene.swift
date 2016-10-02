@@ -194,8 +194,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         pLabel.text = String(displayScore) + " Points!"
         
             
-        for i in emitter { i?.particleBirthRate = 1500;
-            i?.position = (rocket?.position)! }
+        for i in emitter {
+            i?.particleBirthRate = 1500;
+            i?.position = (rocket?.position)!
+        }
 
         self.over?.run(SKAction.scale(to: 4.0, duration: 1.5))
         
