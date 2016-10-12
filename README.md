@@ -1,4 +1,4 @@
-# finn-knife-game
+# finn-knife-game [![Slack Status](https://westlakeapc.herokuapp.com/badge.svg)](https://westlakeapc.herokuapp.com/)
 Move Finn left and right to avoid being killed by the Falling Sky Knives in this awesome SpriteKit template. Free to use and free to play from the monkeys behind the curtain. (Animator Joe)
 
 # License
